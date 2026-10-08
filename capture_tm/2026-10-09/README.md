@@ -5,6 +5,13 @@
 
 [确定性结论](CONCLUSIONS.md) · [文献与工程资料](REFERENCES.md) · [完整挖掘报告](idea-stage/IDEA_REPORT.md) · [提案](refine-logs/FINAL_PROPOSAL.md) · [实验计划](refine-logs/EXPERIMENT_PLAN.md)
 
+
+## 2026-10-09 追加查新结果
+
+本轮裁决：**PROCEED WITH CAUTION，收窄问题新颖性 5.5/10**。允许推进最小决定实验，核心条件规律尚未验证。
+
+[完整查新报告](novelty-check/NOVELTY_REPORT_20261009.md) · [方法级最近邻矩阵](novelty-check/PRIOR_ART_MATRIX_20261009.md) · [实际检索日志](novelty-check/SEARCH_LOG_20261009.md) · [全部查新材料](novelty-check/README.md)
+
 ## 已能确认的结果
 
 1. 本次实际运行的是独立的标量/静态双像素 CPU 玩具模型，没有复现原仓库动作预算，没有 GPU、S24 真实训练或实拍。
