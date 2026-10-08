@@ -1,0 +1,525 @@
+{
+  "kind": "aggregation_of_actual_helper_outputs",
+  "review_date": "2026-10-09",
+  "resolver": "C:/Users/Lenovo/.agents/skills/shared-references/scripts/resolve_helper.py",
+  "helper": "verify_papers.py",
+  "runs": [
+    {
+      "verdict": "WARN",
+      "hallucination_rate": 0,
+      "pending_rate": 0.05,
+      "warnings": [
+        "transient_failures_present"
+      ],
+      "papers": [
+        {
+          "id": "ebsnet",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2005.12536"
+          }
+        },
+        {
+          "id": "adaptiveae",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2508.13503"
+          }
+        },
+        {
+          "id": "debir",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2603.21784"
+          }
+        },
+        {
+          "id": "modular",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2512.08564"
+          }
+        },
+        {
+          "id": "editraw",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2512.05859"
+          }
+        },
+        {
+          "id": "benchmark",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2609.02831"
+          }
+        },
+        {
+          "id": "drift",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2604.03402"
+          }
+        },
+        {
+          "id": "satellite",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2609.17023"
+          }
+        },
+        {
+          "id": "camerarl",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2404.01636"
+          }
+        },
+        {
+          "id": "digitalgimbal",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2012.04515"
+          }
+        },
+        {
+          "id": "neuraldet",
+          "status": "verified",
+          "method": "s2",
+          "confidence": "medium",
+          "reason": null,
+          "identifiers": {
+            "s2_title": "Neural Auto-Exposure for High-Dynamic Range Object Detection",
+            "arxiv_id": "",
+            "doi": "10.1109/CVPR46437.2021.00762"
+          }
+        },
+        {
+          "id": "noiseoptimal",
+          "status": "verified",
+          "method": "s2",
+          "confidence": "medium",
+          "reason": null,
+          "identifiers": {
+            "s2_title": "Noise-optimal capture for high dynamic range photography",
+            "arxiv_id": "",
+            "doi": "10.1109/CVPR.2010.5540167"
+          }
+        },
+        {
+          "id": "bracketire",
+          "status": "verified",
+          "method": "s2",
+          "confidence": "medium",
+          "reason": null,
+          "identifiers": {
+            "s2_title": "Exposure Bracketing Is All You Need For A High-Quality Image",
+            "arxiv_id": "2401.00766",
+            "doi": ""
+          }
+        },
+        {
+          "id": "domehdr",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2608.05626"
+          }
+        },
+        {
+          "id": "rttonemap",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2608.30400"
+          }
+        },
+        {
+          "id": "spatialcorrection",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2604.04136"
+          }
+        },
+        {
+          "id": "segmentation",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2410.19839"
+          }
+        },
+        {
+          "id": "hdrplus",
+          "status": "verify_pending",
+          "method": null,
+          "confidence": null,
+          "reason": "s2_verify_pending",
+          "identifiers": {}
+        },
+        {
+          "id": "activesl",
+          "status": "verified",
+          "method": "crossref",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "doi": "10.1109/icpr56361.2022.9956188"
+          }
+        },
+        {
+          "id": "wysiwyg",
+          "status": "verified",
+          "method": "crossref",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "doi": "10.1145/2508363.2508421"
+          }
+        }
+      ]
+    },
+    {
+      "verdict": "WARN",
+      "hallucination_rate": 0,
+      "pending_rate": 0.25,
+      "warnings": [
+        "transient_failures_present"
+      ],
+      "papers": [
+        {
+          "id": "joca",
+          "status": "verified",
+          "method": "arxiv",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "arxiv_id": "2512.06763"
+          }
+        },
+        {
+          "id": "optimalhdr",
+          "status": "verify_pending",
+          "method": null,
+          "confidence": null,
+          "reason": "s2_verify_pending",
+          "identifiers": {}
+        },
+        {
+          "id": "metering",
+          "status": "verified",
+          "method": "crossref",
+          "confidence": "high",
+          "reason": null,
+          "identifiers": {
+            "doi": "10.1111/j.1467-8659.2012.03027.x"
+          }
+        },
+        {
+          "id": "blurnoise",
+          "status": "verified",
+          "method": "s2",
+          "confidence": "medium",
+          "reason": null,
+          "identifiers": {
+            "s2_title": "Uniform Motion Blur in Poissonian Noise: Blur/Noise Tradeoff",
+            "arxiv_id": "",
+            "doi": "10.1109/TIP.2010.2062196"
+          }
+        }
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "ebsnet",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2005.12536"
+      }
+    },
+    {
+      "id": "adaptiveae",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2508.13503"
+      }
+    },
+    {
+      "id": "debir",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2603.21784"
+      }
+    },
+    {
+      "id": "modular",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2512.08564"
+      }
+    },
+    {
+      "id": "editraw",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2512.05859"
+      }
+    },
+    {
+      "id": "benchmark",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2609.02831"
+      }
+    },
+    {
+      "id": "drift",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2604.03402"
+      }
+    },
+    {
+      "id": "satellite",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2609.17023"
+      }
+    },
+    {
+      "id": "camerarl",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2404.01636"
+      }
+    },
+    {
+      "id": "digitalgimbal",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2012.04515"
+      }
+    },
+    {
+      "id": "neuraldet",
+      "status": "verified",
+      "method": "s2",
+      "confidence": "medium",
+      "reason": null,
+      "identifiers": {
+        "s2_title": "Neural Auto-Exposure for High-Dynamic Range Object Detection",
+        "arxiv_id": "",
+        "doi": "10.1109/CVPR46437.2021.00762"
+      }
+    },
+    {
+      "id": "noiseoptimal",
+      "status": "verified",
+      "method": "s2",
+      "confidence": "medium",
+      "reason": null,
+      "identifiers": {
+        "s2_title": "Noise-optimal capture for high dynamic range photography",
+        "arxiv_id": "",
+        "doi": "10.1109/CVPR.2010.5540167"
+      }
+    },
+    {
+      "id": "bracketire",
+      "status": "verified",
+      "method": "s2",
+      "confidence": "medium",
+      "reason": null,
+      "identifiers": {
+        "s2_title": "Exposure Bracketing Is All You Need For A High-Quality Image",
+        "arxiv_id": "2401.00766",
+        "doi": ""
+      }
+    },
+    {
+      "id": "domehdr",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2608.05626"
+      }
+    },
+    {
+      "id": "rttonemap",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2608.30400"
+      }
+    },
+    {
+      "id": "spatialcorrection",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2604.04136"
+      }
+    },
+    {
+      "id": "segmentation",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2410.19839"
+      }
+    },
+    {
+      "id": "hdrplus",
+      "status": "verify_pending",
+      "method": null,
+      "confidence": null,
+      "reason": "s2_verify_pending",
+      "identifiers": {}
+    },
+    {
+      "id": "activesl",
+      "status": "verified",
+      "method": "crossref",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "doi": "10.1109/icpr56361.2022.9956188"
+      }
+    },
+    {
+      "id": "wysiwyg",
+      "status": "verified",
+      "method": "crossref",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "doi": "10.1145/2508363.2508421"
+      }
+    },
+    {
+      "id": "joca",
+      "status": "verified",
+      "method": "arxiv",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "arxiv_id": "2512.06763"
+      }
+    },
+    {
+      "id": "optimalhdr",
+      "status": "verify_pending",
+      "method": null,
+      "confidence": null,
+      "reason": "s2_verify_pending",
+      "identifiers": {}
+    },
+    {
+      "id": "metering",
+      "status": "verified",
+      "method": "crossref",
+      "confidence": "high",
+      "reason": null,
+      "identifiers": {
+        "doi": "10.1111/j.1467-8659.2012.03027.x"
+      }
+    },
+    {
+      "id": "blurnoise",
+      "status": "verified",
+      "method": "s2",
+      "confidence": "medium",
+      "reason": null,
+      "identifiers": {
+        "s2_title": "Uniform Motion Blur in Poissonian Noise: Blur/Noise Tradeoff",
+        "arxiv_id": "",
+        "doi": "10.1109/TIP.2010.2062196"
+      }
+    }
+  ],
+  "counts": {
+    "total": 24,
+    "verified": 22,
+    "verify_pending": 2,
+    "unverified": 0
+  },
+  "limitations": "Checks paper existence; does not establish scientific containment or title-claim identity. Pending indicates transient API failures, not fabricated papers."
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "ebsnet",
+    "arxiv_id": "2005.12536",
+    "doi": null,
+    "title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection"
+  },
+  {
+    "id": "adaptiveae",
+    "arxiv_id": "2508.13503",
+    "doi": null,
+    "title": "AdaptiveAE: An Adaptive Exposure Strategy for HDR Capturing in Dynamic Scenes"
+  },
+  {
+    "id": "debir",
+    "arxiv_id": "2603.21784",
+    "doi": null,
+    "title": "Dynamic Exposure Burst Image Restoration"
+  },
+  {
+    "id": "modular",
+    "arxiv_id": "2512.08564",
+    "doi": null,
+    "title": "Modular Neural Image Signal Processing"
+  },
+  {
+    "id": "editraw",
+    "arxiv_id": "2512.05859",
+    "doi": null,
+    "title": "Edit-aware RAW Reconstruction"
+  },
+  {
+    "id": "benchmark",
+    "arxiv_id": "2609.02831",
+    "doi": null,
+    "title": "Benchmarking RAW and RGB Restoration in Image Signal Processors"
+  },
+  {
+    "id": "drift",
+    "arxiv_id": "2604.03402",
+    "doi": null,
+    "title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping"
+  },
+  {
+    "id": "satellite",
+    "arxiv_id": "2609.17023",
+    "doi": null,
+    "title": "Optimal exposure time for satellite imaging? A trade-off between residual tip-tilt and registration accuracy"
+  },
+  {
+    "id": "camerarl",
+    "arxiv_id": "2404.01636",
+    "doi": null,
+    "title": "Learning to Control Camera Exposure via Reinforcement Learning"
+  },
+  {
+    "id": "digitalgimbal",
+    "arxiv_id": "2012.04515",
+    "doi": null,
+    "title": "Digital Gimbal: End-to-End Deep Image Stabilization With Learnable Exposure Times"
+  },
+  {
+    "id": "neuraldet",
+    "arxiv_id": null,
+    "doi": null,
+    "title": "Neural Auto-Exposure for High-Dynamic Range Object Detection"
+  },
+  {
+    "id": "noiseoptimal",
+    "arxiv_id": null,
+    "doi": null,
+    "title": "Noise-Optimal Capture for High Dynamic Range Photography"
+  },
+  {
+    "id": "bracketire",
+    "arxiv_id": null,
+    "doi": null,
+    "title": "Exposure Bracketing Is All You Need For A High-Quality Image"
+  },
+  {
+    "id": "domehdr",
+    "arxiv_id": "2608.05626",
+    "doi": null,
+    "title": "Dual-Output Multi-Exposure HDR Reconstruction via SDR Fusion and Gain Map Inverse Tone Mapping"
+  },
+  {
+    "id": "rttonemap",
+    "arxiv_id": "2608.30400",
+    "doi": null,
+    "title": "Real-Time Scene-Adaptive Tone Mapping for High-Dynamic Range Object Detection"
+  },
+  {
+    "id": "spatialcorrection",
+    "arxiv_id": "2604.04136",
+    "doi": null,
+    "title": "Rethinking Exposure Correction for Spatially Non-uniform Degradation"
+  },
+  {
+    "id": "segmentation",
+    "arxiv_id": "2410.19839",
+    "doi": null,
+    "title": "Scene-Segmentation-Based Exposure Compensation for Tone Mapping of High Dynamic Range Scenes"
+  },
+  {
+    "id": "hdrplus",
+    "arxiv_id": null,
+    "doi": null,
+    "title": "Burst photography for high dynamic range and low-light imaging on mobile cameras"
+  },
+  {
+    "id": "activesl",
+    "title": "Active Short-Long Exposure Deblurring",
+    "doi": "10.1109/ICPR56361.2022.9956188",
+    "arxiv_id": null
+  },
+  {
+    "id": "wysiwyg",
+    "title": "WYSIWYG Computational Photography via Viewfinder Editing",
+    "doi": "10.1145/2508363.2508421",
+    "arxiv_id": null
+  },
+  {
+    "id": "joca",
+    "arxiv_id": "2512.06763",
+    "title": "JOCA: Task-Driven Joint Optimisation of Camera Hardware and Adaptive Camera Control Algorithms",
+    "doi": null
+  },
+  {
+    "id": "optimalhdr",
+    "arxiv_id": null,
+    "title": "Optimal HDR Reconstruction with Linear Digital Cameras",
+    "doi": null
+  },
+  {
+    "id": "metering",
+    "arxiv_id": null,
+    "title": "Metering for Exposure Stacks",
+    "doi": "10.1111/j.1467-8659.2012.03027.x"
+  },
+  {
+    "id": "blurnoise",
+    "arxiv_id": null,
+    "title": "Uniform Motion Blur in Poissonian Noise: Blur/Noise Trade-Off",
+    "doi": null
+  }
+]
