@@ -1,0 +1,13 @@
+{
+  "skill": "novelty-check",
+  "run_id": "2026-10-08_run01",
+  "date": "2026-10-08",
+  "executor": "Codex",
+  "project_dir": ".",
+  "review_route": "fresh subagent",
+  "model": "inherited default; same-family",
+  "acceptance_status": "provisional",
+  "codex_mcp": "not exposed",
+  "helper_verification": "unavailable: verify_papers.py not found",
+  "runtime_note": "default exec, Node runtime and apply_patch failed; escalated PowerShell succeeded"
+}

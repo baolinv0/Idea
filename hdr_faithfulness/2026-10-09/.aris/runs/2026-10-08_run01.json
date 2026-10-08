@@ -1,0 +1,75 @@
+{
+  "record_type": "manual_diagnostic_not_ARIS_helper_output",
+  "run_id": "2026-10-08_run01",
+  "direction": "HDR observation evidence and generative prior",
+  "date": "2026-10-08",
+  "executor": "GPT-6 (system-described; exact runtime alias unavailable)",
+  "stages": {
+    "research_lit": {
+      "status": "substantive_artifact_present",
+      "artifact": "idea-stage/IDEA_REPORT.md#literature-landscape"
+    },
+    "idea_creator": {
+      "status": "12_candidates_present",
+      "artifact": "idea-stage/IDEA_REPORT.md#ranked-ideas",
+      "configured_generation_model": "gpt-6-astra",
+      "reasoning_effort": "xhigh"
+    },
+    "novelty_check": {
+      "status": "provisional_only",
+      "artifact": "idea-stage/IDEA_REPORT.md#novelty-verification",
+      "cross_family_receipt": null
+    },
+    "research_review": {
+      "status": "same_family_fresh_session_review_returned",
+      "artifact": "idea-stage/IDEA_REPORT.md#external-critical-review",
+      "configured_reviewer_model": "gpt-6-astra",
+      "reasoning_effort": "ultra",
+      "actual_returned_model_identity": null,
+      "agent_path": "/root/idea_pool_review",
+      "verdict": "PROCEED WITH CAUTION for literature checks only",
+      "cross_family_receipt": null
+    },
+    "research_refine_pipeline": {
+      "status": "question_level_proposal_present",
+      "artifact": "refine-logs/FINAL_PROPOSAL.md",
+      "method_design": false
+    }
+  },
+  "gates": {
+    "idea-discovery-evidence": {
+      "status": "BLOCKED",
+      "executed": false,
+      "reasons": [
+        "run_state.py missing from canonical resolution chain",
+        "idea_discovery_gate.py missing from canonical resolution chain",
+        "configured cross-family acceptance receipts unavailable"
+      ]
+    }
+  },
+  "empirical_runs": 0,
+  "pilot_status": "deferred_by_user_SCOUT_literature_first_constraint",
+  "selected_candidate_ids": [
+    12,
+    1,
+    4
+  ],
+  "source_failures": {
+    "gemini": {
+      "exit_code": 41,
+      "reason": "GEMINI_API_KEY not configured; no source evidence returned"
+    },
+    "paper_verification": {
+      "status": "UNVERIFIED_AUTOMATION",
+      "reason": "verify_papers.py missing; inspected primary sources manually"
+    },
+    "html": {
+      "status": "not_rendered",
+      "reason": "render-html skill unavailable"
+    },
+    "research_contract_template": {
+      "status": "missing",
+      "formal_contract_instantiated": false
+    }
+  }
+}

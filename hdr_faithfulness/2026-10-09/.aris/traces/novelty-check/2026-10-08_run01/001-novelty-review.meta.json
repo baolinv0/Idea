@@ -1,0 +1,11 @@
+{
+  "call_number": 1,
+  "purpose": "novelty-review",
+  "agent_task": "/root/novelty_review",
+  "model": "inherited default; same-family",
+  "reasoning_effort": "xhigh",
+  "review_status": "completed_same_family",
+  "acceptance_status": "provisional",
+  "helper_verification": "unavailable",
+  "status": "ok"
+}

@@ -1,0 +1,221 @@
+{
+  "description": "Edited AI-agent review notes, not verbatim transcripts or actual researchers' statements",
+  "date": "2026-10-08—09",
+  "identity_confirmation": {
+    "reply": "是的",
+    "interpretation": "用户确认上一条身份对应问题；继续采用Lei Zhang / Michael S. Brown / Tianfan Xue",
+    "date": "2026-10-08"
+  },
+  "profiles": [
+    {
+      "id": "lei_zhang",
+      "name": "Lei Zhang（张磊）",
+      "identity": "香港理工，主页明确同时隶属OPPO Research Institute",
+      "url": "https://www4.comp.polyu.edu.hk/~cslzhang/",
+      "lens": "真实图像恢复、生成先验、保真与感知权衡、方法贡献要求"
+    },
+    {
+      "id": "michael_brown",
+      "name": "Michael S. Brown",
+      "identity": "York University；Samsung关联见其公开ICCV2023材料，不推断当前职务",
+      "url": "https://www.eecs.yorku.ca/~mbrown/",
+      "lens": "RAW、相机ISP、辐射/颜色标定、评价链路公平性"
+    },
+    {
+      "id": "tianfan_xue",
+      "name": "Tianfan Xue（薛天帆）",
+      "identity": "CUHK MMLab；主页列出AdaptiveAE、UltraFusion等",
+      "url": "https://tianfan.info/",
+      "lens": "多帧计算摄影、曝光策略、真实观测与生成信息的使用"
+    },
+    {
+      "id": "chongyi_li",
+      "name": "Chongyi Li（李重仪）",
+      "identity": "南开，英文/中文主页及南开官方教师页已核对",
+      "url": "https://li-chongyi.github.io/",
+      "lens": "真实退化、可靠低层视觉、生成恢复、事实与质量评价"
+    },
+    {
+      "id": "jiawen_chen",
+      "name": "Jiawen Chen",
+      "identity": "MIT个人页，现为Waabi Principal Researcher；此前Google/Adobe成像工作",
+      "url": "https://people.csail.mit.edu/jiawen/",
+      "lens": "RAW噪声、经典burst处理、相机工程、可部署系统和公平基线"
+    },
+    {
+      "id": "felix_heide",
+      "name": "Felix Heide",
+      "identity": "Princeton Computational Imaging Lab",
+      "url": "https://www.cs.princeton.edu/~fheide/",
+      "lens": "物理观测、计算成像、辨识/不确定性、传感器与算法联合视角"
+    }
+  ],
+  "first_round": {
+    "chongyi_li": {
+      "agent": "/root/panel_chongyi_li",
+      "ranking": [
+        "B",
+        "A",
+        "C"
+      ],
+      "verdicts": {
+        "A": "PROCEED WITH CAUTION",
+        "B": "PROCEED WITH CAUTION",
+        "C": "MERGE-AS-DIAGNOSTIC"
+      },
+      "strongest_point": "停止失效是最直接的科学问题；C主要作为必要读出控制",
+      "challenge": "固定预算风险校准在反复检查、首次达标即停止后是否仍有效？B需区分采样一致性盲区与重复检查失效。",
+      "read_sources": [
+        "https://li-chongyi.github.io/",
+        "https://arxiv.org/html/2610.02675v1",
+        "https://arxiv.org/html/2512.03345v1"
+      ],
+      "notes": "返回文本沿用错误中文名；研究身份英文与主页正确，综合报告统一更正为李重仪，交叉回合再确认。",
+      "editorially_condensed_notes": "此评议仅模拟其公开研究方向，不代表本人意见或背书。其主页强调真实条件下的可靠视觉、恢复、生成与应用。优先看真实退化下事实是否保留，以及质量指标能否支持采集决策。\nA：PROCEED WITH CAUTION。恢复器放回采集链路可能产生实际曝光选择损失，但等时间/读出不等于等有效证据；饱和、读噪、归一化、融合均可解释排序。先验操作并不纯。需控制已知物理解释后跨独立场景的可预测选择损失。单场景反转/interaction显著不够。最近邻沿用Noise-Optimal Capture、AdaptiveAE、BIGPrior。\nB：PROCEED WITH CAUTION，第一。已一致却应继续拍有明确决策后果。OnePhoton已预算/样本/任务，HalluGen已有测量一致错误，但不能等同跨seed。seed离散反映采样器覆盖，不等事实不确定性。先查每输入样本一致性与正确率配对；同覆盖率停止超标、额外独立观测纠错才增强判断。\nC：MERGE-AS-DIAGNOSTIC。同reader对raw/恢复图有效但未分解归因；便宜非生成适配可缩差也不否定生成。核缩放/二值化/decoder，未详述不等于没做。跨任务/reader稳定分解规律才重考虑独立立题。\n排序B>A>C。质疑：多个固定预算节点反复检查首次达标停拍后，风险保证是否仍成立？需区分生成信号失效与重复检查失效。"
+    },
+    "lei_zhang": {
+      "agent": "/root/panel_lei_zhang",
+      "ranking": [
+        "A",
+        "B",
+        "C"
+      ],
+      "verdicts": {
+        "A": "PROCEED WITH CAUTION",
+        "B": "PROCEED WITH CAUTION",
+        "C": "MERGE-AS-DIAGNOSTIC"
+      },
+      "strongest_point": "A可作采集决策损失题；B要限制随机恢复器；C作为控制",
+      "challenge": "局部观测信息严格占优的配置却被冻结恢复器反选，如何区分有意义任务偏好和输入失配？",
+      "read_sources": [
+        "https://www4.comp.polyu.edu.hk/~cslzhang/papers.htm",
+        "https://arxiv.org/abs/2412.03017",
+        "https://arxiv.org/pdf/2406.08177v2"
+      ],
+      "editorially_condensed_notes": "公开PiSA-SR有像素保真/语义细节两类调节；OSEDiff用低质输入取代随机噪声起点。操作语义须核实，降低随机性不等于真。\nA谨慎继续，可独立。同成本事实目标下选择有意义，但物理SNR、饱和、融合、输入失配可解释反转；估计器影响最优选择本身已知。查NoiseOptimal目标函数；合法设置下重复选择变化且物理解释不足才加强判断。\nB谨慎继续，条件独立。停止后的风险/新增数据纠错可核算，但低方差偏差旧，确定性恢复器没有同类seed信号。查OnePhoton的联合停止分析；武断阈值/挑图或已有直接覆盖则降级。\nC合并诊断。生成适配现成reader也有效；未描述不能说不公平。查raw预处理/decoder/调参预算，跨reader、任务、噪声稳定分解且改变预算选择才独立。\n排序A>B>C。质疑：信息严格占优时的反选究竟是任务偏好还是输入失配？"
+    },
+    "michael_brown": {
+      "agent": "/root/panel_michael_brown",
+      "ranking": [
+        "A",
+        "B",
+        "C"
+      ],
+      "verdicts": {
+        "A": "PROCEED WITH CAUTION",
+        "B": "MERGE-AS-DIAGNOSTIC",
+        "C": "MERGE-AS-DIAGNOSTIC"
+      },
+      "strongest_point": "A可能成主线，B/C先控制；执行先核C的公平性",
+      "challenge": "额外真实证据纠错是否只是改变亮度/对比度/读出输入分布？若不排除，B与C可能是同一机制。",
+      "read_sources": [
+        "https://www.eecs.yorku.ca/~mbrown/",
+        "https://www.eecs.yorku.ca/~mbrown/ICCV2023_Brown.html",
+        "https://people.csail.mit.edu/hasinoff/hdrnoise/",
+        "https://arxiv.org/abs/1901.09482"
+      ],
+      "editorially_condensed_notes": "A谨慎继续。关注黑电平、曝光归一化、裁剪、去马赛克和tone-map混杂；等时间读出不等局部有效证据。NoiseOptimal已等成本物理SNR。统一标定/输出链后配置达标仍变且选择损失可解释才加强，常规融合解释则降诊断。\nB合并诊断。固定测量seed算法变化与独立重新采集噪声不同；采集外层、seed内层、独立单位场景。先核OnePhoton独立采集还是固定观测多生成。同覆盖率、固定ISP、追加独立证据纠错才可升格。\nC合并诊断。RAW→RGB必要链路混合信号恢复与接口适配。缺描述不能说不公平；BridgingGap早已分视觉/识别。核输入范围、归一化、threshold、拒识。跨reader/任务系统性改预算才主线。\n潜力排序A>B>C；执行先C的公平控制。质疑：B追加数据纠错是否仅亮度/读出适配改变，因而与C同一现象？"
+    },
+    "tianfan_xue": {
+      "agent": "/root/panel_tianfan_xue",
+      "ranking": [
+        "B",
+        "A",
+        "C"
+      ],
+      "verdicts": {
+        "A": "PROCEED WITH CAUTION",
+        "B": "PROCEED WITH CAUTION",
+        "C": "MERGE-AS-DIAGNOSTIC"
+      },
+      "strongest_point": "A宽泛关系AdaptiveAE已有；B更值得停拍后果核查；UltraFusion合法接口约束必须先确认。",
+      "challenge": "新增曝光同时改局部SNR与饱和覆盖，怎样将A反转/B纠错归因于生成机制的决策影响而不是已知物理HDR收益？",
+      "read_sources": [
+        "https://tianfan.info/",
+        "https://arxiv.org/html/2508.13503v1",
+        "https://arxiv.org/html/2501.11515v1",
+        "https://github.com/OpenImagingLab/UltraFusion/blob/main/dataset/test_dataset.py",
+        "https://github.com/OpenImagingLab/UltraFusion/blob/main/pipeline/V4_CA/pipeline.py",
+        "https://github.com/OpenImagingLab/UltraFusion/blob/main/utils/V4_CA/sampler.py"
+      ],
+      "editorially_condensed_notes": "A谨慎继续。AdaptiveAE Fig5/Table3已明确融合器影响EV选择，不能拿一般交互/排序翻转当新意。残差是同冻结模型合法操作与事实目标的选择损失；可重复达标集合且物理解释不足才强化。\nB谨慎继续，第一。停止后果可测，有观测软引导并不事实认证。查OnePhoton跨seed/coverage/追加观测的联合停止结果，不能只稳定错误图。\nC合并诊断。reader预处理/量化接口先核查；未知≠不公平。跨reader归因规律才独立。\n接口：UltraFusion加载器读取ue/oe两张RGB且可能缩放，不直接支持任意RAW栈。原生API strength=13层控制注入强度，steps采样路径；uncond=None时cfg_scale不走CFG分支，不能做有效CFG扫描。CLI seed类型/choices冲突。接口缺口不可算H0，不临时加方法补接口。\n排序B>A>C。质疑：新增数据改变物理SNR/饱和，怎样分离生成机制决策影响？"
+    },
+    "jiawen_chen": {
+      "agent": "/root/panel_jiawen_chen",
+      "ranking": [
+        "A",
+        "B",
+        "C"
+      ],
+      "verdicts": {
+        "A": "PROCEED WITH CAUTION",
+        "B": "PROCEED WITH CAUTION",
+        "C": "MERGE-AS-DIAGNOSTIC"
+      },
+      "strongest_point": "A应证明曝光选择规律与决策损失；B要计入多seed成本；C是共同解释基线。",
+      "challenge": "现实有用的跨seed停拍规则是什么？共享偏差何以超出已知不确定性缺陷，新增测量带来什么可辨识证据？",
+      "read_sources": [
+        "https://people.csail.mit.edu/jiawen/",
+        "https://arxiv.org/html/1811.11127v1",
+        "https://arxiv.org/html/2504.03136v1"
+      ],
+      "editorially_condensed_notes": "A谨慎继续，第一。曝光分配系统价值强；饱和、异方差、融合、归一化可解释翻转。Unprocessing显示处理链重要，设置不统称纯先验。先比较NoiseOptimal/AdaptiveAE目标约束；跨场景排除解释后选择损失可升格。\nB谨慎继续，次。跨seed固定条件下共享错误可能不表现分歧；无合理停拍规则易成旧缺陷演示。核OnePhoton联合分析；同coverage校准后仍提前停止且独立追加证据纠错可升格，校准后消失降诊断。计入多seed部署成本。\nC合并诊断。处理适配不是不公平证据。核raw定义、normalization、threshold、decoder；跨任务改变最低达标预算且分解贡献才提高。Classic Video Denoising含学习参数预测，非生成不等无学习。\n排序A>B>C，未证新颖性。质询现实停拍规则及新增可辨识证据。"
+    },
+    "felix_heide": {
+      "agent": "/root/panel_felix_heide",
+      "ranking": [
+        "A",
+        "B",
+        "C"
+      ],
+      "verdicts": {
+        "A": "PROCEED WITH CAUTION",
+        "B": "MERGE-AS-DIAGNOSTIC",
+        "C": "ABANDON-CURRENT-FRAMING; retain baseline check"
+      },
+      "strongest_point": "A只能谈给定恢复链决策损失，不能称物理信息上限改变；B算法seed不等真实后验。",
+      "challenge": "SNR/裁剪相近而事实风险不同，如何分离测量的事实有效信息与恢复器利用信息的能力？",
+      "read_sources": [
+        "https://www.cs.princeton.edu/~fheide/",
+        "https://light.princeton.edu/",
+        "https://arxiv.org/html/2604.19976v1",
+        "https://arxiv.org/html/2610.02675v1"
+      ],
+      "editorially_condensed_notes": "A谨慎继续，第一。LuckyHDR物理因素联合处理支持链路决策；局部SNR不完整描述可辨识性。处理器没充分利用证据可翻转排序，不表示物理上限变了。核曝光/基准帧消融与NoiseOptimal。可复现事实风险变化、选择损失及物理解释余量才能推进。\nB合并诊断。OnePhoton真逆向核与学到的近似条件分布有区别，seed只测算法变化，未证真实后验。采样塌缩/先验失配的稳定错误已知。核7.2/9联合事实/coverage/停止后果；同覆盖率多场景超额错误且新增观测纠错可升格。\nC放弃当前独立题框架，保留baseline。OnePhoton同QR decoder端到端收益有效但未分解贡献。适配成熟，强baseline不自动论文。跨预算/reader归因稳定改变采集选择可重开。\n排序A>B>C。质询物理有效信息与利用能力的区分。"
+    }
+  },
+  "cross_round": {
+    "felix_heide": {
+      "agent": "/root/panel_felix_heide",
+      "question_from": [
+        "lei_zhang",
+        "felix_heide"
+      ],
+      "question": "局部信息占优的配置被反选时，怎样区别任务偏好、模型失配和物理信息上限？",
+      "response": "维持A谨慎、B诊断、C放弃当前独立框架。局部SNR高不是通道信息支配；同任务/损失/先验且已证明支配时，最优决策可忽略新增信息而不变差。冻结器反选先说明利用受限；若另换损失/先验/成本则比较条件改变。先核官方输入契约、训练退化、曝光归一化、元数据和操作数据保真语义；合法适配消除反选支持失配，未有对照不等排除失配。A只称明确冻结流程/分布内可达事实风险及采集决策损失，不称物理上限、单预算最低成本或Bayes最优界。"
+    },
+    "michael_brown": {
+      "agent": "/root/panel_michael_brown",
+      "question_from": [
+        "chongyi_li",
+        "jiawen_chen"
+      ],
+      "question": "固定预算校准是否能保证首次一致即停的风险？怎样分开信号盲区、停止选择、处理链变化？",
+      "response": "维持A谨慎、B/C诊断。固定节点边际校准不直接保证路径选择后的停止风险；正确模型且含完整停止历史的后验是另一对象，不笼统称optional stopping破坏后验。现实规则需检查节点、seed数、阈值/接受区，多seed推理读出等待成本与曝光分别报告。最便宜回放已有完整预算序列，每场景首次停点/错误/覆盖率；固定点同coverage的一致错误体现信号盲区，停止子集进一步风险升高体现选择效应。场景作单位。已有亮度/对比度/饱和分层、曝光归一化ISP固定；reader输入范围改善路径纠错不够新增事实证据归因。缺完整序列不能回溯停止风险。"
+    },
+    "jiawen_chen": {
+      "agent": "/root/panel_jiawen_chen",
+      "question_from": [
+        "michael_brown",
+        "tianfan_xue",
+        "felix_heide"
+      ],
+      "question": "新增观测纠错是否只是输入适配或已知物理HDR收益？何时B独立、何时归入C？",
+      "response": "保持A>B>C。核补材/代码/已有逐预算输出：新增观测是否伴随曝光归一化、tone-map、threshold、reader改变，seed是否仅作用同一观测。配置只识别混杂不证明机制；若有独立真值，查事实纠正而非拒识→解码成功。若亮度/对比度/噪声适配及公平非生成处理获得相同纠错，且校准后无额外停止损失，B降C诊断。若同coverage一致性规则反复提前停拍，新增真实观测纠正独立真值确认错误，适配解释不足，B才可独立。A先用SNR/饱和/传统融合解释，再看操作有无额外配置/达标变化，不求纯先验但记录语义；接受Felix流程损失而非物理上限限定。"
+    }
+  },
+  "first_round_complete": true,
+  "cross_round_complete": true,
+  "empirical_runs": 0,
+  "formal_idea_discovery_gate": "BLOCKED; unchanged"
+}

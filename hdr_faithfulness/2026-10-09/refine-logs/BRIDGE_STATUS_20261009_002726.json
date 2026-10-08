@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-09",
+  "requested_scope": "experiment planning only",
+  "skill": "experiment-bridge",
+  "composed_skill": "experiment-plan",
+  "selected_idea": "A",
+  "scientific_status": "provisional; novelty not confirmed; no pilot",
+  "planning_status": "complete",
+  "implementation_ready": false,
+  "auto_deploy": false,
+  "implemented_scripts": 0,
+  "deployed_jobs": 0,
+  "empirical_runs": 0,
+  "training_gpu_hours": 0,
+  "primary_model": {
+    "repo": "https://github.com/Fanghua-Yu/SUPIR",
+    "checkpoint": "SUPIR-v0Q",
+    "checkpoint_downloaded": false,
+    "entrypoint": "test.py",
+    "operation": "s_stage2",
+    "settings": [
+      1,
+      0.93
+    ],
+    "semantic": "stage2 conditioning control scale, not pure prior strength",
+    "revision": null,
+    "local_api_sanity": "pending",
+    "input": "1024x1024 uint8 RGB from a fixed declared RAW fusion/display pipeline"
+  },
+  "design": {
+    "claims": [
+      "C1",
+      "C2"
+    ],
+    "primary_transfer": "s0_to_s1",
+    "minimum_meaningful_risk_loss": 0.03,
+    "error_target": 0.05,
+    "coverage_target": 0.8,
+    "coverage_gap_tolerance": 0.05,
+    "development_scenes": 24,
+    "calibration_scenes": 80,
+    "test_scenes": {
+      "initial_planning": 160,
+      "suggested_cap": 320,
+      "locked": false
+    },
+    "exposure_schedules": {
+      "eU": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "eB": [
+        0.25,
+        0.25,
+        0.5,
+        3
+      ]
+    },
+    "frames": 4,
+    "total_time_over_t": 4,
+    "capture_repeats": 2,
+    "generative_seeds": [
+      17,
+      29,
+      43
+    ],
+    "independent_unit": "scene family; one preselected fact and deployment replicate per primary scene",
+    "generated_outputs_range": [
+      6336,
+      10176
+    ],
+    "estimated_gpu_hours_not_measured": {
+      "at_5_seconds": [
+        11,
+        18
+      ],
+      "at_15_seconds": [
+        33,
+        53
+      ],
+      "at_30_seconds": [
+        66,
+        106
+      ]
+    }
+  },
+  "first_actions": [
+    "R001 direct-evidence matrix",
+    "R002 actual model/data readiness",
+    "R003 official 8-output sanity after readiness"
+  ],
+  "design_review": {
+    "agent": "/root/plan_design_audit",
+    "context": "fresh",
+    "model_override": "none; inherited default",
+    "status": "completed",
+    "cross_family_certification": false
+  },
+  "code_review_status": "not_applicable_no_implementation",
+  "contract_template_status": "not_found_in_skill_directories; readable fallback created",
+  "previous_idea_discovery_gate": "BLOCKED old status, not re-evaluated",
+  "execution_requirements": [
+    "actual data and independent truth",
+    "checkpoint/environment readiness",
+    "E0-E2 go conditions",
+    "test protocol/sample size lock before test"
+  ],
+  "outputs": [
+    "refine-logs/EXPERIMENT_PLAN.md",
+    "refine-logs/EXPERIMENT_TRACKER.md",
+    "refine-logs/FINAL_PROPOSAL.md",
+    "idea-stage/docs/research_contract.md",
+    "refine-logs/BRIDGE_STATUS.json",
+    "01_RESEARCH_STATE.md"
+  ]
+}

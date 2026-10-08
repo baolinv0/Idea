@@ -1,0 +1,16 @@
+{
+  "tool": "collaboration.spawn_agent",
+  "arguments": {
+    "task_name": "novelty_review",
+    "agent_type": "default",
+    "fork_turns": "none",
+    "reasoning_effort": "xhigh",
+    "message": "作为 fresh-session 只读审查者，请读取 .\\work\\NOVELTY_DOSSIER.md 。里面完整列出用户问题、所有检索工作与来源、候选缺口、最小probe和 NOVELTY VERDICT LIMITS（必须按此限制判断）。按里面 Reviewer questions 评判问题的新颖性、最近prior、精确delta、PROCEED WITH CAUTION/5分是否校准，并批评probe能否区分新交互与已知SNR/多曝光效果，给最小修正，禁止网络设计、实验实现。可浏览一手来源补充核对。你的责任只读审查，不修改任何文件。根代理已写work材料并负责输出，所以你不独占工作区，不要还原任何文件。现有默认 shell 和 node 进程有 helper setup 故障，读文件请 exec_command 用 PowerShell 加 sandbox_permissions=require_escalated（只读路径在当前工作区）。本会话无 Codex reviewer MCP，技能允许fresh subagent fallback；这是同模型家族审查，必须标记 provisional，不能冒称独立跨模型检验。用中文返回完整实际审查（500-1000字即可，含必须修正和残余判断）；无需等导师答复。"
+  },
+  "result": {
+    "task_name": "/root/novelty_review"
+  },
+  "files_referenced": [
+    "evidence/NOVELTY_DOSSIER.md"
+  ]
+}

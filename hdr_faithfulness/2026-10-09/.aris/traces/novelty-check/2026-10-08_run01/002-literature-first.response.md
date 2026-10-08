@@ -1,0 +1,3 @@
+应先把可直接引用的结论收敛出来：[One Photon, Many Worlds](https://arxiv.org/html/2610.02675v1)支持其 SPAD 场景中观测预算增加、条件歧义及任务误差下降；[Hasinoff 2010](https://people.csail.mit.edu/hasinoff/hdrnoise/)支持固定时间与照片数下曝光分配改变 SNR；[UltraFusion](https://arxiv.org/html/2501.11515v1)证明真实不同曝光可引导生成补全。
+
+三者不能拼接推出“常规 Bayer RAW 固定预算下，生成先验改变最优配置排序”，也不能推出可校准的局部事实风险阈值。具体 `[t,t,t,t]` 与 `[t/4,t/4,t/2,3t]` 只是未验证例子，须撤去任何已获文献证明的表述。跨方法 benchmark 数值也不能证明公平预算收益，除非采集成本、输入观测及评价协议一致。后续应只保留这两项证据缺口，先检索直接证据，再判断是否需要新研究。
