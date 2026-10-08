@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ebs",
+    "arxiv_id": "2005.12536",
+    "title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+    "doi": null
+  },
+  {
+    "id": "adaptive",
+    "arxiv_id": "2508.13503",
+    "title": "AdaptiveAE: Physics-Aware Exposure Learning for Cameras in Motion",
+    "doi": null
+  },
+  {
+    "id": "debir",
+    "arxiv_id": "2603.21784",
+    "title": "Dynamic Exposure Burst Image Restoration",
+    "doi": null
+  },
+  {
+    "id": "modular",
+    "arxiv_id": "2512.08564",
+    "title": "Modular Neural Image Signal Processing",
+    "doi": null
+  },
+  {
+    "id": "drift",
+    "arxiv_id": "2604.03402",
+    "title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+    "doi": null
+  },
+  {
+    "id": "edit",
+    "arxiv_id": "2512.05859",
+    "title": "Edit-aware RAW Reconstruction",
+    "doi": null
+  },
+  {
+    "id": "bench",
+    "arxiv_id": "2609.02831",
+    "title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+    "doi": null
+  }
+]

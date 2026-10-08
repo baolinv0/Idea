@@ -1,0 +1,26 @@
+{
+  "archive_date": "2026-10-09",
+  "source_analysis_dates": [
+    "2026-10-08",
+    "2026-10-09"
+  ],
+  "source_isp_repository": "https://github.com/baolinv0/modular_neural_isp",
+  "source_isp_ref": "feature/capture-tm-c-20261005",
+  "source_isp_commit": "7e080d373accd28150034b68718c27a21f932a09",
+  "research_status": "REVISE",
+  "cross_family_evidence_gate": "BLOCKED",
+  "gpu_hours_used_this_idea_run": 0,
+  "num_source_candidates": 10,
+  "cpu_probe_seed_ids": [
+    19,
+    37,
+    73
+  ],
+  "changes_for_archive": [
+    "machine absolute paths replaced",
+    "repository-relative entry and conclusions added",
+    "historical novelty note added",
+    "source numeric content and experiment code logic preserved",
+    "UTF-8 LF"
+  ]
+}

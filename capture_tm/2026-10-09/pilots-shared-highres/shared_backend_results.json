@@ -1,0 +1,132 @@
+{
+  "status": "completed_cpu_followup",
+  "elapsed_seconds": 14.627817299682647,
+  "exposures": [
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "replicates": [
+    {
+      "seed": 19,
+      "mean_mse_by_family_and_exposure": [
+        [
+          0.0006563676104852476,
+          0.00029572097087103956,
+          0.0001293308836253329,
+          0.0001409692046159197,
+          0.00015831289820117403,
+          0.00013762273912435908,
+          0.0009490540376935788
+        ],
+        [
+          0.0013462408050253544,
+          0.0006280785948655027,
+          0.00028844570299687097,
+          0.000308759611791259,
+          0.0005480286244389101,
+          0.0005290020574609004,
+          0.0012560682823102053
+        ]
+      ],
+      "test_best_exposures_diagnostic": [
+        0.5,
+        0.5
+      ],
+      "best_fixed_dev_exposure": 0.5,
+      "fixed_test_mse": 0.00020888829331110195,
+      "rule_threshold_from_dev": 0.32,
+      "rule_actions_from_dev": [
+        4.0,
+        0.5
+      ],
+      "rule_test_mse": 0.00018994862739073448,
+      "rule_relative_mse_reduction_vs_fixed": 0.09066887196095863,
+      "test_family_conditioned_diagnostic_mse": 0.00020888829331110192,
+      "test_hindsight_min_realized_loss_mse": 4.185388797104956e-05
+    },
+    {
+      "seed": 37,
+      "mean_mse_by_family_and_exposure": [
+        [
+          0.0006653443874429767,
+          0.0002927934990691374,
+          0.0001305976035544134,
+          0.00014114595108494167,
+          0.00015855923539167887,
+          0.00013842674193359432,
+          0.0009461863661243304
+        ],
+        [
+          0.001353754000357207,
+          0.0006277442671819258,
+          0.00028887197405792157,
+          0.0003083934496203805,
+          0.000548769427276458,
+          0.0005310270837666012,
+          0.001253039440010792
+        ]
+      ],
+      "test_best_exposures_diagnostic": [
+        0.5,
+        0.5
+      ],
+      "best_fixed_dev_exposure": 0.5,
+      "fixed_test_mse": 0.00020973478880616746,
+      "rule_threshold_from_dev": 0.32,
+      "rule_actions_from_dev": [
+        4.0,
+        0.5
+      ],
+      "rule_test_mse": 0.00018991993453272465,
+      "rule_relative_mse_reduction_vs_fixed": 0.09447576334966201,
+      "test_family_conditioned_diagnostic_mse": 0.0002097347888061675,
+      "test_hindsight_min_realized_loss_mse": 4.168852157115497e-05
+    },
+    {
+      "seed": 73,
+      "mean_mse_by_family_and_exposure": [
+        [
+          0.0006539747444483996,
+          0.0002938528553524747,
+          0.00013028485828224976,
+          0.00013967312606497502,
+          0.0001582064176155636,
+          0.00013786529245270028,
+          0.000948671469124339
+        ],
+        [
+          0.0013466437464880819,
+          0.0006245621766842222,
+          0.0002890092678523661,
+          0.0003064690135154867,
+          0.0005494166011428436,
+          0.0005306199529248169,
+          0.0012567018912047036
+        ]
+      ],
+      "test_best_exposures_diagnostic": [
+        0.5,
+        0.5
+      ],
+      "best_fixed_dev_exposure": 0.5,
+      "fixed_test_mse": 0.00020964706306730792,
+      "rule_threshold_from_dev": 0.32,
+      "rule_actions_from_dev": [
+        4.0,
+        0.5
+      ],
+      "rule_test_mse": 0.00019018968827666378,
+      "rule_relative_mse_reduction_vs_fixed": 0.09281014723491399,
+      "test_family_conditioned_diagnostic_mse": 0.00020964706306730792,
+      "test_hindsight_min_realized_loss_mse": 4.1673694507920567e-05
+    }
+  ],
+  "scope": "Shared equal-bin bidirectional local estimators fit on mixed populations; one per action. Test rule uses only three .25-exposure noisy previews and a known linear prior, no family ID. Targets/latents used only for fitting and evaluation. No real-camera/neural validation.",
+  "hindsight_note": "Minimum over realized test losses uses unavailable future measurements/noise; it is not a latent or causal oracle and is excluded from claims.",
+  "not_tested": "Generalization to unknown nonlinear priors/full images/strong neural backends; scene-wise confidence intervals; adaptive risk predictor."
+}

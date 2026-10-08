@@ -1,0 +1,13 @@
+{
+  "agent_id": "/root/discovery_novelty",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "backend": "collaboration",
+  "fork_turns": "none",
+  "verdict": "PROCEED WITH CAUTION",
+  "novelty_score": 5,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "executor_model": "codex-gpt-6",
+  "response_scope": "before shared-backend follow-up"
+}

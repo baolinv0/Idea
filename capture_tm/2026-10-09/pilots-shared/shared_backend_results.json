@@ -1,0 +1,132 @@
+{
+  "status": "completed_cpu_followup",
+  "elapsed_seconds": 7.489586700219661,
+  "exposures": [
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "replicates": [
+    {
+      "seed": 19,
+      "mean_mse_by_family_and_exposure": [
+        [
+          0.0011035742050596608,
+          0.0004743810877076734,
+          0.00019243556229340907,
+          0.00018470462351383998,
+          0.00017594306229873425,
+          0.00014196193019662352,
+          0.0009497299970110458
+        ],
+        [
+          0.0034247074532019286,
+          0.001243795051714832,
+          0.000542394095637962,
+          0.00037042344665638184,
+          0.0005641171920227023,
+          0.0005328829223779126,
+          0.0012566462720780315
+        ]
+      ],
+      "test_best_exposures_diagnostic": [
+        4.0,
+        1.0
+      ],
+      "best_fixed_dev_exposure": 1.0,
+      "fixed_test_mse": 0.0002775640350851109,
+      "rule_threshold_from_dev": 0.32,
+      "rule_actions_from_dev": [
+        4.0,
+        1.0
+      ],
+      "rule_test_mse": 0.00023619558429585893,
+      "rule_relative_mse_reduction_vs_fixed": 0.14904110605167908,
+      "test_family_conditioned_diagnostic_mse": 0.0002561926884265027,
+      "test_hindsight_min_realized_loss_mse": 6.328160809531033e-05
+    },
+    {
+      "seed": 37,
+      "mean_mse_by_family_and_exposure": [
+        [
+          0.0011139014238521704,
+          0.00047510560858880384,
+          0.00019320142865599118,
+          0.00018632209563466118,
+          0.00017626064525544724,
+          0.00014274668003015325,
+          0.000946858250172953
+        ],
+        [
+          0.003422481787937645,
+          0.0012565560849538276,
+          0.0005438584094901651,
+          0.00037058793050132407,
+          0.0005648882665258706,
+          0.0005350493579785786,
+          0.0012536822144927707
+        ]
+      ],
+      "test_best_exposures_diagnostic": [
+        4.0,
+        1.0
+      ],
+      "best_fixed_dev_exposure": 1.0,
+      "fixed_test_mse": 0.00027845501306799264,
+      "rule_threshold_from_dev": 0.30000000000000004,
+      "rule_actions_from_dev": [
+        4.0,
+        1.0
+      ],
+      "rule_test_mse": 0.00023700700565328447,
+      "rule_relative_mse_reduction_vs_fixed": 0.1488499235766586,
+      "test_family_conditioned_diagnostic_mse": 0.00025666730526573866,
+      "test_hindsight_min_realized_loss_mse": 6.370843434197266e-05
+    },
+    {
+      "seed": 73,
+      "mean_mse_by_family_and_exposure": [
+        [
+          0.0011041173671766042,
+          0.0004711396225997968,
+          0.00019441736693120429,
+          0.00018352304463123764,
+          0.00017611355995988216,
+          0.0001422233879358505,
+          0.000949363116914662
+        ],
+        [
+          0.003424003728589092,
+          0.001246098873584786,
+          0.0005514152904851947,
+          0.0003682097306965791,
+          0.0005657160122273684,
+          0.0005345612176150621,
+          0.0012572570880224913
+        ]
+      ],
+      "test_best_exposures_diagnostic": [
+        4.0,
+        1.0
+      ],
+      "best_fixed_dev_exposure": 1.0,
+      "fixed_test_mse": 0.0002758663876639084,
+      "rule_threshold_from_dev": 0.32,
+      "rule_actions_from_dev": [
+        4.0,
+        1.0
+      ],
+      "rule_test_mse": 0.00023599591355378684,
+      "rule_relative_mse_reduction_vs_fixed": 0.1445282060194164,
+      "test_family_conditioned_diagnostic_mse": 0.00025521655931621477,
+      "test_hindsight_min_realized_loss_mse": 6.377682604970654e-05
+    }
+  ],
+  "scope": "Shared equal-bin bidirectional local estimators fit on mixed populations; one per action. Test rule uses only three .25-exposure noisy previews and a known linear prior, no family ID. Targets/latents used only for fitting and evaluation. No real-camera/neural validation.",
+  "not_tested": "Generalization to unknown nonlinear priors/full images/strong neural backends; scene-wise confidence intervals; adaptive risk predictor.",
+  "hindsight_note": "Minimum over realized test losses uses unavailable future measurements/noise; it is not a latent or causal oracle and is excluded from claims."
+}

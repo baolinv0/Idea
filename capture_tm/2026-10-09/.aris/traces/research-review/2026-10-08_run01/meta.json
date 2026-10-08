@@ -1,0 +1,14 @@
+{
+  "agent_id": "/root/discovery_critical",
+  "model": "gpt-6-astra",
+  "effort": "ultra",
+  "backend": "collaboration",
+  "fork_turns": "none",
+  "rounds": 2,
+  "verdict": "PROCEED",
+  "refinement_verdict": "REVISE",
+  "maturity_score": 4,
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "executor_model": "codex-gpt-6"
+}

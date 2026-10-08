@@ -1,0 +1,87 @@
+{
+  "run_id": "capturetm-20261008-run01",
+  "executor_model": "codex-gpt-6",
+  "executor_family": "openai",
+  "policy": {
+    "provisional_advances": false
+  },
+  "created": "2026-10-08T15:27:00Z",
+  "updated": "2026-10-08T16:02:21Z",
+  "gates": {
+    "idea-discovery-evidence": {
+      "verdict": "BLOCKED",
+      "reasons": [
+        "novelty-check review provenance invalid (provisional review cannot advance this run)",
+        "research-review review provenance invalid (provisional review cannot advance this run)"
+      ],
+      "updated": "2026-10-08T16:02:21Z"
+    }
+  },
+  "phases": [
+    {
+      "phase": "research-lit",
+      "status": "done",
+      "artifact": "idea-stage/IDEA_REPORT.md#literature-landscape",
+      "verdict_id": null,
+      "reviewer": null,
+      "reviewer_family": null,
+      "review_independence": null,
+      "acceptance_status": null,
+      "executor_model": "codex-gpt-6",
+      "executor_family": "openai",
+      "updated": "2026-10-08T15:43:40Z"
+    },
+    {
+      "phase": "idea-creator",
+      "status": "done",
+      "artifact": "idea-stage/IDEA_REPORT.md#ranked-ideas",
+      "verdict_id": null,
+      "reviewer": null,
+      "reviewer_family": null,
+      "review_independence": null,
+      "acceptance_status": null,
+      "executor_model": "codex-gpt-6",
+      "executor_family": "openai",
+      "updated": "2026-10-08T15:43:50Z"
+    },
+    {
+      "phase": "novelty-check",
+      "status": "provisional",
+      "artifact": "idea-stage/IDEA_REPORT.md#novelty-verification",
+      "verdict_id": ".aris/traces/novelty-check/2026-10-08_run01/response.md",
+      "reviewer": "gpt-6-astra",
+      "reviewer_family": "openai",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional",
+      "executor_model": "codex-gpt-6",
+      "executor_family": "openai",
+      "updated": "2026-10-08T15:53:36Z"
+    },
+    {
+      "phase": "research-review",
+      "status": "provisional",
+      "artifact": "idea-stage/IDEA_REPORT.md#external-critical-review",
+      "verdict_id": ".aris/traces/research-review/2026-10-08_run01/response-round2.md",
+      "reviewer": "gpt-6-astra",
+      "reviewer_family": "openai",
+      "review_independence": "same-family",
+      "acceptance_status": "provisional",
+      "executor_model": "codex-gpt-6",
+      "executor_family": "openai",
+      "updated": "2026-10-08T16:02:03Z"
+    },
+    {
+      "phase": "research-refine-pipeline",
+      "status": "done",
+      "artifact": "refine-logs/FINAL_PROPOSAL.md",
+      "verdict_id": null,
+      "reviewer": null,
+      "reviewer_family": null,
+      "review_independence": null,
+      "acceptance_status": null,
+      "executor_model": "codex-gpt-6",
+      "executor_family": "openai",
+      "updated": "2026-10-08T16:02:13Z"
+    }
+  ]
+}
