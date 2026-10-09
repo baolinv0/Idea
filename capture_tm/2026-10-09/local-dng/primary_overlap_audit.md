@@ -51,4 +51,3 @@ The implemented inverse uses a uniform chromaticity prior; higher-order scene pr
 The full A+B+C combination was not established by these three method/experiment sections. Several components already are: preview-driven exposure optimization, generic backend cross-tests, optimal noisy capture/merging, probabilistic inversion, and reconstruction-dependent acceptable exposure pairs. A different combination of controls is not automatically a novel scientific contribution.
 
 CaptureTM's stricter frozen crossover can improve diagnostic attribution. Its controlled dependence test needs a substantive surviving finding, not merely an unreported protocol combination. The completed H-aware experiment's negative result about the residual rule should remain visible when requesting novelty and critical review. This primary-source check cannot create the missing cross-family acceptance receipts.
-

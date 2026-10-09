@@ -226,4 +226,3 @@ The H-aware experiment and its complete three-seed arithmetic audit are now fini
 The deterministic idea-discovery Evidence Gate still has the two documented cross-family reviewer-receipt gaps. These completed numerical results should be supplied to the actual novelty and critical reviewers; they do not themselves create those receipts or make the workflow PASS. A reviewer may recommend proceeding with a narrower diagnostic/negative contribution, or abandoning/pivoting. Record the actual verdict rather than treating completion of the experiment as acceptance.
 
 No unresolved implementation defect was found. This completed result audit is same-family provisional review, not cross-family acceptance.
-
