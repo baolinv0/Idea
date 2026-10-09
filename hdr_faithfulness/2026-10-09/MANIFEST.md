@@ -56,3 +56,11 @@
 | [refine-logs/FINAL_PROPOSAL.20261008-231637.md](refine-logs/FINAL_PROPOSAL.20261008-231637.md) | historical_version | outputs/refine-logs/FINAL_PROPOSAL.20261008-231637.md |
 | [refine-logs/FINAL_PROPOSAL.md](refine-logs/FINAL_PROPOSAL.md) | source_material | outputs/refine-logs/FINAL_PROPOSAL.md |
 | MANIFEST.md | archive_index | 本文件 |
+
+## 补充归档：vivo 照片SDR已验证结论
+
+以下为2026-10-09新增的独立项目结论，不计入上表原HDR研究资料或其经验实验。完整实验数据保留在来源仓库，不复制数据快照。
+
+| 文件 | 类别 | 来源 |
+|---|---|---|
+| [VIVO_AESTHETIC_VERIFIED_CONCLUSIONS.md](VIVO_AESTHETIC_VERIFIED_CONCLUSIONS.md) | verified_conclusions / archive_adjusted_text | baolinv0/vivo-aesthetic-tone-color@a3ff28668eb136508b31f56606a5f20c71a3dbe1 / docs/aesthetic_v2/VERIFIED_CONCLUSIONS.md；仅调整归档说明与链接 |
