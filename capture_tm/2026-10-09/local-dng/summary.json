@@ -1,0 +1,653 @@
+{
+  "N0_N1": [
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "fixed_risk": 0.00019796909083645206,
+      "residual_relative_gain": 0.0738062980860813,
+      "brightness_relative_gain": 0.058718974983919314,
+      "residual_minus_brightness": {
+        "mean_difference": -2.98682363769083e-06,
+        "paired_independent_source_percentile_ci95": [
+          -6.625732167875347e-06,
+          6.638592114649735e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+      },
+      "nodes256_vs512_max_action_risk_difference": 5.569409940064634e-19
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "fixed_risk": 0.00027336859324450177,
+      "residual_relative_gain": 0.14881551239066915,
+      "brightness_relative_gain": 0.04862160730623477,
+      "residual_minus_brightness": {
+        "mean_difference": -2.738986688460498e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.0412930079358375e-05,
+          -2.4353143686339078e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+      },
+      "nodes256_vs512_max_action_risk_difference": 8.961964269613895e-19
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "fixed_risk": 0.000205478292837399,
+      "residual_relative_gain": 0.07619306251376523,
+      "brightness_relative_gain": 0.06254176605477668,
+      "residual_minus_brightness": {
+        "mean_difference": -2.805045091410212e-06,
+        "paired_independent_source_percentile_ci95": [
+          -6.340513993362797e-06,
+          1.0149474373244566e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+      },
+      "nodes256_vs512_max_action_risk_difference": 5.481643201327659e-20
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "fixed_risk": 0.000274432462991561,
+      "residual_relative_gain": 0.15597578471990048,
+      "brightness_relative_gain": 0.04892567544871784,
+      "residual_minus_brightness": {
+        "mean_difference": -2.9378025150806414e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.261697742096948e-05,
+          -2.6155783077413524e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+      },
+      "nodes256_vs512_max_action_risk_difference": 9.136003070495052e-19
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "fixed_risk": 0.00020433080142896268,
+      "residual_relative_gain": 0.08431016690020521,
+      "brightness_relative_gain": 0.06688915095829717,
+      "residual_minus_brightness": {
+        "mean_difference": -3.559650149116852e-06,
+        "paired_independent_source_percentile_ci95": [
+          -7.821739466711862e-06,
+          8.435052003642863e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+      },
+      "nodes256_vs512_max_action_risk_difference": 1.6432038834241648e-19
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "fixed_risk": 0.00027378806463538457,
+      "residual_relative_gain": 0.16514584578302105,
+      "brightness_relative_gain": 0.04971322559209712,
+      "residual_minus_brightness": {
+        "mean_difference": -3.160407367786442e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.55585680053829e-05,
+          -2.7686185010693433e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+      },
+      "nodes256_vs512_max_action_risk_difference": 8.85240833338431e-19
+    }
+  ],
+  "DNG": [
+    {
+      "camera": "iphone",
+      "backend": "inverse",
+      "fixed_exposures": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "fixed_risk_range": [
+        0.0012475060419593013,
+        0.0012506966492247975
+      ],
+      "policy_gain_ranges": {
+        "mean_brightness": [
+          -1.0630470921002746,
+          -1.0592235060206434
+        ],
+        "q99_brightness": [
+          0.10384991777869823,
+          0.10436003617750422
+        ],
+        "temporal_noise": [
+          -0.2979563611082554,
+          -0.2962121978934722
+        ],
+        "local_gradient": [
+          -2.147881705977047,
+          -2.140192236066661
+        ]
+      },
+      "policy_ci_by_seed": {
+        "mean_brightness": [
+          [
+            0.0005048418884032211,
+            0.002169539819477707
+          ],
+          [
+            0.0005045545417477576,
+            0.002170178293637163
+          ],
+          [
+            0.0005038666015382048,
+            0.002171597259439511
+          ]
+        ],
+        "q99_brightness": [
+          [
+            -0.00039006858507924496,
+            0.0
+          ],
+          [
+            -0.00038965423256426577,
+            0.0
+          ],
+          [
+            -0.0003906447077001638,
+            0.0
+          ]
+        ],
+        "temporal_noise": [
+          [
+            -0.00018871584482990774,
+            0.001303822926998175
+          ],
+          [
+            -0.00018815422380092753,
+            0.0012995690338955617
+          ],
+          [
+            -0.00018943217951118596,
+            0.001303777003395768
+          ]
+        ],
+        "local_gradient": [
+          [
+            0.0005048418884032211,
+            0.006229821401459258
+          ],
+          [
+            0.0005045545417477576,
+            0.00622607019939318
+          ],
+          [
+            0.0005038666015382048,
+            0.006230520505040131
+          ]
+        ]
+      }
+    },
+    {
+      "camera": "iphone",
+      "backend": "point_posterior",
+      "fixed_exposures": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "fixed_risk_range": [
+        0.0004624440614574754,
+        0.0004638091144138871
+      ],
+      "policy_gain_ranges": {
+        "mean_brightness": [
+          0.1832150438517134,
+          0.1842152485969848
+        ],
+        "q99_brightness": [
+          0.1302769407358806,
+          0.1315317855717577
+        ],
+        "temporal_noise": [
+          0.25446894430648503,
+          0.2550831650293717
+        ],
+        "local_gradient": [
+          -0.4436095765751922,
+          -0.43829574644995484
+        ]
+      },
+      "policy_ci_by_seed": {
+        "mean_brightness": [
+          [
+            -0.0001550206244248169,
+            2.200240248125538e-05
+          ],
+          [
+            -0.00015814694574731132,
+            2.177249057773877e-05
+          ],
+          [
+            -0.00015701203588689523,
+            2.1314411274470422e-05
+          ]
+        ],
+        "q99_brightness": [
+          [
+            -0.00018247827939167218,
+            0.0
+          ],
+          [
+            -0.0001812708975337776,
+            0.0
+          ],
+          [
+            -0.00018203164955498533,
+            0.0
+          ]
+        ],
+        "temporal_noise": [
+          [
+            -0.00019801233193484434,
+            0.0
+          ],
+          [
+            -0.00019626337354482348,
+            0.0
+          ],
+          [
+            -0.00019755537443816727,
+            0.0
+          ]
+        ],
+        "local_gradient": [
+          [
+            -0.0001550206244248169,
+            0.0008916163723565306
+          ],
+          [
+            -0.00015814694574731132,
+            0.0008874716023682879
+          ],
+          [
+            -0.00015701203588689523,
+            0.0008914551361309213
+          ]
+        ]
+      }
+    },
+    {
+      "camera": "iphone",
+      "backend": "local_wiener",
+      "fixed_exposures": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "fixed_risk_range": [
+        0.0006483638786320549,
+        0.0006500825517408549
+      ],
+      "policy_gain_ranges": {
+        "mean_brightness": [
+          0.007161825735995553,
+          0.007830197703217356
+        ],
+        "q99_brightness": [
+          0.006460217658782796,
+          0.008894217194670873
+        ],
+        "temporal_noise": [
+          -0.9480413229532536,
+          -0.2713857513707203
+        ],
+        "local_gradient": [
+          -0.8119119688155929,
+          -0.2490192794518904
+        ]
+      },
+      "policy_ci_by_seed": {
+        "mean_brightness": [
+          [
+            -1.3930407336830694e-05,
+            0.0
+          ],
+          [
+            -1.5266705456509157e-05,
+            0.0
+          ],
+          [
+            -1.4630747851299854e-05,
+            0.0
+          ]
+        ],
+        "q99_brightness": [
+          [
+            -1.256571533416702e-05,
+            0.0
+          ],
+          [
+            -1.7341247223102106e-05,
+            0.0
+          ],
+          [
+            -1.3075878627770638e-05,
+            0.0
+          ]
+        ],
+        "temporal_noise": [
+          [
+            0.0,
+            0.0015931735869640286
+          ],
+          [
+            0.0,
+            0.0005007849690403364
+          ],
+          [
+            0.0,
+            0.0015905066436356214
+          ]
+        ],
+        "local_gradient": [
+          [
+            -1.3930407336830694e-05,
+            0.0015931735869640286
+          ],
+          [
+            -1.5266705456509157e-05,
+            0.0005007849690403364
+          ],
+          [
+            -1.4630747851299854e-05,
+            0.0015905066436356214
+          ]
+        ]
+      }
+    },
+    {
+      "camera": "s25",
+      "backend": "inverse",
+      "fixed_exposures": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "fixed_risk_range": [
+        0.0015187965024704056,
+        0.0015197669213634253
+      ],
+      "policy_gain_ranges": {
+        "mean_brightness": [
+          0.6444239695586319,
+          0.6455402291319673
+        ],
+        "q99_brightness": [
+          0.6723284951916182,
+          0.67341763827724
+        ],
+        "temporal_noise": [
+          0.6444239695586319,
+          0.6455402291319673
+        ],
+        "local_gradient": [
+          0.09484394945251506,
+          0.09613542160774213
+        ]
+      },
+      "policy_ci_by_seed": {
+        "mean_brightness": [
+          [
+            -0.002090554598686509,
+            0.0
+          ],
+          [
+            -0.002087225621813775,
+            0.0
+          ],
+          [
+            -0.0020878793173070838,
+            0.0
+          ]
+        ],
+        "q99_brightness": [
+          [
+            -0.002090554598686509,
+            -0.0002246636056863506
+          ],
+          [
+            -0.002087225621813775,
+            -0.0002267927948199033
+          ],
+          [
+            -0.0020878793173070838,
+            -0.00022822376456118647
+          ]
+        ],
+        "temporal_noise": [
+          [
+            -0.002090554598686509,
+            0.0
+          ],
+          [
+            -0.002087225621813775,
+            0.0
+          ],
+          [
+            -0.0020878793173070838,
+            0.0
+          ]
+        ],
+        "local_gradient": [
+          [
+            -0.0006715327083632981,
+            0.00016498027950977154
+          ],
+          [
+            -0.0006673086033092511,
+            0.00016599831324981543
+          ],
+          [
+            -0.0006685862240803792,
+            0.00016535140094779558
+          ]
+        ]
+      }
+    },
+    {
+      "camera": "s25",
+      "backend": "point_posterior",
+      "fixed_exposures": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "fixed_risk_range": [
+        0.00039106035795467603,
+        0.0003912925780368423
+      ],
+      "policy_gain_ranges": {
+        "mean_brightness": [
+          0.07999492909907646,
+          0.08279123760347251
+        ],
+        "q99_brightness": [
+          -0.1868364328240475,
+          0.06460776338396845
+        ],
+        "temporal_noise": [
+          0.07999492909907646,
+          0.08279123760347251
+        ],
+        "local_gradient": [
+          -0.4597610993700312,
+          -0.4564258989811516
+        ]
+      },
+      "policy_ci_by_seed": {
+        "mean_brightness": [
+          [
+            -0.00013275785342680834,
+            3.562874038863477e-05
+          ],
+          [
+            -0.00012904750610014175,
+            3.506148907389456e-05
+          ],
+          [
+            -0.0001303646731698391,
+            3.649667730813002e-05
+          ]
+        ],
+        "q99_brightness": [
+          [
+            -0.00013275785342680834,
+            0.00021849408676279973
+          ],
+          [
+            -0.00012904750610014175,
+            0.00021947598812706596
+          ],
+          [
+            -0.0001303646731698391,
+            3.649667730813002e-05
+          ]
+        ],
+        "temporal_noise": [
+          [
+            -0.00013275785342680834,
+            3.562874038863477e-05
+          ],
+          [
+            -0.00012904750610014175,
+            3.506148907389456e-05
+          ],
+          [
+            -0.0001303646731698391,
+            3.649667730813002e-05
+          ]
+        ],
+        "local_gradient": [
+          [
+            7.073413945402738e-05,
+            0.00029732990487266967
+          ],
+          [
+            7.095790028586245e-05,
+            0.00030047212856097483
+          ],
+          [
+            7.109100539097844e-05,
+            0.00029880372247911656
+          ]
+        ]
+      }
+    },
+    {
+      "camera": "s25",
+      "backend": "local_wiener",
+      "fixed_exposures": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "fixed_risk_range": [
+        0.0015187965024704056,
+        0.0015197669213634253
+      ],
+      "policy_gain_ranges": {
+        "mean_brightness": [
+          0.6424942132123057,
+          0.6432565710644773
+        ],
+        "q99_brightness": [
+          0.629755657347347,
+          0.6300957202034949
+        ],
+        "temporal_noise": [
+          0.6426289151421666,
+          0.6798976071540687
+        ],
+        "local_gradient": [
+          0.08677794517431159,
+          0.08730695042494707
+        ]
+      },
+      "policy_ci_by_seed": {
+        "mean_brightness": [
+          [
+            -0.002111197484311767,
+            0.0
+          ],
+          [
+            -0.0021083235225184496,
+            0.0
+          ],
+          [
+            -0.0021092817052946688,
+            0.0
+          ]
+        ],
+        "q99_brightness": [
+          [
+            -0.002111197484311767,
+            -0.00011298409694023145
+          ],
+          [
+            -0.0021083235225184496,
+            -0.00011385761685428102
+          ],
+          [
+            -0.0021092817052946688,
+            -0.00011501185383721935
+          ]
+        ],
+        "temporal_noise": [
+          [
+            -0.002111197484311767,
+            -0.00016696950085064716
+          ],
+          [
+            -0.0021083235225184496,
+            -0.00016670121495328908
+          ],
+          [
+            -0.0021092817052946688,
+            0.0
+          ]
+        ],
+        "local_gradient": [
+          [
+            -0.0005633465173242143,
+            0.00010248168286394238
+          ],
+          [
+            -0.0005637675639944645,
+            0.00010295327908738218
+          ],
+          [
+            -0.0005606427234462578,
+            0.0001029965742464983
+          ]
+        ]
+      }
+    }
+  ],
+  "DNG_quadrature_max_abs_risk_difference": 6.635846751812825e-06,
+  "DNG_code_commit": "09052a605b8251c539a6dda3268f2b1f183a95c8",
+  "cross_matrix_note": "Frozen source backend policies replayed against same future capture costs; limited renderer classes, one-session diagnostic",
+  "cross_family_review": "not available; existing reviews provisional",
+  "full_H_reference": "pending; current posterior does not assimilate preview history"
+}

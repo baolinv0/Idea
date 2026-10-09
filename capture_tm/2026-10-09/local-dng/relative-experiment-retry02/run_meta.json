@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETED_RELATIVE_DIAGNOSTIC",
+  "code_commit": "09052a605b8251c539a6dda3268f2b1f183a95c8",
+  "exit_code": 0,
+  "cpu_wall_seconds": 161.52046620007604,
+  "gpu_seconds": 0,
+  "source_files": 68,
+  "groups": {
+    "train": 6,
+    "development": 2,
+    "diagnostic": 3
+  },
+  "seeds": [
+    19,
+    37,
+    73
+  ],
+  "future_repeats": 4,
+  "expert_gt_used": false,
+  "physical_recapture": false,
+  "source_images_uploaded": false,
+  "failures": [
+    {
+      "attempt": "relative-experiment",
+      "commit": "b3d892a",
+      "exit_code": 1,
+      "reason": "all-code posterior top-code likelihood underflow",
+      "fix": "34b98c4 log-domain original-kernel sum"
+    },
+    {
+      "attempt": "relative-experiment-retry01",
+      "commit": "34b98c4",
+      "exit_code": 0,
+      "qualification": "independent audit found positive subnormal numerator defect in astronomically rare unobserved cells",
+      "fix": "5bc80cf threshold1e-250 and positive-subnormal regression"
+    },
+    {
+      "attempt": "relative-experiment-retry02",
+      "commit": "09052a6",
+      "exit_code": 0,
+      "qualification": "current authoritative DNG diagnostic"
+    }
+  ],
+  "unresolved": [
+    "H-aware/full image backend not tested",
+    "DNG quadrature2vs4 action mean risk difference6.636e-6; refine4vs8 before stronger numerical claim",
+    "one-session diagnostic, three evaluation groups",
+    "mandatory cross-family reviews unavailable"
+  ]
+}

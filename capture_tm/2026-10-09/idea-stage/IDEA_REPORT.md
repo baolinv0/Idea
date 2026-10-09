@@ -5,6 +5,8 @@
 
 最值得开展一次最小决定实验的问题是：**当曝光差异已获得充分、公平的后端补偿时，哪些可观测的空间关系仍会改变最优物理曝光？** 主线由“可补偿范围”定义，空间关系反例提供机制证据，独立后端交叉评测排除搭档适配。三者构成一个问题，不能算三项独立创新。
 
+最新补充（2026-10-09）：N0连续参考、反向依赖N1以及68份DNG相对诊断已执行。当前参考后端仍未融合三张历史预览；H-aware决定检验正在实现。投稿贡献和跨系列验收仍未完成。见[本地诊断完整正负结论](../local-dng/CONCLUSIONS.md)。
+
 ## Literature Landscape
 
 本轮在既有查新基础上扩展了后期编辑、空间可恢复性与后端分布匹配检索。来源包括一手 arXiv/CVF、作者官方项目、alphaXiv 发现与网页检索。Gemini CLI 实际调用失败：缺 GEMINI_API_KEY；没有把它的输出当审阅证据。不是所有会议/年份的穷尽检索。
@@ -104,6 +106,16 @@ reviewer 指出：细容差集合受 LUT 分箱影响；分族后端相当于获
 当前允许的结论仅是：**在指定静态双像素混合分布和有限共享后端中，已知空间关系的简单因果规则能改善固定目标误差**。没有强后端普遍增益或复杂策略必要性证据。
 末轮精炼核验256×256原始数据后给出 **REVISE / PROCEED**，成熟度仍4/10、新颖度暂评2–3/10（非查新重评分）。保留题目“固定目标下曝光选择收益：后端补偿与空间可预测性”；下一步只做连续参考后端与空间依赖留出，暂不新增网络/GPU。完整首轮响应及真实身份位于[trace](../.aris/traces/research-review/2026-10-08_run01/response.md)。
 
+## Local Diagnostic Update 2026-10-09
+
+- 完整审计：34对、68个唯一处理过的Linear RAW，11个保守背景组，6/2/3组用于train/development/diagnostic；同一会话，不称独立真实场景大样本。
+- 连续参考：3seed、8192源×16次未来重复、64–512积分节点；已知关系规则相对固定曝光下降7.38%–8.43%，反向依赖留出下降14.88%–16.51%。256/512节点动作平均风险差<1e-18。
+- 直接关系规则减亮度规则的配对CI在N0三个seed均跨零；不能据各自对固定曝光显著，就宣布关系特征独立必要。N1直接CI不跨零，但仍属于训练prior失配的双像素模型。
+- 独立代码审计确认后端信息缺口：当前后验只用未来捕获与已知曝光，没有使用三张H或动作选择事件。这是共同受限后端比较，不是充分后端/Bayes下界。
+- DNG真实内容相对诊断已跑通3seed、三个有限后端、四个预设规则；规则收益随后端改变，有明显阴性/反转；三个诊断组的区间只作描述。没有神经训练、原生Bayer、专家GT或真实多曝光重拍证据。
+- 当前代码已上传工程分支；原始JSON、逐源成本、冻结后端交叉矩阵、失败修复与复现环境见[local-dng](../local-dng/README.md)。原实验target/actions/formalS24test保持原状。
+- H-aware检验正在独立worktree实现。DNG积分2/4节点每prior bin最大风险差6.636e-6，后续4/8 refinement用于确认更严格数值口径。
+
 ## Refined Proposal
 
 选定的 Problem Anchor：固定目标、因果三预览、相同合法动作与预算，研究充分后端补偿后仍然可识别的曝光选择价值。主张与正式验证条件将落入 FINAL_PROPOSAL 和研究契约。
@@ -127,9 +139,9 @@ reviewer 指出：细容差集合受 LUT 分箱影响；分族后端相当于获
 
 ## Final Recommendation and Acceptance
 
-研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。下一步优先两个CPU检验，见proposal与plan；正式训练在此之后。
+研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。N0/N1受限版本已执行；当前下一步是H-aware后验与冻结后端交叉验证，见最新诊断结论；正式神经训练仍按决定检验结果安排。
 
-技能[idea-discovery](../ARCHIVE_NOTES.md#review-status)要求最终确定性证据门，并明确“do not present the workflow as complete”；[运行时规则](../ARCHIVE_NOTES.md#review-status)写明“Same-family review is provisional, not cross-family evidence.” 本轮配置的两次审阅实际均为OpenAI gpt-6-astra，与执行者同family；没有虚构其他模型接受。实际证据门结果见下方及.aris/runs状态。当前可审阅的研究产物已经备齐，验收仍为暂定。
+技能[idea-discovery](C:/Users/Lenovo/.agents/skills/idea-discovery/SKILL.md)要求最终确定性证据门，并明确“do not present the workflow as complete”；[运行时规则](C:/Users/Lenovo/.agents/skills/shared-references/codex-runtime.md)写明“Same-family review is provisional, not cross-family evidence.” 本轮配置的两次审阅实际均为OpenAI gpt-6-astra，与执行者同family；没有虚构其他模型接受。实际证据门结果见下方及.aris/runs状态。当前可审阅的研究产物已经备齐，验收仍为暂定。
 
 <!-- ARIS_IDEA_DISCOVERY_EVIDENCE_GATE:START -->
 ## Evidence Gate

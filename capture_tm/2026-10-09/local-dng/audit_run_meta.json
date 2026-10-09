@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "code_commit": "ea0ae22",
+  "wall_seconds": 79.33745680004358,
+  "failed_attempt": {
+    "exit_code": 1,
+    "reason": "DNGVersion binary TIFF tag not JSON serializable",
+    "resolution": "ea0ae22"
+  },
+  "raw_data_untouched": true,
+  "images_uploaded": false
+}

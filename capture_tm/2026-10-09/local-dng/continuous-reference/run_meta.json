@@ -1,0 +1,29 @@
+{
+  "protocol": "N0_N1_PROTOCOL.md",
+  "code_commit": "5c72145",
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "cpu_wall_seconds": 151.8329894002527,
+  "gpu_seconds": 0,
+  "configuration": {
+    "seeds": [
+      19,
+      37,
+      73
+    ],
+    "train_sources": 2048,
+    "development_sources": 4096,
+    "diagnostic_sources_each": 8192,
+    "future_repeats": 16,
+    "nodes": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "selection_nodes": 512,
+    "bootstraps": 2000
+  },
+  "claim_scope": "common H-blind fixed renderer with known train prior; not sufficient/full-history image backend",
+  "next_discriminating_test": "H-aware posterior and frozen backend cross matrix"
+}

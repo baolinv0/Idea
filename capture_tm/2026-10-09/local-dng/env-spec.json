@@ -1,0 +1,33 @@
+{
+  "provider": "local-cpu",
+  "python": "3.12.14",
+  "cpus": 4,
+  "gpus": 0,
+  "pip_phases": [
+    [
+      "numpy==2.3.5"
+    ],
+    [
+      "scipy==1.18.1",
+      "rawpy==0.27.1",
+      "tifffile==2026.9.20",
+      "imagecodecs==2026.8.16",
+      "pytest==9.1.1"
+    ]
+  ],
+  "env": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4"
+  },
+  "smoke": {
+    "entry": "research/ae_tm/diagnostics/environment_witness.py",
+    "poisson_mean": 100,
+    "poisson_count": 32,
+    "seed": 19,
+    "expected_poisson_sum": 3146,
+    "expected_integral_x2": 0.3333333333333333
+  },
+  "rebuild": "isolated venv; ordered pip phases; fresh documented-invocation witness required",
+  "data": "user path provided only at CLI, never encoded in public environment spec"
+}

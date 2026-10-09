@@ -1,0 +1,3146 @@
+{
+  "status": "completed_simulated_diagnostic",
+  "scope": "independent N0/N1 two-pixel simulation; not S24, real camera or original CaptureTM evaluation",
+  "protocol": "research/ae_tm/diagnostics/N0_N1_PROTOCOL.md; FROZEN 2026-10-09",
+  "exposures": [
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "physical_chain": {
+    "full_well_electrons": 1000.0,
+    "read_sd_electrons": 4.0,
+    "adc_max_code": 4095,
+    "target": "sqrt(l/(l+.5))",
+    "shot_noise": "Poisson; no Gaussian shot-noise approximation",
+    "metadata": "known exposure; analog and digital gain 1"
+  },
+  "config": {
+    "seeds": [
+      19,
+      37,
+      73
+    ],
+    "train_sources": 2048,
+    "dev_sources": 4096,
+    "sources_per_diagnostic": 8192,
+    "future_noise_repeats": 16,
+    "nodes": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "selection_nodes": 512,
+    "chunk": 256,
+    "likelihood_chunk": 64,
+    "bootstraps": 2000
+  },
+  "training_renderer_prior": {
+    "weight": 0.5,
+    "copula": "linear",
+    "shift": 0.5
+  },
+  "N0_true_dependence": {
+    "weight": 0.5,
+    "copula": "linear",
+    "shift": 0.5
+  },
+  "N1_true_dependence": {
+    "weight": 0.5,
+    "copula": "reverse",
+    "shift": 0.5
+  },
+  "N1_changes_actual_copula": true,
+  "known_prior_note": "renderer knows explicit training uniform mixture; residual policy knows b=4a+.6",
+  "policy_features": {
+    "known_linear_residual": "abs(mean(b_preview/.25)-(4*mean(a_preview/.25)+.6))",
+    "global_brightness": "mean of both exposure-compensated preview pixel means",
+    "temporal_noise": "RMS of per-pixel temporal sample SD from three compensated previews"
+  },
+  "likelihood_audit": {
+    "poisson_means": [
+      0.0,
+      1.0,
+      100.0,
+      500.0,
+      999.0,
+      1000.0,
+      1500.0,
+      14400.0
+    ],
+    "probability_sum": [
+      0.9999999999999996,
+      0.9999999999999992,
+      1.0000000000000606,
+      0.9999999999998076,
+      1.0000000000002929,
+      0.9999999999997664,
+      1.0,
+      1.0
+    ],
+    "max_normalization_abs_error": 2.928768338961163e-13,
+    "read_kernel_sigmas": 8.0,
+    "per_cell_absolute_read_tail_bound": 1.8662881722815223e-15,
+    "last_explicit_poisson_count": 1032,
+    "upper_poisson_tail": "complete scipy.stats.poisson.sf(last_count, mean)"
+  },
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1"
+  },
+  "replicates": [
+    {
+      "seed": 19,
+      "frozen_rules": {
+        "known_linear_residual": {
+          "threshold": 0.2505820105820106,
+          "left_action_index": 5,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00018381354138236064,
+          "candidate_thresholds_from_train": [
+            0.01668701668701671,
+            0.03439967439967449,
+            0.055921855921855945,
+            0.08040700040700047,
+            0.11102971102971126,
+            0.16001628001628015,
+            0.2505820105820106,
+            0.3735449735449736,
+            0.5696540496540498
+          ],
+          "actions": [
+            4.0,
+            0.5
+          ]
+        },
+        "global_brightness": {
+          "threshold": 0.582010582010582,
+          "left_action_index": 3,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00018548716076493738,
+          "candidate_thresholds_from_train": [
+            0.5147903947903948,
+            0.582010582010582,
+            0.635913715913716,
+            0.6905657305657306,
+            0.743019943019943,
+            0.7959951159951161,
+            0.8522262922262922,
+            0.9074481074481076,
+            0.9705006105006105
+          ],
+          "actions": [
+            1.0,
+            0.5
+          ]
+        },
+        "temporal_noise": {
+          "threshold": 0.024288452999206837,
+          "left_action_index": 3,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00019849977261031013,
+          "candidate_thresholds_from_train": [
+            0.024288452999206837,
+            0.030985277644048837,
+            0.037219614887021316,
+            0.04294592220644876,
+            0.048463338006005066,
+            0.05474095809035012,
+            0.06078941449843435,
+            0.06978049340699345,
+            0.0828381544545107
+          ],
+          "actions": [
+            1.0,
+            0.5
+          ]
+        }
+      },
+      "dev_expected_cost_by_action": [
+        0.0009779324578428788,
+        0.00043835206626639264,
+        0.0001995196962269074,
+        0.00021847726627107104,
+        0.0003628319980156303,
+        0.0003440800628017572,
+        0.0011130014233971237
+      ],
+      "dev_selected_fixed_action_index": 2,
+      "selection_seconds": 6.704743999987841,
+      "diagnostics_by_nodes": {
+        "64": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009563964494978661,
+              0.0004333693431513516,
+              0.00019796909083645185,
+              0.00022136088440099307,
+              0.0003531205504498042,
+              0.00033411733465027715,
+              0.0010948424295409566
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00019796909083645206,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018335772510550598,
+                "action_counts": [
+                  0,
+                  0,
+                  2305,
+                  0,
+                  0,
+                  5887,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.07380629809032635,
+                "paired_comparison": {
+                  "mean_difference": -1.4611365730946077e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.7744098174929112e-05,
+                    -1.1603951487655267e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00018634454874403742,
+                "action_counts": [
+                  0,
+                  0,
+                  6420,
+                  1772,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.05871897498391809,
+                "paired_comparison": {
+                  "mean_difference": -1.1624542092414615e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.3241786254455137e-05,
+                    -1.0047352505706163e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00019886445543700054,
+                "action_counts": [
+                  0,
+                  0,
+                  7413,
+                  779,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.004522749469452192,
+                "paired_comparison": {
+                  "mean_difference": 8.953646005484728e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -3.512810673658185e-07,
+                    2.2368703899160274e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.194695250109894e-06,
+              1.9486035544503977e-06,
+              8.813978478955785e-07,
+              5.454576313092567e-07,
+              2.5910063627383433e-07,
+              1.557227614438144e-07,
+              1.1764353745538408e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.003578844713338e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013357066137649613,
+              0.0005964339391131535,
+              0.000273368593244502,
+              0.0003421942619559937,
+              0.0007313588640843978,
+              0.0007133573427233689,
+              0.0013975484932708053
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.0002733685932445019,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.0002326871059691077,
+                "action_counts": [
+                  0,
+                  0,
+                  5434,
+                  0,
+                  0,
+                  2758,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.14881551239139057,
+                "paired_comparison": {
+                  "mean_difference": -4.0681487275394214e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.340141013513103e-05,
+                    -3.7987807642449007e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0002600769728539101,
+                "action_counts": [
+                  0,
+                  0,
+                  7055,
+                  1137,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.048621607306233994,
+                "paired_comparison": {
+                  "mean_difference": -1.3291620390591784e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4852897600407932e-05,
+                    -1.1821573176318063e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027954781611933015,
+                "action_counts": [
+                  0,
+                  0,
+                  7456,
+                  736,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.022603997048415758,
+                "paired_comparison": {
+                  "mean_difference": 6.1792228748282015e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    4.469588510236825e-06,
+                    7.982113636266708e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.3384030923545165e-06,
+              2.393084219692037e-06,
+              1.0908359546757751e-06,
+              6.418641335677161e-07,
+              2.7076900899556926e-07,
+              1.823661811247543e-07,
+              1.130987305179938e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.965327456718242e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 3.988733499776572
+        },
+        "128": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009563964494978647,
+              0.0004333693431513505,
+              0.00019796909083645214,
+              0.00022136088440099293,
+              0.00035312055044980364,
+              0.00033411733465145416,
+              0.0010948424200306122
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00019796909083645206,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018335772510634645,
+                "action_counts": [
+                  0,
+                  0,
+                  2305,
+                  0,
+                  0,
+                  5887,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.07380629808608086,
+                "paired_comparison": {
+                  "mean_difference": -1.4611365730105617e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.7744098174389318e-05,
+                    -1.1603951487438195e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00018634454874403702,
+                "action_counts": [
+                  0,
+                  0,
+                  6420,
+                  1772,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0587189749839202,
+                "paired_comparison": {
+                  "mean_difference": -1.1624542092415064e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.3241786254455588e-05,
+                    -1.0047352505706618e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.0001988644554370005,
+                "action_counts": [
+                  0,
+                  0,
+                  7413,
+                  779,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.004522749469451748,
+                "paired_comparison": {
+                  "mean_difference": 8.953646005484471e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -3.5128106736586795e-07,
+                    2.23687038991599e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.194695250109918e-06,
+              1.948603554450405e-06,
+              8.813978478955817e-07,
+              5.454576313092571e-07,
+              2.5910063627383523e-07,
+              1.557227614490051e-07,
+              1.1764351649020002e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.0035790503226556e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013357066137649595,
+              0.0005964339391131533,
+              0.0002733685932445022,
+              0.0003421942619559965,
+              0.0007313588640843973,
+              0.0007133573427248472,
+              0.001397548527417239
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027336859324450145,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.0002326871059693047,
+                "action_counts": [
+                  0,
+                  0,
+                  5434,
+                  0,
+                  0,
+                  2758,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.1488155123906686,
+                "paired_comparison": {
+                  "mean_difference": -4.068148727519676e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.3401410135289256e-05,
+                    -3.798780764203602e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00026007697285390955,
+                "action_counts": [
+                  0,
+                  0,
+                  7055,
+                  1137,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04862160730623444,
+                "paired_comparison": {
+                  "mean_difference": -1.329162039059193e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4852897600408146e-05,
+                    -1.182157317631825e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027954781611933,
+                "action_counts": [
+                  0,
+                  0,
+                  7456,
+                  736,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.022603997048416646,
+                "paired_comparison": {
+                  "mean_difference": 6.179222874828473e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    4.4695885102370815e-06,
+                    7.982113636266942e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.3384030923545335e-06,
+              2.393084219692047e-06,
+              1.0908359546757775e-06,
+              6.418641335677178e-07,
+              2.7076900899557106e-07,
+              1.8236618112309011e-07,
+              1.1309868669466532e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.9653274554468e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 4.228217100258917
+        },
+        "256": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009563964494978662,
+              0.0004333693431513507,
+              0.0001979690908364522,
+              0.00022136088440099307,
+              0.00035312055044980364,
+              0.0003341173346514541,
+              0.0010948424200306118
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00019796909083645206,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018335772510634618,
+                "action_counts": [
+                  0,
+                  0,
+                  2305,
+                  0,
+                  0,
+                  5887,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0738062980860823,
+                "paired_comparison": {
+                  "mean_difference": -1.4611365730105871e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.7744098174389626e-05,
+                    -1.160395148743844e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00018634454874403742,
+                "action_counts": [
+                  0,
+                  0,
+                  6420,
+                  1772,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.05871897498391809,
+                "paired_comparison": {
+                  "mean_difference": -1.1624542092414644e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.324178625445518e-05,
+                    -1.00473525057062e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00019886445543700052,
+                "action_counts": [
+                  0,
+                  0,
+                  7413,
+                  779,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.00452274946945197,
+                "paired_comparison": {
+                  "mean_difference": 8.95364600548459e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -3.512810673658325e-07,
+                    2.236870389916017e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.194695250109898e-06,
+              1.9486035544504e-06,
+              8.813978478955798e-07,
+              5.454576313092567e-07,
+              2.591006362738346e-07,
+              1.5572276144900402e-07,
+              1.1764351649019863e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.003579050322662e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013357066137649608,
+              0.0005964339391131535,
+              0.00027336859324450177,
+              0.0003421942619559951,
+              0.0007313588640843971,
+              0.000713357342724848,
+              0.0013975485274172385
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027336859324450145,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00023268710596930465,
+                "action_counts": [
+                  0,
+                  0,
+                  5434,
+                  0,
+                  0,
+                  2758,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.1488155123906688,
+                "paired_comparison": {
+                  "mean_difference": -4.068148727519676e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.3401410135289324e-05,
+                    -3.798780764203599e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0002600769728539095,
+                "action_counts": [
+                  0,
+                  0,
+                  7055,
+                  1137,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04862160730623466,
+                "paired_comparison": {
+                  "mean_difference": -1.3291620390591938e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4852897600408178e-05,
+                    -1.1821573176318261e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.0002795478161193298,
+                "action_counts": [
+                  0,
+                  0,
+                  7456,
+                  736,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.02260399704841598,
+                "paired_comparison": {
+                  "mean_difference": 6.17922287482833e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    4.46958851023694e-06,
+                    7.982113636266806e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.33840309235452e-06,
+              2.393084219692041e-06,
+              1.0908359546757745e-06,
+              6.418641335677162e-07,
+              2.70769008995569e-07,
+              1.8236618112308892e-07,
+              1.1309868669466403e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.96532745544681e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 7.6000483999960124
+        },
+        "512": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009563964494978652,
+              0.0004333693431513504,
+              0.00019796909083645212,
+              0.0002213608844009928,
+              0.0003531205504498039,
+              0.00033411733465145394,
+              0.0010948424200306118
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00019796909083645206,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018335772510634637,
+                "action_counts": [
+                  0,
+                  0,
+                  2305,
+                  0,
+                  0,
+                  5887,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0738062980860813,
+                "paired_comparison": {
+                  "mean_difference": -1.461136573010572e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.7744098174389457e-05,
+                    -1.1603951487438344e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00018634454874403718,
+                "action_counts": [
+                  0,
+                  0,
+                  6420,
+                  1772,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.058718974983919314,
+                "paired_comparison": {
+                  "mean_difference": -1.1624542092414891e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.3241786254455424e-05,
+                    -1.0047352505706468e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00019886445543700054,
+                "action_counts": [
+                  0,
+                  0,
+                  7413,
+                  779,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.004522749469452192,
+                "paired_comparison": {
+                  "mean_difference": 8.953646005484636e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -3.5128106736581676e-07,
+                    2.2368703899160074e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.1946952501099095e-06,
+              1.9486035544504033e-06,
+              8.81397847895581e-07,
+              5.454576313092564e-07,
+              2.591006362738347e-07,
+              1.5572276144900592e-07,
+              1.1764351649020005e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.003579050322659e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.001335706613764959,
+              0.0005964339391131534,
+              0.0002733685932445021,
+              0.00034219426195599545,
+              0.0007313588640843976,
+              0.0007133573427248474,
+              0.0013975485274172381
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027336859324450177,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.0002326871059693048,
+                "action_counts": [
+                  0,
+                  0,
+                  5434,
+                  0,
+                  0,
+                  2758,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.14881551239066915,
+                "paired_comparison": {
+                  "mean_difference": -4.0681487275196964e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.3401410135289513e-05,
+                    -3.798780764203616e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00026007697285390977,
+                "action_counts": [
+                  0,
+                  0,
+                  7055,
+                  1137,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04862160730623477,
+                "paired_comparison": {
+                  "mean_difference": -1.3291620390591979e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4852897600408208e-05,
+                    -1.1821573176318309e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027954781611933015,
+                "action_counts": [
+                  0,
+                  0,
+                  7456,
+                  736,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.022603997048416202,
+                "paired_comparison": {
+                  "mean_difference": 6.179222874828379e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    4.469588510236998e-06,
+                    7.982113636266859e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.338403092354528e-06,
+              2.393084219692043e-06,
+              1.0908359546757768e-06,
+              6.418641335677161e-07,
+              2.7076900899557027e-07,
+              1.8236618112309139e-07,
+              1.130986866946654e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.965327455446809e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 28.987804499920458
+        }
+      },
+      "nodes_convergence": {
+        "64": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -5.3522721535243656e-20,
+              -6.206336135985367e-20,
+              -1.718591799670798e-20,
+              -4.70045383083258e-21,
+              -3.222075281047181e-21,
+              -1.1758251024647913e-15,
+              9.510347038903407e-12
+            ],
+            "max_abs_action_risk_difference": 9.510347038903407e-12,
+            "max_abs_source_action_cost_difference": 8.794920986800181e-09,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -8.403734215435405e-16,
+              "global_brightness": 2.584860832070019e-19,
+              "temporal_noise": -7.746132846252828e-21
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              1.356476942913459e-18,
+              -3.135841702188528e-20,
+              1.419477086317029e-19,
+              -1.6837112476006619e-18,
+              -6.736186677356209e-20,
+              -1.4776042867665264e-15,
+              -3.414643616036086e-11
+            ],
+            "max_abs_action_risk_difference": 3.414643616036086e-11,
+            "max_abs_source_action_cost_difference": 1.0326196767454499e-08,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.9710949310021375e-16,
+              "global_brightness": 3.37619350482653e-19,
+              "temporal_noise": -3.539050891777501e-20
+            }
+          }
+        },
+        "128": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              6.161751100968758e-20,
+              2.3587055166949584e-21,
+              -5.8600576520553554e-21,
+              -5.2830164567383633e-20,
+              3.872963025549845e-20,
+              1.1080672378864543e-20,
+              -1.0845992191795299e-20
+            ],
+            "max_abs_action_risk_difference": 6.161751100968758e-20,
+            "max_abs_source_action_cost_difference": 3.729655473350135e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 9.876000138954698e-20,
+              "global_brightness": -1.8030252267213826e-19,
+              "temporal_noise": -2.2310198493897417e-20
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -3.116402957793532e-19,
+              2.3291751688268153e-19,
+              -2.897586802403348e-19,
+              7.987572391396337e-19,
+              5.719561025013224e-20,
+              -4.652329238276069e-19,
+              5.960359505182004e-19
+            ],
+            "max_abs_action_risk_difference": 7.987572391396337e-19,
+            "max_abs_source_action_cost_difference": 3.642919299551295e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -9.307027832019219e-20,
+              "global_brightness": -2.3875658482669336e-19,
+              "temporal_noise": -1.9598535009826081e-19
+            }
+          }
+        },
+        "256": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -6.16224740933629e-20,
+              -4.3076671169617746e-20,
+              -1.3344491232011719e-20,
+              -2.445828314712106e-20,
+              7.22500906034442e-21,
+              -2.4708274253458205e-20,
+              5.569409940064634e-19
+            ],
+            "max_abs_action_risk_difference": 5.569409940064634e-19,
+            "max_abs_source_action_cost_difference": 5.117434254131581e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.638983291283841e-19,
+              "global_brightness": 2.327682107821157e-19,
+              "temporal_noise": -1.765203427188161e-20
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              5.632206616424561e-19,
+              2.6365554844515204e-19,
+              -3.452405790564103e-19,
+              -8.961964269613895e-19,
+              -3.0523895181395843e-19,
+              4.473241210613615e-19,
+              7.03849837915401e-19
+            ],
+            "max_abs_action_risk_difference": 8.961964269613895e-19,
+            "max_abs_source_action_cost_difference": 4.85722573273506e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.4818919994372177e-19,
+              "global_brightness": -3.041723024140713e-19,
+              "temporal_noise": -3.9394910942659533e-19
+            }
+          }
+        },
+        "512": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_abs_action_risk_difference": 0.0,
+            "max_abs_source_action_cost_difference": 0.0,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 0.0,
+              "global_brightness": 0.0,
+              "temporal_noise": 0.0
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_abs_action_risk_difference": 0.0,
+            "max_abs_source_action_cost_difference": 0.0,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 0.0,
+              "global_brightness": 0.0,
+              "temporal_noise": 0.0
+            }
+          }
+        }
+      },
+      "source_metrics_files": {
+        "N0_diagnostic": "seed_19_N0_diagnostic.npz",
+        "N1_dependence_diagnostic": "seed_19_N1_dependence_diagnostic.npz"
+      },
+      "node_reference_note": "highest requested node count is a numerical reference, not proof of exact convergence",
+      "elapsed_seconds": 52.344721500296146
+    },
+    {
+      "seed": 37,
+      "frozen_rules": {
+        "known_linear_residual": {
+          "threshold": 0.24931216931216915,
+          "left_action_index": 5,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00018978433933063686,
+          "candidate_thresholds_from_train": [
+            0.019731379731379707,
+            0.03759055759055743,
+            0.060024420024420044,
+            0.08695156695156703,
+            0.11778591778591785,
+            0.16897028897028912,
+            0.24931216931216915,
+            0.3796336996337,
+            0.5645095645095645
+          ],
+          "actions": [
+            4.0,
+            0.5
+          ]
+        },
+        "global_brightness": {
+          "threshold": 0.5794057794057794,
+          "left_action_index": 3,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00019306846557011164,
+          "candidate_thresholds_from_train": [
+            0.5110297110297111,
+            0.5794057794057794,
+            0.6299552299552301,
+            0.6901750101750103,
+            0.7415547415547415,
+            0.7982417582417582,
+            0.8520797720797721,
+            0.9046153846153847,
+            0.9642328042328042
+          ],
+          "actions": [
+            1.0,
+            0.5
+          ]
+        },
+        "temporal_noise": {
+          "threshold": 0.024767205763902383,
+          "left_action_index": 3,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00020488293140351284,
+          "candidate_thresholds_from_train": [
+            0.024767205763902383,
+            0.03122658195585731,
+            0.03715355098228721,
+            0.0427838018270929,
+            0.048405884479818986,
+            0.05450601441790818,
+            0.06085242685373146,
+            0.0698366019526676,
+            0.0832188119536956
+          ],
+          "actions": [
+            1.0,
+            0.5
+          ]
+        }
+      },
+      "dev_expected_cost_by_action": [
+        0.000998228500970025,
+        0.0004504060820400868,
+        0.0002061180423996803,
+        0.00022860990005966317,
+        0.00035543527798351704,
+        0.00033568067196730345,
+        0.0010837066697516639
+      ],
+      "dev_selected_fixed_action_index": 2,
+      "selection_seconds": 10.531447799876332,
+      "diagnostics_by_nodes": {
+        "64": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.000977313280260973,
+              0.0004514650520901983,
+              0.0002054782928373987,
+              0.00022520135963049857,
+              0.0003552908699911001,
+              0.0003356826083751891,
+              0.0010883794546689874
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020547829283739898,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.0001898222724250873,
+                "action_counts": [
+                  0,
+                  0,
+                  2368,
+                  0,
+                  0,
+                  5824,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.07619306251829128,
+                "paired_comparison": {
+                  "mean_difference": -1.5656020412311673e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.8867093331029304e-05,
+                    -1.2305542715047056e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00019262731751742773,
+                "action_counts": [
+                  0,
+                  0,
+                  6432,
+                  1760,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06254176605477546,
+                "paired_comparison": {
+                  "mean_difference": -1.2850975319971244e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.464771232378484e-05,
+                    -1.1105309167129553e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.000205276760056702,
+                "action_counts": [
+                  0,
+                  0,
+                  7297,
+                  895,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0009807983992570213,
+                "paired_comparison": {
+                  "mean_difference": -2.0153278069699546e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.634605032724886e-06,
+                    1.212519709454613e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.248826555762062e-06,
+              2.021211052422102e-06,
+              9.164235220540744e-07,
+              5.413016931638018e-07,
+              2.5865871236023623e-07,
+              1.5420921296873938e-07,
+              1.203076581536434e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.121301026821957e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.001324241196973448,
+              0.0005894907438499867,
+              0.0002744324629915608,
+              0.00033941361511603775,
+              0.0007202956115329179,
+              0.000702196912319218,
+              0.0013648922531855705
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027443246299156123,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00023162764422271295,
+                "action_counts": [
+                  0,
+                  0,
+                  5364,
+                  0,
+                  0,
+                  2828,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.15597578472399798,
+                "paired_comparison": {
+                  "mean_difference": -4.2804818768848326e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.547280610145175e-05,
+                    -4.0139919261540196e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00026100566937464406,
+                "action_counts": [
+                  0,
+                  0,
+                  7137,
+                  1055,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.048925675448717065,
+                "paired_comparison": {
+                  "mean_difference": -1.3426793616917195e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4929747038196989e-05,
+                    -1.1889288008313949e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027974371375403547,
+                "action_counts": [
+                  0,
+                  0,
+                  7439,
+                  753,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.019353580493272515,
+                "paired_comparison": {
+                  "mean_difference": 5.31125076247422e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.5106145760716868e-06,
+                    7.089505330291952e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.296190712120121e-06,
+              2.3648434648663914e-06,
+              1.0921699845995147e-06,
+              6.345056814954557e-07,
+              2.709318484394615e-07,
+              1.8233815551172475e-07,
+              1.14817399627311e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.82961276652637e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 3.3657283997163177
+        },
+        "128": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009773132802609731,
+              0.00045146505209019806,
+              0.000205478292837399,
+              0.0002252013596304988,
+              0.0003552908699911002,
+              0.0003356826083764338,
+              0.0010883794439772397
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020547829283739904,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018982227242601737,
+                "action_counts": [
+                  0,
+                  0,
+                  2368,
+                  0,
+                  0,
+                  5824,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.07619306251376501,
+                "paired_comparison": {
+                  "mean_difference": -1.5656020411381655e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.8867093330107136e-05,
+                    -1.2305542713588047e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0001926273175174274,
+                "action_counts": [
+                  0,
+                  0,
+                  6432,
+                  1760,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06254176605477735,
+                "paired_comparison": {
+                  "mean_difference": -1.2850975319971623e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.464771232378528e-05,
+                    -1.1105309167129927e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.000205276760056702,
+                "action_counts": [
+                  0,
+                  0,
+                  7297,
+                  895,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0009807983992573543,
+                "paired_comparison": {
+                  "mean_difference": -2.0153278069702744e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.6346050327248872e-06,
+                    1.2125197094545643e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.248826555762087e-06,
+              2.02121105242211e-06,
+              9.16423522054078e-07,
+              5.41301693163802e-07,
+              2.586587123602372e-07,
+              1.5420921296826274e-07,
+              1.203076518096834e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.121300735104214e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013242411969734446,
+              0.0005894907438499877,
+              0.0002744324629915605,
+              0.000339413615116041,
+              0.0007202956115329176,
+              0.000702196912318372,
+              0.0013648922956113214
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027443246299156074,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00023162764422383713,
+                "action_counts": [
+                  0,
+                  0,
+                  5364,
+                  0,
+                  0,
+                  2828,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.15597578471990003,
+                "paired_comparison": {
+                  "mean_difference": -4.2804818767723616e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.5472806099260226e-05,
+                    -4.013991926148519e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0002610056693746434,
+                "action_counts": [
+                  0,
+                  0,
+                  7137,
+                  1055,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04892567544871773,
+                "paired_comparison": {
+                  "mean_difference": -1.3426793616917349e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4929747038197133e-05,
+                    -1.1889288008314101e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.0002797437137540352,
+                "action_counts": [
+                  0,
+                  0,
+                  7439,
+                  753,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.019353580493273403,
+                "paired_comparison": {
+                  "mean_difference": 5.3112507624744505e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.510614576071894e-06,
+                    7.0895053302921486e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.296190712120146e-06,
+              2.3648434648664003e-06,
+              1.0921699845995162e-06,
+              6.345056814954567e-07,
+              2.7093184843946355e-07,
+              1.8233815549245165e-07,
+              1.1481734386903383e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.829612737269849e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 4.647400700021535
+        },
+        "256": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009773132802609731,
+              0.00045146505209019827,
+              0.0002054782928373989,
+              0.00022520135963049822,
+              0.00035529086999110034,
+              0.0003356826083764337,
+              0.001088379443977238
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020547829283739896,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018982227242601716,
+                "action_counts": [
+                  0,
+                  0,
+                  2368,
+                  0,
+                  0,
+                  5824,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.07619306251376579,
+                "paired_comparison": {
+                  "mean_difference": -1.5656020411381824e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.8867093330107356e-05,
+                    -1.230554271358819e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00019262731751742773,
+                "action_counts": [
+                  0,
+                  0,
+                  6432,
+                  1760,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06254176605477535,
+                "paired_comparison": {
+                  "mean_difference": -1.2850975319971262e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4647712323784968e-05,
+                    -1.1105309167129534e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.000205276760056702,
+                "action_counts": [
+                  0,
+                  0,
+                  7297,
+                  895,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0009807983992569103,
+                "paired_comparison": {
+                  "mean_difference": -2.0153278069698827e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.6346050327248207e-06,
+                    1.2125197094545844e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.248826555762067e-06,
+              2.0212110524221063e-06,
+              9.164235220540753e-07,
+              5.413016931638016e-07,
+              2.5865871236023655e-07,
+              1.5420921296826173e-07,
+              1.2030765180968202e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.121300735104218e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013242411969734463,
+              0.0005894907438499876,
+              0.0002744324629915609,
+              0.00033941361511603916,
+              0.0007202956115329175,
+              0.000702196912318373,
+              0.0013648922956113192
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.0002744324629915607,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00023162764422383707,
+                "action_counts": [
+                  0,
+                  0,
+                  5364,
+                  0,
+                  0,
+                  2828,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.15597578471990003,
+                "paired_comparison": {
+                  "mean_difference": -4.280481876772365e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.547280609926028e-05,
+                    -4.013991926148523e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00026100566937464336,
+                "action_counts": [
+                  0,
+                  0,
+                  7137,
+                  1055,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04892567544871773,
+                "paired_comparison": {
+                  "mean_difference": -1.3426793616917374e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4929747038197155e-05,
+                    -1.1889288008314113e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027974371375403504,
+                "action_counts": [
+                  0,
+                  0,
+                  7439,
+                  753,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.01935358049327296,
+                "paired_comparison": {
+                  "mean_difference": 5.311250762474309e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.5106145760717537e-06,
+                    7.089505330292002e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.296190712120127e-06,
+              2.364843464866393e-06,
+              1.0921699845995143e-06,
+              6.345056814954558e-07,
+              2.709318484394617e-07,
+              1.8233815549245064e-07,
+              1.1481734386903243e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.829612737269861e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 7.280538599938154
+        },
+        "512": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009773132802609733,
+              0.000451465052090198,
+              0.00020547829283739893,
+              0.00022520135963049833,
+              0.0003552908699911002,
+              0.0003356826083764338,
+              0.0010883794439772395
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.000205478292837399,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018982227242601732,
+                "action_counts": [
+                  0,
+                  0,
+                  2368,
+                  0,
+                  0,
+                  5824,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.07619306251376523,
+                "paired_comparison": {
+                  "mean_difference": -1.5656020411381732e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.8867093330107247e-05,
+                    -1.230554271358805e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0001926273175174275,
+                "action_counts": [
+                  0,
+                  0,
+                  6432,
+                  1760,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06254176605477668,
+                "paired_comparison": {
+                  "mean_difference": -1.2850975319971517e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4647712323785196e-05,
+                    -1.1105309167129795e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00020527676005670202,
+                "action_counts": [
+                  0,
+                  0,
+                  7297,
+                  895,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.0009807983992570213,
+                "paired_comparison": {
+                  "mean_difference": -2.0153278069703252e-07,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.6346050327248768e-06,
+                    1.2125197094545542e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.2488265557620795e-06,
+              2.0212110524221084e-06,
+              9.164235220540765e-07,
+              5.413016931638015e-07,
+              2.58658712360237e-07,
+              1.5420921296826335e-07,
+              1.2030765180968336e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.121300735104214e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013242411969734457,
+              0.0005894907438499872,
+              0.0002744324629915611,
+              0.0003394136151160397,
+              0.0007202956115329178,
+              0.0007021969123183723,
+              0.0013648922956113205
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.000274432462991561,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00023162764422383724,
+                "action_counts": [
+                  0,
+                  0,
+                  5364,
+                  0,
+                  0,
+                  2828,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.15597578471990048,
+                "paired_comparison": {
+                  "mean_difference": -4.280481876772382e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.547280609926047e-05,
+                    -4.01399192614854e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00026100566937464363,
+                "action_counts": [
+                  0,
+                  0,
+                  7137,
+                  1055,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04892567544871784,
+                "paired_comparison": {
+                  "mean_difference": -1.3426793616917405e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.4929747038197173e-05,
+                    -1.1889288008314166e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.0002797437137540354,
+                "action_counts": [
+                  0,
+                  0,
+                  7439,
+                  753,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.01935358049327318,
+                "paired_comparison": {
+                  "mean_difference": 5.311250762474351e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.510614576071791e-06,
+                    7.089505330292051e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.2961907121201385e-06,
+              2.364843464866396e-06,
+              1.0921699845995158e-06,
+              6.345056814954555e-07,
+              2.709318484394627e-07,
+              1.8233815549245326e-07,
+              1.1481734386903383e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.829612737269858e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 24.262056200299412
+        }
+      },
+      "nodes_convergence": {
+        "64": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -7.244282368616906e-20,
+              -1.4777085334892308e-19,
+              -4.186485157222756e-20,
+              -7.292527677844061e-20,
+              -2.582871462696829e-21,
+              -1.2430518159121094e-15,
+              1.0691740488540612e-11
+            ],
+            "max_abs_action_risk_difference": 1.0691740488540612e-11,
+            "max_abs_source_action_cost_difference": 8.114009999483918e-09,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -9.299869102873407e-16,
+              "global_brightness": 2.306952961670578e-19,
+              "temporal_noise": -4.684323808887796e-21
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              1.5438647845199968e-18,
+              -5.869859742314109e-20,
+              2.1292662942880624e-19,
+              -1.7202600161711643e-18,
+              -4.1177361085619425e-20,
+              8.454629270446608e-16,
+              -4.2425751405277534e-11
+            ],
+            "max_abs_action_risk_difference": 4.2425751405277534e-11,
+            "max_abs_source_action_cost_difference": 1.0809914695363368e-08,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.1242956490876924e-15,
+              "global_brightness": 4.235642433075251e-19,
+              "temporal_noise": 8.167043700950436e-20
+            }
+          }
+        },
+        "128": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -5.937502436905633e-21,
+              1.632937247240932e-20,
+              3.4245277359695346e-21,
+              6.21051339807876e-20,
+              -7.466132208903628e-21,
+              9.837659025093158e-21,
+              8.004833582828787e-21
+            ],
+            "max_abs_action_risk_difference": 6.21051339807876e-20,
+            "max_abs_source_action_cost_difference": 3.5128150388530344e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 7.910700429120253e-20,
+              "global_brightness": -1.0208029144363776e-19,
+              "temporal_noise": 8.787966827763366e-21
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -3.922316756797821e-19,
+              2.0766720829904095e-19,
+              -2.950187217555595e-19,
+              8.547732898362653e-19,
+              1.5698088908424162e-19,
+              -4.16151257452978e-19,
+              6.036032055569887e-19
+            ],
+            "max_abs_action_risk_difference": 8.547732898362653e-19,
+            "max_abs_source_action_cost_difference": 3.5561831257524545e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -8.84516119724258e-20,
+              "global_brightness": -2.395628791287794e-19,
+              "temporal_noise": -1.9564992835987056e-19
+            }
+          }
+        },
+        "256": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -5.481643201327659e-20,
+              -5.310251378406672e-20,
+              -5.1477724265859433e-20,
+              -1.7246715771730627e-20,
+              3.0411295220512062e-21,
+              4.095278154931128e-20,
+              3.913311344866533e-20
+            ],
+            "max_abs_action_risk_difference": 5.481643201327659e-20,
+            "max_abs_source_action_cost_difference": 4.9439619065339e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.4297899606040339e-19,
+              "global_brightness": 2.044420310906967e-19,
+              "temporal_noise": -7.153664732511722e-21
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              6.63014212282691e-19,
+              2.853857899320732e-19,
+              -3.1465474872664955e-19,
+              -9.136003070495052e-19,
+              -2.296999910950034e-19,
+              4.25944377971964e-19,
+              3.991484242526313e-19
+            ],
+            "max_abs_action_risk_difference": 9.136003070495052e-19,
+            "max_abs_source_action_cost_difference": 4.85722573273506e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.48249739224803e-19,
+              "global_brightness": -2.833414130481484e-19,
+              "temporal_noise": -3.5688025104595023e-19
+            }
+          }
+        },
+        "512": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_abs_action_risk_difference": 0.0,
+            "max_abs_source_action_cost_difference": 0.0,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 0.0,
+              "global_brightness": 0.0,
+              "temporal_noise": 0.0
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_abs_action_risk_difference": 0.0,
+            "max_abs_source_action_cost_difference": 0.0,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 0.0,
+              "global_brightness": 0.0,
+              "temporal_noise": 0.0
+            }
+          }
+        }
+      },
+      "source_metrics_files": {
+        "N0_diagnostic": "seed_37_N0_diagnostic.npz",
+        "N1_dependence_diagnostic": "seed_37_N1_dependence_diagnostic.npz"
+      },
+      "node_reference_note": "highest requested node count is a numerical reference, not proof of exact convergence",
+      "elapsed_seconds": 51.35943070007488
+    },
+    {
+      "seed": 73,
+      "frozen_rules": {
+        "known_linear_residual": {
+          "threshold": 0.3704843304843308,
+          "left_action_index": 5,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00018630261195801882,
+          "candidate_thresholds_from_train": [
+            0.014733414733414829,
+            0.033943833943834135,
+            0.05347985347985331,
+            0.0759137159137159,
+            0.10264550264550254,
+            0.14731786731786728,
+            0.22458282458282453,
+            0.3704843304843308,
+            0.5665445665445665
+          ],
+          "actions": [
+            4.0,
+            0.5
+          ]
+        },
+        "global_brightness": {
+          "threshold": 0.5754985754985754,
+          "left_action_index": 3,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00019138592488377105,
+          "candidate_thresholds_from_train": [
+            0.5152136752136753,
+            0.5754985754985754,
+            0.6268620268620271,
+            0.6812210012210013,
+            0.7303215303215302,
+            0.7860968660968662,
+            0.8434025234025234,
+            0.892991452991453,
+            0.9547089947089948
+          ],
+          "actions": [
+            1.0,
+            0.5
+          ]
+        },
+        "temporal_noise": {
+          "threshold": 0.023716692402185737,
+          "left_action_index": 3,
+          "right_action_index": 2,
+          "dev_expected_cost": 0.00020362725996164055,
+          "candidate_thresholds_from_train": [
+            0.023716692402185737,
+            0.031191931799822322,
+            0.037250157022661164,
+            0.042833950679031216,
+            0.048275120345294936,
+            0.05500699226261391,
+            0.061713545651363916,
+            0.07027606150889132,
+            0.08362485107869683
+          ],
+          "actions": [
+            1.0,
+            0.5
+          ]
+        }
+      },
+      "dev_expected_cost_by_action": [
+        0.0009840915533049876,
+        0.00044158591768914146,
+        0.0002042113088907803,
+        0.0002232547777701105,
+        0.000353290976470522,
+        0.0003349350377485434,
+        0.001090884023742332
+      ],
+      "dev_selected_fixed_action_index": 2,
+      "selection_seconds": 6.48266559978947,
+      "diagnostics_by_nodes": {
+        "64": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009828966059110865,
+              0.0004484183371928311,
+              0.00020433080142896246,
+              0.000223525929301245,
+              0.0003470088920357133,
+              0.0003281807635080592,
+              0.001090145978845635
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020433080142896268,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018710363745687314,
+                "action_counts": [
+                  0,
+                  0,
+                  1656,
+                  0,
+                  0,
+                  6536,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.08431016690392967,
+                "paired_comparison": {
+                  "mean_difference": -1.7227163972089554e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -2.1268752486237174e-05,
+                    -1.3559321799534765e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00019066328760675117,
+                "action_counts": [
+                  0,
+                  0,
+                  6513,
+                  1679,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06688915095829606,
+                "paired_comparison": {
+                  "mean_difference": -1.3667513822211482e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5420813693404917e-05,
+                    -1.1949343303537875e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00020439034632095302,
+                "action_counts": [
+                  0,
+                  0,
+                  7471,
+                  721,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.00029141417531719505,
+                "paired_comparison": {
+                  "mean_difference": 5.954489199034266e-08,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.1825254222350192e-06,
+                    1.3908376669560204e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.2067277736310655e-06,
+              2.024688539467056e-06,
+              9.230439180917553e-07,
+              5.46597062517751e-07,
+              2.5787903077603815e-07,
+              1.5351671852496526e-07,
+              1.1587961862104847e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.078786997612303e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013459861917067843,
+              0.000592053872240161,
+              0.00027378806463538473,
+              0.00033895032162542944,
+              0.0007282410762598129,
+              0.0007098860566007713,
+              0.0013711621648741254
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027378806463538495,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.0002285731031364539,
+                "action_counts": [
+                  0,
+                  0,
+                  4165,
+                  0,
+                  0,
+                  4027,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.16514584578091718,
+                "paired_comparison": {
+                  "mean_difference": -4.521496149893107e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.8715007449509634e-05,
+                    -4.1619881765201425e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0002601771768137424,
+                "action_counts": [
+                  0,
+                  0,
+                  7185,
+                  1007,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04971322559209701,
+                "paired_comparison": {
+                  "mean_difference": -1.3610887821642498e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.515378714213688e-05,
+                    -1.2109220663580314e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.0002787699320719677,
+                "action_counts": [
+                  0,
+                  0,
+                  7479,
+                  713,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.018196072364284,
+                "paired_comparison": {
+                  "mean_difference": 4.981867436582722e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.209874142336697e-06,
+                    6.799987767521433e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.36387116697763e-06,
+              2.3649263274332174e-06,
+              1.093344913550413e-06,
+              6.413784947078848e-07,
+              2.6988116988137567e-07,
+              1.8097577713188973e-07,
+              1.1185581362851906e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.931223767875377e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 3.4896221002563834
+        },
+        "128": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009828966059110859,
+              0.0004484183371928313,
+              0.0002043308014289626,
+              0.00022352592930124517,
+              0.00034700889203571325,
+              0.0003281807635093017,
+              0.0010901459903660015
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020433080142896268,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018710363745763414,
+                "action_counts": [
+                  0,
+                  0,
+                  1656,
+                  0,
+                  0,
+                  6536,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.08431016690020521,
+                "paired_comparison": {
+                  "mean_difference": -1.7227163971328536e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -2.126875248357677e-05,
+                    -1.355932179966913e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00019066328760675085,
+                "action_counts": [
+                  0,
+                  0,
+                  6513,
+                  1679,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06688915095829773,
+                "paired_comparison": {
+                  "mean_difference": -1.3667513822211832e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5420813693405286e-05,
+                    -1.194934330353831e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00020439034632095302,
+                "action_counts": [
+                  0,
+                  0,
+                  7471,
+                  721,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.00029141417531719505,
+                "paired_comparison": {
+                  "mean_difference": 5.954489199035793e-08,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.1825254222349985e-06,
+                    1.3908376669560157e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.206727773631088e-06,
+              2.024688539467065e-06,
+              9.230439180917582e-07,
+              5.465970625177517e-07,
+              2.5787903077603915e-07,
+              1.5351671853733056e-07,
+              1.158796014403454e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.0787870898652085e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.001345986191706783,
+              0.0005920538722401619,
+              0.0002737880646353839,
+              0.0003389503216254319,
+              0.0007282410762598125,
+              0.0007098860566005959,
+              0.0013711622148062479
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027378806463538435,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00022857310313587737,
+                "action_counts": [
+                  0,
+                  0,
+                  4165,
+                  0,
+                  0,
+                  4027,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.16514584578302105,
+                "paired_comparison": {
+                  "mean_difference": -4.5214961499506943e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.8715007448564637e-05,
+                    -4.161988176623123e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0002601771768137417,
+                "action_counts": [
+                  0,
+                  0,
+                  7185,
+                  1007,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.049713225592097565,
+                "paired_comparison": {
+                  "mean_difference": -1.3610887821642587e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5153787142136953e-05,
+                    -1.2109220663580428e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027876993207196735,
+                "action_counts": [
+                  0,
+                  0,
+                  7479,
+                  713,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.01819607236428511,
+                "paired_comparison": {
+                  "mean_difference": 4.981867436583011e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.2098741423369336e-06,
+                    6.7999877675217345e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.363871166977648e-06,
+              2.3649263274332255e-06,
+              1.0933449135504153e-06,
+              6.413784947078864e-07,
+              2.6988116988137715e-07,
+              1.8097577713714745e-07,
+              1.1185576102034304e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.931223656812101e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 4.490182699635625
+        },
+        "256": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009828966059110867,
+              0.00044841833719283107,
+              0.00020433080142896233,
+              0.00022352592930124514,
+              0.00034700889203571303,
+              0.0003281807635093017,
+              0.0010901459903660004
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020433080142896268,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018710363745763395,
+                "action_counts": [
+                  0,
+                  0,
+                  1656,
+                  0,
+                  0,
+                  6536,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.08431016690020621,
+                "paired_comparison": {
+                  "mean_difference": -1.7227163971328732e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -2.1268752483576918e-05,
+                    -1.3559321799669318e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00019066328760675117,
+                "action_counts": [
+                  0,
+                  0,
+                  6513,
+                  1679,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06688915095829606,
+                "paired_comparison": {
+                  "mean_difference": -1.366751382221149e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5420813693405008e-05,
+                    -1.1949343303537925e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00020439034632095308,
+                "action_counts": [
+                  0,
+                  0,
+                  7471,
+                  721,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.00029141417531763913,
+                "paired_comparison": {
+                  "mean_difference": 5.954489199038681e-08,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.1825254222349682e-06,
+                    1.390837666956057e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.206727773631072e-06,
+              2.0246885394670602e-06,
+              9.230439180917555e-07,
+              5.465970625177508e-07,
+              2.578790307760386e-07,
+              1.5351671853732966e-07,
+              1.1587960144034411e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.0787870898652166e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013459861917067845,
+              0.0005920538722401613,
+              0.00027378806463538387,
+              0.00033895032162543,
+              0.0007282410762598121,
+              0.0007098860566005974,
+              0.001371162214806248
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027378806463538425,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00022857310313587753,
+                "action_counts": [
+                  0,
+                  0,
+                  4165,
+                  0,
+                  0,
+                  4027,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.16514584578302016,
+                "paired_comparison": {
+                  "mean_difference": -4.521496149950672e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.8715007448564366e-05,
+                    -4.161988176623099e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.0002601771768137417,
+                "action_counts": [
+                  0,
+                  0,
+                  7185,
+                  1007,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04971322559209712,
+                "paired_comparison": {
+                  "mean_difference": -1.3610887821642601e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5153787142136987e-05,
+                    -1.2109220663580431e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.0002787699320719672,
+                "action_counts": [
+                  0,
+                  0,
+                  7479,
+                  713,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.018196072364284888,
+                "paired_comparison": {
+                  "mean_difference": 4.9818674365828744e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.20987414233683e-06,
+                    6.799987767521591e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.363871166977635e-06,
+              2.3649263274332196e-06,
+              1.0933449135504121e-06,
+              6.413784947078854e-07,
+              2.6988116988137546e-07,
+              1.8097577713714618e-07,
+              1.1185576102034172e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.931223656812116e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 7.560195300262421
+        },
+        "512": {
+          "N0_diagnostic": {
+            "expected_cost_by_action": [
+              0.0009828966059110863,
+              0.000448418337192831,
+              0.00020433080142896246,
+              0.00022352592930124503,
+              0.0003470088920357132,
+              0.000328180763509302,
+              0.001090145990366001
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00020433080142896268,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00018710363745763414,
+                "action_counts": [
+                  0,
+                  0,
+                  1656,
+                  0,
+                  0,
+                  6536,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.08431016690020521,
+                "paired_comparison": {
+                  "mean_difference": -1.722716397132857e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -2.126875248357681e-05,
+                    -1.3559321799669179e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00019066328760675096,
+                "action_counts": [
+                  0,
+                  0,
+                  6513,
+                  1679,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.06688915095829717,
+                "paired_comparison": {
+                  "mean_difference": -1.3667513822211715e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5420813693405225e-05,
+                    -1.1949343303538179e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00020439034632095305,
+                "action_counts": [
+                  0,
+                  0,
+                  7471,
+                  721,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.0002914141753174171,
+                "paired_comparison": {
+                  "mean_difference": 5.954489199036385e-08,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.1825254222349892e-06,
+                    1.3908376669560024e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              4.2067277736310825e-06,
+              2.0246885394670628e-06,
+              9.230439180917568e-07,
+              5.465970625177506e-07,
+              2.578790307760389e-07,
+              1.535167185373314e-07,
+              1.158796014403454e-06
+            ],
+            "hindsight_min_realized_future_cost": 4.0787870898652105e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "N1_dependence_diagnostic": {
+            "expected_cost_by_action": [
+              0.0013459861917067837,
+              0.0005920538722401611,
+              0.00027378806463538425,
+              0.00033895032162543096,
+              0.0007282410762598132,
+              0.0007098860566005966,
+              0.0013711622148062474
+            ],
+            "dev_selected_fixed_exposure": 0.5,
+            "fixed_expected_cost": 0.00027378806463538457,
+            "policies": {
+              "known_linear_residual": {
+                "expected_cost": 0.00022857310313587756,
+                "action_counts": [
+                  0,
+                  0,
+                  4165,
+                  0,
+                  0,
+                  4027,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.16514584578302105,
+                "paired_comparison": {
+                  "mean_difference": -4.521496149950705e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -4.871500744856474e-05,
+                    -4.161988176623131e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "global_brightness": {
+                "expected_cost": 0.00026017717681374203,
+                "action_counts": [
+                  0,
+                  0,
+                  7185,
+                  1007,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": 0.04971322559209712,
+                "paired_comparison": {
+                  "mean_difference": -1.3610887821642626e-05,
+                  "paired_independent_source_percentile_ci95": [
+                    -1.5153787142136994e-05,
+                    -1.210922066358044e-05
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              },
+              "temporal_noise": {
+                "expected_cost": 0.00027876993207196757,
+                "action_counts": [
+                  0,
+                  0,
+                  7479,
+                  713,
+                  0,
+                  0,
+                  0
+                ],
+                "relative_reduction_vs_fixed": -0.01819607236428511,
+                "paired_comparison": {
+                  "mean_difference": 4.981867436582919e-06,
+                  "paired_independent_source_percentile_ci95": [
+                    3.2098741423368514e-06,
+                    6.799987767521635e-06
+                  ],
+                  "bootstrap_replicates": 2000,
+                  "independent_source_count": 8192,
+                  "difference_direction": "policy minus dev-selected fixed; negative favors policy"
+                }
+              }
+            },
+            "future_mc_se_by_action": [
+              5.363871166977643e-06,
+              2.3649263274332225e-06,
+              1.0933449135504142e-06,
+              6.413784947078846e-07,
+              2.698811698813762e-07,
+              1.809757771371488e-07,
+              1.1185576102034308e-06
+            ],
+            "hindsight_min_realized_future_cost": 6.931223656812111e-05,
+            "hindsight_note": "uses unavailable realized future noise; not an oracle or causal bound"
+          },
+          "elapsed_seconds": 25.37904700031504
+        }
+      },
+      "nodes_convergence": {
+        "64": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -1.2486291346487953e-20,
+              3.114004134017128e-20,
+              -1.7396849052909002e-20,
+              -9.387465976711173e-20,
+              -3.155756075435742e-20,
+              -1.2419853754270257e-15,
+              -1.1520370900131979e-11
+            ],
+            "max_abs_action_risk_difference": 1.1520370900131979e-11,
+            "max_abs_source_action_cost_difference": 1.0277499320554898e-08,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -7.610042730791943e-16,
+              "global_brightness": 2.1561868873236006e-19,
+              "temporal_noise": -3.841219969543122e-20
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              1.5988110838894442e-18,
+              1.050767532126111e-19,
+              3.3447916608224855e-19,
+              -1.738705109855331e-18,
+              -9.636550738666203e-20,
+              1.7801046287767684e-16,
+              -4.993212255651579e-11
+            ],
+            "max_abs_action_risk_difference": 4.993212255651579e-11,
+            "max_abs_source_action_cost_difference": 9.726252913093078e-09,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 5.763133281672066e-16,
+              "global_brightness": 4.615878749102095e-19,
+              "temporal_noise": 1.3711759423985263e-19
+            }
+          }
+        },
+        "128": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -1.5683344414005405e-20,
+              1.2463957469949021e-20,
+              -9.040773902474885e-21,
+              4.4051917111817765e-20,
+              -1.0920438446925071e-20,
+              -1.3337654067261085e-20,
+              6.2940172809159876e-21
+            ],
+            "max_abs_action_risk_difference": 4.4051917111817765e-20,
+            "max_abs_source_action_cost_difference": 3.9898639947466563e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 2.6124496319441352e-20,
+              "global_brightness": -1.2610047905883543e-19,
+              "temporal_noise": -1.4912101890376276e-20
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              -3.9310765994847577e-19,
+              1.4158623070401723e-19,
+              -3.0047046237774337e-19,
+              8.105546958310181e-19,
+              1.3355864965434323e-19,
+              -3.8373470194422695e-19,
+              6.203385169150084e-19
+            ],
+            "max_abs_action_risk_difference": 8.105546958310181e-19,
+            "max_abs_source_action_cost_difference": 3.642919299551295e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.9020566467494235e-19,
+              "global_brightness": -2.616132395127586e-19,
+              "temporal_noise": -2.091993535886423e-19
+            }
+          }
+        },
+        "256": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              1.6068810579455116e-20,
+              -1.80660381684644e-20,
+              -1.4641820625224574e-20,
+              4.2303257296880665e-20,
+              -1.9241461818902253e-20,
+              -5.386698376643057e-20,
+              -1.6432038834241648e-19
+            ],
+            "max_abs_action_risk_difference": 1.6432038834241648e-19,
+            "max_abs_source_action_cost_difference": 4.9439619065339e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.7696934669506755e-19,
+              "global_brightness": 2.0935000385770351e-19,
+              "temporal_noise": 8.179885679960322e-21
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              7.223329883700938e-19,
+              3.7507553618512604e-19,
+              -3.4562583842670687e-19,
+              -8.85240833338431e-19,
+              -2.818409074169772e-19,
+              4.567234195982413e-19,
+              2.17692750414283e-19
+            ],
+            "max_abs_action_risk_difference": 8.85240833338431e-19,
+            "max_abs_source_action_cost_difference": 5.0306980803327406e-17,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": -1.9582996939007156e-20,
+              "global_brightness": -3.200183946135965e-19,
+              "temporal_noise": -3.9062487733989785e-19
+            }
+          }
+        },
+        "512": {
+          "N0_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_abs_action_risk_difference": 0.0,
+            "max_abs_source_action_cost_difference": 0.0,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 0.0,
+              "global_brightness": 0.0,
+              "temporal_noise": 0.0
+            }
+          },
+          "N1_dependence_diagnostic": {
+            "risk_difference_by_action_vs_highest_nodes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_abs_action_risk_difference": 0.0,
+            "max_abs_source_action_cost_difference": 0.0,
+            "policy_risk_difference_vs_highest_nodes": {
+              "known_linear_residual": 0.0,
+              "global_brightness": 0.0,
+              "temporal_noise": 0.0
+            }
+          }
+        }
+      },
+      "source_metrics_files": {
+        "N0_diagnostic": "seed_73_N0_diagnostic.npz",
+        "N1_dependence_diagnostic": "seed_73_N1_dependence_diagnostic.npz"
+      },
+      "node_reference_note": "highest requested node count is a numerical reference, not proof of exact convergence",
+      "elapsed_seconds": 48.12226739991456
+    }
+  ],
+  "elapsed_seconds": 151.8329894002527,
+  "limitations": [
+    "finite Gauss-Legendre integration and finite future-noise Monte Carlo",
+    "paired CI resamples independent sources conditional on frozen rule and finite repeated captures",
+    "known toy training prior and known linear residual relation; not unrestricted image Bayes",
+    "no real-camera, S24 formal test, unknown full-image prior, motion or neural training validation",
+    "extremely rare observations may underflow likelihood/evidence and raise; no Gaussian fallback"
+  ]
+}

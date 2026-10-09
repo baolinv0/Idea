@@ -16,3 +16,7 @@ CPU墙钟：主运行10.54秒、点式2048复核10.99秒、共同32×128复核7.
 
 原始结果全部保留。hindsight_min统计利用未来已实现噪声，禁止当latent/causal oracle或可实现regret。
 恢复从N0开始，不为追求阳性重跑已完成的机制probe。
+
+## Local diagnostic execution update 2026-10-09
+
+N0/N1受限版本与本地DNG相对诊断已执行，详见[完整结论](../local-dng/CONCLUSIONS.md)。N0的连续风险稳定但参考后端未融合H；N0关系规则相对亮度规则的直接CI跨零。N1反向依赖留出已完成，仍为已知训练prior模型。下一决定实验改为H-aware后验及严格冻结后端交叉矩阵；DNG4/8积分 refinement待做。正式神经强后端、有效跨系列评审与最终gate尚未完成。原计划和历史结果保留，当前状态以新执行结论为准。

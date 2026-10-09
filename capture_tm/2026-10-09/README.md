@@ -1,3 +1,5 @@
+2026-10-09更新：[本地DNG与连续参考的完整正负结论和复现证据](local-dng/README.md)。当前下一步是H-aware决定检验；最终验收仍BLOCKED。
+
 # CaptureTM 讨论归档
 
 归档日期：2026-10-09（Asia/Shanghai）。

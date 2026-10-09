@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "rawpy": "0.27.1",
+    "tifffile": "2026.9.20"
+  },
+  "witness": {
+    "seed": 19,
+    "poisson_mean": 100,
+    "poisson_count": 32,
+    "poisson_sum": 3146,
+    "normal_cdf_zero": 0.5,
+    "integral_x2": 0.33333333333333337,
+    "quadrature_error": 3.700743415417189e-15
+  },
+  "status": "PASS"
+}

@@ -69,3 +69,7 @@ Gate D：全部成立且与最近邻有明确实验证据差异，再扩展数�
 首轮批判审阅PROCEED只允许最小决定实验；本轮修订保持原Problem Anchor，实证等级下调。复杂risk网络继续排除。最小下步：同输入连续/数值后验参考后端＋预注册delta，再做已知规则的先验留出；没有新GPU运行。
 
 末轮实际 gpt-6-astra/ultra裁决REVISE / PROCEED，见review trace response-round2.md；成熟度4/10，新颖度暂评2–3/10。开始日期2026-10-08，最终整理2026-10-09（Asia/Shanghai）。
+
+## Local diagnostic execution update 2026-10-09
+
+N0/N1受限版本与本地DNG相对诊断已执行，详见[完整结论](../local-dng/CONCLUSIONS.md)。N0的连续风险稳定但参考后端未融合H；N0关系规则相对亮度规则的直接CI跨零。N1反向依赖留出已完成，仍为已知训练prior模型。下一决定实验改为H-aware后验及严格冻结后端交叉矩阵；DNG4/8积分 refinement待做。正式神经强后端、有效跨系列评审与最终gate尚未完成。原计划和历史结果保留，当前状态以新执行结论为准。

@@ -1,31 +1,19 @@
-# CaptureTM：尚需完成的步骤
+# CaptureTM：剩余步骤与当前进度
+更新：2026-10-09。代码和本轮全部正负结论已回传；研究仍REVISE，验收BLOCKED，未确认投稿贡献。
 
-核对日期：2026-10-09。状态：研究准备稿；idea-discovery 验收 BLOCKED；投稿贡献未验证。
+| Step | 当前实际状态 | 尚需完成 |
+|---|---|---|
+| N0连续参考 | 3seed、8192源×16重复、64–512积分已跑；数值稳定 | H-aware参考后端：把三张历史预览纳入后验，排除遗漏已知信息造成的收益 |
+| N1依赖留出 | 保边际的反向copula留出已跑，规则冻结 | 在H-aware及更充分先验变化下确认；不称任意图像泛化 |
+| DNG诊断 | 68个唯一DNG完整审计，6/2/3背景组；3seed相对实验已跑 | 每prior bin4/8积分refinement；更多独立场景/相机标定按贡献需要决定 |
+| 后端与简单规则 | 反演、点后验、局部Wiener与全部4规则已比 | 当前家族受限；H-aware及必要充分神经后端仍未验；简单方法能解释就停止复杂主张 |
+| 交叉评测 | 已保存3有限DNG后端冻结动作交叉矩阵 | H-aware/H-blind的2selectors×2renderers严格交叉矩阵 |
+| 查新/批判审阅 | 既有同系列审阅与新代码审计均有真实记录 | 按最新claim重新核对文献，取得实际跨系列明确正判及可追溯身份 |
+| 最终验收/同步 | 本轮代码、结果、负例、失败修复已同步 | 更新最终proposal/plan/tracker，记录有效接受后重跑gate，回传后续决定实验 |
 
-报告和 HTML 已生成、历史材料已上传，不代表实验与评审已验收。
+下一步：H-aware后验 → DNG积分4/8 → 评估复杂方法必要性 → 更新查新与批判审阅 → 最终gate及GitHub同步。
+不为得到阳性而改变目标、动作或统计单位。若简单方法充分或机制消失，保留负结果并调整贡献定位。
 
-## 直接导致 workflow incomplete 的缺口
+报告的“workflow is not complete”直接来自两项无效评审凭据。用户指定idea-discovery/SKILL.md要求实际review receipts和确定性gate；shared-references/codex-runtime.md明确写明“Same-family review is provisional, not cross-family evidence.”目前执行者与两位审阅者都属OpenAI，只能暂定。必须是真实不同系列模型的明确接受，不能修改provisional_advances绕过。
 
-1. novelty-check：执行者与审阅者均属 OpenAI，现有 gpt-6-astra 响应为 provisional。需要真实的不同模型系列审阅，基于最新协议、原始结果及一手文献给出明确判定，保留实际模型身份及可追溯响应。PROCEED 或 PROCEED WITH CAUTION 才能产生接受凭据。
-2. research-review：同样缺少可接受的跨系列审阅凭据。需要独立批判审阅，明确是否继续，不能把评分、风险列表或无响应当作接受。
-3. 将有效评审实质性结论写入报告，按实际响应记录 acceptance，再重跑 idea_discovery_gate.py。只有验证器返回 PASS 才能称该技能工作流完成。不得修改 provisional_advances 绕过证据要求。
-
-要求来源：用户指定的 idea-discovery/SKILL.md 的 per-stage evidence gate；shared-references/codex-runtime.md 明确规定 “Same-family review is provisional, not cross-family evidence.”
-
-## 判断 topic 是否值得投稿还需的证据
-
-| 顺序 | 待完成步骤 | 当前状态 | 通过或停止标准 |
-|---|---|---|---|
-| 1 | N0 连续后验参考后端 | 协议已写；实现、单测、smoke、正式比较尚未完成 | 实际 Poisson/read/ADC 似然；积分节点收敛、边界概率、三 seed 与配对源样本置信区间。收益不能随估计器离散化消失 |
-| 2 | N1 空间依赖留出 | 未执行 | 保持边际的依赖结构变化上评测冻结策略。不能只改变混合比例；不能利用未来噪声、test loss 或族标签 |
-| 3 | 本地 DNG 诊断 | 已建 CPU 环境，已初查 34 对清单及首个文件；完整审计、场景分组、协议冻结与实验未完成 | 修复陈旧清单路径；原始场景先划分，再生成裁块/噪声；验证 GT 来源与数据域。当前首批样本为处理过的 Linear RAW，不能冒充原生 Bayer、干净 HDR 或真实多曝光重拍 |
-| 4 | 后端容量与简单规则比较 | 待 N0/N1 决定是否推进 | 相同目标、动作、输入与预算；比较固定曝光、高光/噪声规则、局部规则和充分训练后端。原 2663 参数适配器不能单独代表强 TM；规则等效则停止复杂算法主张 |
-| 5 | 独立后端交叉评测 | 旧点式 pilot 没有搭档专属收益；强后端版本未做 | 固定策略与同一捕获样本，交叉比较独立训练后端。只有搭档受益则结论限于适配 |
-| 6 | 最新查新与批判审阅 | 历史响应存在，最新决定实验尚无结果 | 按保留下来的结果更新 claim；明确最近邻及一句话差异；补齐上述有效评审凭据 |
-| 7 | 结论、复现包与 GitHub 同步 | 历史档案已上传；新增本地实验尚未回传 | 更新报告、proposal、plan、tracker、状态；保留正负结果与 commit/config/seed/逐场景指标；代码同步指定工程分支，结论同步 Idea 仓库；回读验证 |
-
-建议执行顺序：N0 → N1 → DNG 诊断 → 必要的强后端/规则比较 → 独立后端验证 → 更新评审与 gate → 最终同步。
-
-第 4–5 步按证据决定是否必要。若 N0/N1 已否定现有机制，应记录负结果、停止复杂方法升级，重新定位或选择其他候选；不为完成清单启动没有判别价值的训练。
-
-技能 gate 的 PASS 只表示 idea-discovery 的证据齐全，不等于投稿就绪。真实相机/原生 Bayer/多曝光标定若缺失，结论必须限定为玩具或真实内容代理实验。
+Gate PASS只表示idea-discovery证据完整，不等于投稿就绪。当前本地数据来自一个采集会话、三个诊断组，真实内容相对模拟不能替代真实多曝光重拍、Bayer或独立专家GT。

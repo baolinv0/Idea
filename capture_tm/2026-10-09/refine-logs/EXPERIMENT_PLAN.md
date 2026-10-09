@@ -56,3 +56,7 @@ DEBIR训练顺序只作解释对照，不宣称staged novelty。Edit-aware RAW�
 
 ## Completed Diagnostic Update
 P2追加共同双向后端：32×128时两族best4/1，256×256时均.5；已知prior预览规则收益从约14.75%降至约9.27%。这不是普遍物理边界证据。后续优先解决估计器分辨率/稀疏性；GPU预算计划不因阳性或阴性自动扩大。
+
+## Local diagnostic execution update 2026-10-09
+
+N0/N1受限版本与本地DNG相对诊断已执行，详见[完整结论](../local-dng/CONCLUSIONS.md)。N0的连续风险稳定但参考后端未融合H；N0关系规则相对亮度规则的直接CI跨零。N1反向依赖留出已完成，仍为已知训练prior模型。下一决定实验改为H-aware后验及严格冻结后端交叉矩阵；DNG4/8积分 refinement待做。正式神经强后端、有效跨系列评审与最终gate尚未完成。原计划和历史结果保留，当前状态以新执行结论为准。
