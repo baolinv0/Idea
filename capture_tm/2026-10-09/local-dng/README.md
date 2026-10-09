@@ -22,3 +22,5 @@
 当前验收缺口：查新和批判审阅的实际模型均属OpenAI系列，接受状态provisional；2026-10-09重新运行evidence gate退出1，仍缺有效跨系列凭据。没有修改gate策略或伪造接受。
 
 最新资料：[H-aware原始结果](history-reference/results.json)、[全部交叉单元汇总](history-reference/summary.json)、[H-aware独立审计](history_independent_audit.md)、[DNG4/8原始结果](relative-experiment-refinement04_08/results.json)、[精度审计](dng_refinement_independent_audit.md)、[文献原文核读](primary_overlap_audit.md)。H-aware已发布等价代码提交c6a3fb4；其完整Git源tree与执行用本地f465e73一致。外部Claude审阅等待用户授权，未启动、无响应。
+
+DNG历史信息控制已完成：[原始JSON](dng-history-control-3seed/results.json)、[完整1152行CSV](dng-history-control-3seed/source_metrics.csv)、[执行记录](dng-history-control-3seed/run_meta.json)、[独立审计](dng_history_control_independent_audit.md)。iPhone固定、S25简单梯度局部收益/CI包含0均保留，详见canonical报告，仍无跨家族接受。代码实际执行与已发布均ae7c762。

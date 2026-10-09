@@ -1,37 +1,39 @@
 # CaptureTM：剩余步骤与完成标准
 
-更新：2026-10-09。研究状态 REVISE；idea-discovery Evidence Gate 为 BLOCKED；投稿贡献尚未确认。
+更新：2026-10-09。研究状态REVISE；Evidence Gate仍BLOCKED；投稿贡献尚未确认。
 
-## 一、报告中 workflow is not complete 的直接原因
+## workflow is not complete 的直接原因
 
-实际 run_state 的其他三个阶段已 done，只有以下两个审核阶段是 provisional：
+run_state其他三个阶段为done，novelty-check与research-review为provisional：实际旧审核者与执行者同属OpenAI，尚无有效不同模型家族接受凭据。HTML不是渲染故障；不能修改provisional_advances来消除提示。
 
-| 必补阶段 | 当前证据 | 完成标准 |
+技能[idea-discovery/SKILL.md](C:/Users/Lenovo/.agents/skills/idea-discovery/SKILL.md)要求“Before presenting this report as complete, run the per-stage evidence gate”；[codex-runtime.md](C:/Users/Lenovo/.agents/skills/shared-references/codex-runtime.md)写明“Same-family review is provisional, not cross-family evidence.”
+
+## 已完成，毋须重复
+
+| 步骤 | 完成证据 | 当前解释 |
 |---|---|---|
-| novelty-check | 审阅者与执行者同属 OpenAI | 对最新主张及原始证据完成实际不同模型家族审阅，取得 PROCEED / PROCEED WITH CAUTION 明确裁决；记录真实模型身份、完整响应和可追溯 receipt |
-| research-review | 审阅者与执行者同属 OpenAI | 独立检查最新协议、完整正负结果及技术提案，形成是否值得推进及最小决定实验的明确裁决；记录真实身份、响应和 receipt |
+| H-aware双像素后验及2×2交叉 | 3seed，退出0、1102.163秒；24单元/96CI独立重算 | H-aware关系规则恒4、收益0；只限已知prior双像素 |
+| DNG积分4/8数值复核 | 3seed，退出0、200.798秒；固定/24规则/288动作/符号稳定 | 当前定性结果稳定；不是严格绝对误差界 |
+| DNG历史信息4×4经典控制 | 3seed，退出0、203.385秒；53测试，1152行/96单元/768CI | iPhone固定；S25简单梯度局部正结果、CI包含0；近似WLS/三个诊断组 |
+| 正负证据及代码整理 | 新代码已发布ae7c762；完整原始JSON/CSV、协议、审计均在本归档 | 归档完整不代表科学主张已验证 |
 
-随后把审阅结论合入 canonical IDEA_REPORT.md，使用真实凭据更新 run_state 的 acceptance，再运行 idea_discovery_gate.py，只有实际 PASS 才能称 idea-discovery 流程完成。不能修改 provisional_advances 绕过。
+## 必补步骤，按依赖顺序
 
-技能依据：[idea-discovery/SKILL.md](C:/Users/Lenovo/.agents/skills/idea-discovery/SKILL.md) 要求 “Before presenting this report as complete, run the per-stage evidence gate”。[codex-runtime.md](C:/Users/Lenovo/.agents/skills/shared-references/codex-runtime.md) 明确写明 “Same-family review is provisional, not cross-family evidence.”
-
-## 二、按证据依赖顺序推进的步骤
-
-| 顺序 | 工作 | 当前实际状态 | 验收标准 |
+| 顺序 | 需要做什么 | 完成标准 | 当前状态 |
 |---|---|---|---|
-| 1 | 完成 H-aware 后验与交叉检验 | 已完成，40项相关测试通过；3seed原始JSON/6份NPZ已生成，24个交叉单元和96条CI独立重算一致 | DONE：退出0、1102.163秒；全H关系规则恒4、收益0；N0亮度微小优、N1直接CI跨0。仅此已知双像素prior范围 |
-| 2 | DNG 数值精度复核 | 已完成4/8复核，退出0、200.798秒；最大组级风险差1.077e-6，固定动作、24规则、288动作和收益符号不变 | DONE：保持输入/先验/种子一致；支持当前定性结果稳定，不宣称严格完全收敛或任意图像Bayes界 |
-| 3 | 决定哪些投稿主张保留 | H-aware阴性结果已确认；当前停止复杂关系策略必要性主张，候选条件规律/评测发现仍未确认创新 | 用完整H-aware与DNG结果区分“后端遗漏信息”“已知先验规则”“可泛化剩余选择价值”；比较直接配对差、预先约定绝对收益标准，不因各自优于固定曝光就声称复杂特征必要 |
-| 4 | 更新查新并补齐两次外审 | 旧审阅真实但同家族；新文献已核读；两份Claude只读外审材料准备完毕，自动审批拒绝外部资料提交，待用户明确授权 | 核对最近工作及经典最近邻；仅凭摘要的论文明确标记，逐条写可核验delta；评审独立读取原始代码、协议和全部正负结果，按第一节保留真实裁决凭据 |
-| 5 | 更新研究契约、proposal、plan、tracker | 已补齐最新完整阴性结论、停止条件与状态，保留旧协议和历史结果；外审后再收敛最终投稿主张 | 用当前证据重写主张、限制、停止条件和最小下一实验；清楚区分已执行、运行中、待执行及条件触发实验 |
-| 6 | 重跑门禁、归档与GitHub同步 | 既有代码已上传；最新H-aware与DNG4/8完整结果正在同步，gate仍有两项审核凭据缺口 | 实际gate PASS后同步MD/HTML和源校验、审核状态及可复现结果；代码上传指定工程分支，所有正负结论上传Idea；如裁决未通过，保留真实BLOCKED/REVISE原因 |
+| 1 | 实际跨家族novelty-check | 审阅最新方法、全部正负原始证据和近邻全文；形成PROCEED/PROCEED WITH CAUTION裁决及一条可核验delta，保留实际模型身份、完整响应、durable trace；ABANDON须指出具体已包含结果的已发表论文 | 最新dossier已备齐；Claude外部提交待用户明确授权，未启动 |
+| 2 | 实际跨家族research-review | 独立读取协议/代码/全部结果，判断是否推进和最小决定实验；保留真实身份/响应/裁决。明确proceed才可接受；风险清单本身不是负裁决 | 同上；本地代码/数值审计不替代它 |
+| 3 | 据两次真实裁决收敛主张 | 更新canonical IDEA_REPORT、proposal、plan、tracker、contract；区分已证、条件主张和未证。若只解释为已知原理，停止该主张；若没有幸存idea，保留BLOCKED并重新选/审核，不伪造正裁决 | C1–C3未确认；复杂关系网络暂无升级证据 |
+| 4 | 录入真实接受并重跑门禁 | 仅在实际正裁决、identity和trace齐备时run_state accept；idea_discovery_gate实际退出0/PASS，再同步MD/HTML源校验、最新审核记录、manifest/checksums与GitHub | 当前两审核provisional，gate BLOCKED |
 
-## 三、流程完成之后，怎样才算投稿证据足够
+## 流程完成之后，怎样才算投稿证据足够
 
-Gate PASS 表示 idea-discovery 证据记录完整，不等于投稿就绪。
+Gate PASS表示idea-discovery证据记录完整，不等于投稿就绪。若审核保留了一个明确、可核验的原创贡献，再补它真正需要的实验：充分后端/必要强基线、独立场景或采集会话、预先冻结的留出与直接配对检验、与claim相应的消融。若claim涉及真实相机/HDR，则需真实重拍、标定及适合GT；现有processed Linear RAW相对模拟不能代替这些证据。
 
-若残余机制仍有稳定、超出简单解释的收益，再按最终claim补足充分后端/必要神经基线、独立场景或采集会话、空间依赖与先验变化留出以及相应消融。当前DNG来自同一采集会话，只有三个诊断背景组；处理过的Linear RAW内容相对模拟不能替代原生Bayer、真实多曝光重拍、标定或独立专家GT。只在投稿主张确实需要时要求相应数据。
+当前S25梯度是简单规则/有限近似后端的局部结果，三个组区间包含0；不能据相对百分比宣称复杂AE必需。现有双像素H-aware阴性和iPhone规则固定也不能推成所有图像自适应无效。没有审核支持的剩余机制时，不强行增加网络寻找阳性。
 
-若H-aware后端消除策略差距，或简单规则足够，就保留负结果，将贡献限定为条件规律、失效边界或评测发现；不为获得阳性改动原目标、动作和统计单位，也不强行增加网络。
+## 当前唯一待用户输入的事项
 
-目前优先级：授权后的两次实际跨家族外审 → 根据真实裁决确定投稿贡献/停止条件 → gate与最终同步。H-aware和DNG4/8已完成，不重复实验寻求阳性。
+自动审批已拒绝把非公开协议、代码和完整实验统计提交给外部Claude服务，理由是此前授权没有明确覆盖此资料类别向该具体服务的发送。两份latest-complete-dossier已本地准备，不含DNG原图、照片或真实像素缓存；此前尝试未启动、未产生响应。等待对这个具体提交的明确授权；没有用其他外部服务绕过拒绝。
+
+最短后续链：授权后的两次实际外审 → 据裁决收敛主张/下一最小实验 → 真实接受、门禁与归档同步。H-aware、DNG4/8和历史融合已经完成，不重复实验寻求阳性。

@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-09T01:41:51.979235+00:00",
+  "command": [
+    "C:\\Users\\Lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "C:\\Users\\Lenovo\\.agents\\skills\\.aris-runtime\\repository\\tools\\idea_discovery_gate.py",
+    "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009",
+    "capturetm-20261008-run01",
+    "--report",
+    "idea-stage/IDEA_REPORT.md"
+  ],
+  "exit_code": 1,
+  "stdout": "BLOCKED: novelty-check review provenance invalid (provisional review cannot advance this run)\nBLOCKED: research-review review provenance invalid (provisional review cannot advance this run)\n",
+  "stderr": "",
+  "gate": {
+    "verdict": "BLOCKED",
+    "reasons": [
+      "novelty-check review provenance invalid (provisional review cannot advance this run)",
+      "research-review review provenance invalid (provisional review cannot advance this run)"
+    ],
+    "updated": "2026-10-09T01:41:51Z"
+  },
+  "external_review_started": false,
+  "all_local_controls_completed": true
+}

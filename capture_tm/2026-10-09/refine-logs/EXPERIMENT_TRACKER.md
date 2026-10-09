@@ -12,6 +12,7 @@ CPU墙钟：主运行10.54秒、点式2048复核10.99秒、共同32×128复核7.
 | N1 留出实际空间依赖强度 | DONE_REVERSE_COPULA | 保边际反向依赖，固定prior与规则；不称未知图像泛化 |
 | H0 完整H后验与2×2交叉 | DONE_NEGATIVE_FOR_RESIDUAL_NECESSITY | 3seed；H-aware关系规则恒4、收益0；1102.163秒 |
 | D0 DNG每bin4/8积分复核 | DONE_STABLE_DECISIONS | 固定动作/24规则/288动作/收益符号不变；200.798秒 |
+| D1 DNG历史信息4×4控制 | DONE_MIXED_CLASSICAL | 3seed、203.385秒；iPhone固定，S25简单梯度局部正结果，CI包含0 |
 | E0 原库动作/目标/split冻结 | PLANNED | 原库协议未实际复现 |
 | E2/E3 独立强后端/GPU | CONDITIONAL | 上述决定检验通过后 |
 | E4 S24/实拍/标定 | DEFERRED | 没有真实HDR重捕获证据 |
@@ -34,3 +35,7 @@ C1–C3仍未在未知完整图像和充分神经后端中验证。若外审提�
 两份具体外审dossier已准备。自动审批拒绝将非公开协议/代码/实验结果提交给Claude服务，当前等待用户明确授权；尚无Claude响应。跨家族接受凭据和Evidence Gate未完成。旧六小时AutoDL预算已结束，本轮无新增远程/GPU授权。
 
 完整结论与逐源证据：[local-dng](../local-dng/CONCLUSIONS.md)；剩余步骤：[WORKFLOW_REMAINING_STEPS](../WORKFLOW_REMAINING_STEPS.md)。
+
+## Latest DNG history-control status 2026-10-09
+
+H-aware、DNG4/8以及DNG历史融合3seed已完成；1152源交叉统计、96单元和768配对CI见canonical报告/原始证据。iPhone规则退化固定；S25简单梯度局部收益保留但三组CI包含0，未验证C1–C3。当前最小下一步为授权后基于全部正负原始材料的实际跨家族查新/批判审核，再据真实裁决保留或停止主张。原始协议和历史结果不改，不安排新网络/GPU来替代审核。

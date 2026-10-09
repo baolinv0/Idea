@@ -6,7 +6,7 @@
     "provisional_advances": false
   },
   "created": "2026-10-08T15:27:00Z",
-  "updated": "2026-10-09T00:50:26Z",
+  "updated": "2026-10-09T01:41:51Z",
   "gates": {
     "idea-discovery-evidence": {
       "verdict": "BLOCKED",
@@ -14,7 +14,7 @@
         "novelty-check review provenance invalid (provisional review cannot advance this run)",
         "research-review review provenance invalid (provisional review cannot advance this run)"
       ],
-      "updated": "2026-10-09T00:50:26Z"
+      "updated": "2026-10-09T01:41:51Z"
     }
   },
   "phases": [

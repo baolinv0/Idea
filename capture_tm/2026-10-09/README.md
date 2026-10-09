@@ -53,3 +53,5 @@ python pilot_shared_highres.py --outdir reproduced/pilots-shared-highres
 科学精炼为 REVISE；查新与批判审阅都实际发生，但同属 OpenAI 系列，跨系列证据门 BLOCKED。归档已完成不等于科学假说已验证。
 
 最新决定实验已完成：[H-aware与DNG4/8完整结论](local-dng/CONCLUSIONS.md)。后端使用完整历史后，关系规则退化为固定4；当前不支持升级复杂AE。外审资料提交授权待用户确认，workflow仍BLOCKED。
+
+最新DNG历史信息控制与混合结论合入[报告](idea-stage/IDEA_REPORT.md#dng-history-information-update-2026-10-09)，[剩余步骤](WORKFLOW_REMAINING_STEPS.md)明确四项必补验收与条件投稿实验；两份原始材料dossier已备齐但未提交Claude。

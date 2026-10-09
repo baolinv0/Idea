@@ -5,7 +5,7 @@
 
 经过决定性检验后，仍待查新的研究问题是：**当曝光差异已获得充分、公平的后端补偿时，哪些可观测的空间关系仍会改变最优物理曝光？** 主线由“可补偿范围”定义，空间关系反例提供机制证据，独立后端交叉评测排除搭档适配。三者构成一个问题，不能算三项独立创新。
 
-最新决定检验（2026-10-09）：H-aware三种子与DNG4/8积分复核均已完成并独立审计。H-aware残差规则退化为固定4，未保留特殊关系自适应收益。现有证据不足以确认投稿贡献；两次跨家族外审等待明确外部提交授权，gate仍BLOCKED。见下文History-aware Decision Update与[完整正负结论](../local-dng/CONCLUSIONS.md)。
+最新决定检验（2026-10-09）：H-aware三种子、DNG4/8精度复核及DNG历史信息控制均完成。双像素关系规则与iPhone H融合规则退化固定；S25简单梯度仍有局部跨后端收益，三个组的配对区间包含0。当前投稿贡献未确认，两次跨家族外审等待明确外部提交授权，gate仍BLOCKED。下文保留所有正负结果和范围。
 
 ## Literature Landscape
 
@@ -35,7 +35,7 @@ verify_papers.py 本轮确认了 EBSNet、AdaptiveAE、DEBIR、Modular ISP、Edi
 |---|---|---|---|
 | 1 / 1 | 强 TM 后还剩多少曝光选择价值：可补偿集合 | 8/8/5；7.25 | CPU 出现噪声下近最优集合收缩；熟知物理权衡风险仍高。选为主线。 |
 | 2 / 2 | 同直方图、不同空间关系是否改变最优曝光 | 8.5/7.5/5.5；7.15 | 分族有限后端可翻转，但共同256×256后端两族都选0.5；作为未确认机制备选，停止稳定物理翻转主张。 |
-| 3 / 3 | 收益能否迁移到独立同目标后端 | 7/8.5/7；6.45 | 本轮所有选择器选同一动作，没有搭档特有优势信号。保留为控制，不独立立项。 |
+| 3 / 3 | 收益能否迁移到独立同目标后端 | 7/8.5/7；6.45 | 早期P3选择器选同一动作，没有搭档特有优势信号；后续DNG结果见最新章节。保留为控制，不独立立项。 |
 | 4 / 8 | 三预览下最优曝光是否可识别 | 7/8/7.5；6.18 | 理论可行；一般 POMDP 已知。作为 causal oracle 差距的辅助分析。 |
 | 5 / 7 | 模拟器标定误差会怎样推翻动作排序 | 6.5/7.5/7；5.93 | 待验证；缺真实标定范围。支持主线的敏感性检查。 |
 | 6 / 4 | 后揭示编辑意图的采集代价 | 7.5/6/8；5.68 | 新协议；Edit-aware RAW 强近邻。暂存，不更换当前固定目标。 |
@@ -143,6 +143,33 @@ DNG每prior bin4/8节点复核完成，退出0、耗时200.798秒；全部216行
 
 两份只读跨家族外审材料已准备；自动审批拒绝向外部Claude提交非公开研究资料，目前等待用户对该目的地和材料的明确授权。此次Claude审阅未启动，无模型响应、无接受凭据。既有同家族审阅仍provisional，gate继续BLOCKED。没有以新增CPU结果替代这两个审核凭据。
 
+## DNG History-information Update 2026-10-09
+
+新独立协议复用相同68份processed Linear RAW绿色源、同一split/目标/合法相对曝光、三张历史预览以及每次的一张未来捕获；没有追加采集帧或合并未来噪声重复。后端为未来单帧inverse/Wiener与H加单未来的近似逆方差融合/融合加Wiener。每个后端独立在development冻结窗口、固定曝光和四条同容量规则，再完整4×4交叉。融合权重存在裁切、估计方差及数据依赖偏差，不是严格Poisson后验或完整图像Bayes界。
+
+代码已发布ae7c762bf18461fb1fb673b81b0ab0bc33c3e78e，53项相关测试通过。正式19/37/73三种子、4次未来重复、2000次组bootstrap，退出0，内部耗时203.385秒；全权重为零像素计数为0。完整1152行CSV、96交叉单元和768条配对CI见原始证据及独立审计；未来-only对照保留旧144行七动作成本、固定动作和规则动作。
+
+收益为每个后端自己的已冻结规则相对自己的dev固定动作之百分比，不把交叉单元的固定动作偷偷重新选择。
+
+| 相机/后端 | dev固定曝光（19/37/73） | 均值规则收益 | q99规则收益 | 时间噪声规则收益 | 局部梯度规则收益 |
+|---|---|---|---|---|---|
+| iphone/H_aware_classical_fusion | 8/8/8 | 0.0000%–0.0000% | 0.0000%–0.0000% | 0.0000%–0.0000% | 0.0000%–0.0000% |
+| iphone/H_aware_fusion_Wiener | 8/8/8 | 0.0000%–0.0000% | 0.0000%–0.0000% | 0.0000%–0.0000% | 0.0000%–0.0000% |
+| s25/H_aware_classical_fusion | 4/4/4 | 0.0000%–0.0000% | -29.0330%–0.0000% | 0.0000%–0.0000% | 0.0000%–0.0000% |
+| s25/H_aware_fusion_Wiener | 4/4/4 | 0.2467%–0.2574% | -0.3688%–-0.1636% | 0.0000%–0.2524% | 17.2117%–17.4656% |
+
+iPhone两种H融合的四条规则均固定8，收益0、CI[0,0]。S25纯融合以固定4为基准，均值/时间噪声/梯度收益0，q99在seed73退化29.0330%，另两seed为0。不能把这部分阴性扩大为所有后端/所有规则都无收益。
+
+保留正结果：S25融合加Wiener的简单局部梯度规则收益17.2117%–17.4656%，绝对约3.10e-5–3.16e-5；相对均值规则的直接差约-3.06e-5至-3.11e-5，但三条描述性95%CI都包含0（上界0）。该冻结梯度选择器转到纯融合后端仍有13.0302%–13.5061%收益，配对区间同样包含0。另一方面，纯融合自己dev训练的梯度规则全固定4，说明后端专属重新选择和冻结转移是不同问题，不能用一个单元替代另一个。
+
+同会话只有g04/g06/g10三个诊断背景组，许多改善来自其中两组；相机配对、crop、seed和噪声重复不增加独立场景数。当前局部正结果来自简单规则、有限近似后端和固定分组，未验证未知图像的必要性或可泛化效果。复杂关系/risk网络、联合AE–TM必然优越和真实相机最优曝光仍无证据。投稿贡献尚未确认；最小下一步是对最新完整证据完成实际跨家族查新和批判审核，而非用新增训练绕过审核。
+
+[新协议](https://github.com/baolinv0/modular_neural_isp/blob/ae7c762bf18461fb1fb673b81b0ab0bc33c3e78e/research/ae_tm/diagnostics/DNG_HISTORY_CONTROL.md)、[原始结果](../local-dng/dng-history-control-3seed/results.json)、[1152行完整逐源交叉](../local-dng/dng-history-control-3seed/source_metrics.csv)、[运行凭据](../local-dng/dng-history-control-3seed/run_meta.json)、[独立审计](../local-dng/dng_history_control_independent_audit.md)。
+
+公开资料补读：2018年[Learnable Exposure Fusion](https://arxiv.org/abs/1804.01611)官方摘要讨论多LDR融合及配准；2026年[Lights, Camera, Attack](https://arxiv.org/abs/2609.37742)摘要提示时序照明不一致的范围；当前只读摘要，不做全文覆盖裁决，身份helper两项均verify_pending。[Google Research 2020资料](https://research.google/blog/live-hdr-and-dual-exposure-controls-on-pixel-4-and-4a/)说明已有burst合并和tone mapping，不能把历史复用本身当原创。原始核验状态与阅读范围均保留。
+
+最新两份原始材料dossier位于review-inputs/latest-complete-dossier，只含方法候选、冻结协议、代码和完整原始统计/文献，不含作者结论、其他review意见、照片或真实像素缓存；状态PREPARED_NOT_SUBMITTED。先前Claude尝试被自动审批拒绝，未启动、无响应、无接受凭据。该数值审计同模型家族，不替代跨家族审核。
+
 ## Refined Proposal
 
 选定的 Problem Anchor：固定目标、因果三预览、相同合法动作与预算，研究充分后端补偿后仍然可识别的曝光选择价值。主张与正式验证条件将落入 FINAL_PROPOSAL 和研究契约。
@@ -166,7 +193,7 @@ DNG每prior bin4/8节点复核完成，退出0、耗时200.798秒；全部216行
 
 ## Final Recommendation and Acceptance
 
-研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。N0/N1受限版本已执行；H-aware及冻结后端交叉已完成；当前下一步是据阴性结果更新查新和外审，正式神经训练缺乏升级证据。
+研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。N0/N1、H-aware、DNG4/8及历史融合控制均完成；正负结果同列，当前下一步是最新查新和实际跨家族外审，正式神经训练缺乏升级证据。
 
 技能[idea-discovery](C:/Users/Lenovo/.agents/skills/idea-discovery/SKILL.md)要求最终确定性证据门，并明确“do not present the workflow as complete”；[运行时规则](C:/Users/Lenovo/.agents/skills/shared-references/codex-runtime.md)写明“Same-family review is provisional, not cross-family evidence.” 本轮配置的两次审阅实际均为OpenAI gpt-6-astra，与执行者同family；没有虚构其他模型接受。实际证据门结果见下方及.aris/runs状态。当前可审阅的研究产物已经备齐，验收仍为暂定。
 

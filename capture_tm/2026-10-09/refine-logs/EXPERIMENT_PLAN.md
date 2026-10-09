@@ -72,3 +72,7 @@ C1–C3仍未在未知完整图像和充分神经后端中验证。若外审提�
 两份具体外审dossier已准备。自动审批拒绝将非公开协议/代码/实验结果提交给Claude服务，当前等待用户明确授权；尚无Claude响应。跨家族接受凭据和Evidence Gate未完成。旧六小时AutoDL预算已结束，本轮无新增远程/GPU授权。
 
 完整结论与逐源证据：[local-dng](../local-dng/CONCLUSIONS.md)；剩余步骤：[WORKFLOW_REMAINING_STEPS](../WORKFLOW_REMAINING_STEPS.md)。
+
+## Latest DNG history-control status 2026-10-09
+
+H-aware、DNG4/8以及DNG历史融合3seed已完成；1152源交叉统计、96单元和768配对CI见canonical报告/原始证据。iPhone规则退化固定；S25简单梯度局部收益保留但三组CI包含0，未验证C1–C3。当前最小下一步为授权后基于全部正负原始材料的实际跨家族查新/批判审核，再据真实裁决保留或停止主张。原始协议和历史结果不改，不安排新网络/GPU来替代审核。

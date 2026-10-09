@@ -30,3 +30,7 @@ H-aware与DNG4/8完整正负结果、合成双像素风险NPZ和独立数值审�
 初次归档的路径整理和校验清单属于当时版本。后续原始JSON及准备的外审dossier保留实际本机路径，作为本地复现/审阅定位，不能据初次说明称当前所有文件已去除绝对路径。跨家族Claude提交被自动审批拒绝，未启动；旧OpenAI审阅仍为provisional，科学工作流gate仍BLOCKED。
 
 SHA256SUMS.txt现在覆盖当前归档的Git-normalized字节（UTF-8/LF文本、原始NPZ），不含其自身。初次清单保留在history/SHA256SUMS_INITIAL_20261009.txt。Windows自动换行转换后的工作副本不作为该Git内容校验输入；GitHub ZIP/原始blob可据此校验。MANIFEST为文件目录，不表示投稿贡献或审核接受。
+
+## DNG历史信息控制归档 2026-10-09
+
+代码执行和已发布提交均ae7c762bf18461fb1fb673b81b0ab0bc33c3e78e，源tree2364997b680efdfc57c951c09f9f22b6271a55c0。追加三seed正式原始JSON/1152行CSV/退出记录、完整独立数值审计脚本与报告，以及最新未提交的两份dossier；没有原图、真实像素缓存、权重或凭据。此前被拒绝Claude尝试trace未改。独立审计当时记录的output_files包含可选作者summary.json；该临时汇总已折入canonical报告后删除，正式results/CSV/run_meta三文件均未改。门禁重跑仍BLOCKED，两项实际跨家族接受欠缺，prepared材料和同家族数值审计均不算接受。SHA清单覆盖当前Git-normalized文件，不含清单本身；初次清单保留。

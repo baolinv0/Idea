@@ -1,0 +1,16 @@
+{
+  "status": "PREPARED_NOT_SUBMITTED",
+  "prepared_at": "2026-10-09T01:31:05.605911+00:00",
+  "purpose": "latest complete primary-artifact inputs; no actual review response or acceptance",
+  "previous_attempt": "run02_claude-cli was rejected before process creation; its trace remains unchanged",
+  "destination": "Claude service pending explicit human authorization",
+  "images_or_real_pixel_cache_included": false,
+  "dossier_sha256": {
+    "novelty-dossier.md": "b1c85693db5e75e169cf23741d9fc99d1602c3e71eef53f8fd6e138ee52ccac9",
+    "critical-dossier.md": "dee5eae0f6316c48be85fe606a4c283d58faa39966205da8cab8a67115470a48"
+  },
+  "source_commit": "ae7c762bf18461fb1fb673b81b0ab0bc33c3e78e",
+  "reviewer_actual_identity": null,
+  "reviewer_family": null,
+  "accepted": false
+}

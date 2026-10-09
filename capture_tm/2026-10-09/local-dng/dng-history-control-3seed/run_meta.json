@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETED",
+  "protocol": "DNG_HISTORY_CONTROL_20261009",
+  "command": [
+    "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\capturetm-local-dng\\.venv\\Scripts\\python.exe",
+    "-u",
+    "research/ae_tm/diagnostics/dng_history_control.py",
+    "--cache",
+    "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\capturetm-local-dng\\private-pixel-cache",
+    "--audit",
+    "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\dng_audit.json",
+    "--out",
+    "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\dng-history-control-3seed",
+    "--seeds",
+    "19",
+    "37",
+    "73",
+    "--repeats",
+    "4",
+    "--bootstraps",
+    "2000"
+  ],
+  "cwd": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\modular_neural_isp",
+  "git_commit": "ae7c762bf18461fb1fb673b81b0ab0bc33c3e78e",
+  "source_tree": "2364997b680efdfc57c951c09f9f22b6271a55c0",
+  "published_same_commit": true,
+  "seeds": [
+    19,
+    37,
+    73
+  ],
+  "future_repeats": 4,
+  "bootstrap_replicates": 2000,
+  "started_at": "2026-10-09T01:25:08.532732+00:00",
+  "tests_passed": 53,
+  "raw_pixels_saved": false,
+  "formal_S24_test": false,
+  "exit_code": 0,
+  "wall_seconds": 205.67410359997302,
+  "finished_at": "2026-10-09T01:28:34.208299+00:00"
+}
