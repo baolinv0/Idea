@@ -51,3 +51,5 @@ python pilot_shared_highres.py --outdir reproduced/pilots-shared-highres
 
 先做同输入连续/数值后验参考后端，再留出真实空间依赖强度，判断简单规则收益能否脱离分箱误差及已知先验。尚无必要新增 risk 网络或扩大 GPU。
 科学精炼为 REVISE；查新与批判审阅都实际发生，但同属 OpenAI 系列，跨系列证据门 BLOCKED。归档已完成不等于科学假说已验证。
+
+最新决定实验已完成：[H-aware与DNG4/8完整结论](local-dng/CONCLUSIONS.md)。后端使用完整历史后，关系规则退化为固定4；当前不支持升级复杂AE。外审资料提交授权待用户确认，workflow仍BLOCKED。

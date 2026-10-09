@@ -1,0 +1,1 @@
+Automatic approval review rejected the Claude CLI invocation before process creation. Stated reason: existing authorization did not explicitly permit sending these non-public research protocols/code/raw experimental results to this specific external Claude destination. No Claude review ran, no actual reviewer model/session response was returned. Explicit user approval is pending.

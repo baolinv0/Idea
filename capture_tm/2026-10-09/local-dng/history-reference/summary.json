@@ -1,0 +1,2132 @@
+{
+  "status": "completed_history_simulated_diagnostic",
+  "runtime_seconds": 1102.1631016000174,
+  "scope": "independent N0/N1 toy simulation; preserves old results; no S24/real-camera/original CaptureTM evidence",
+  "same_backend_H_aware": [
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.161126483622654e-05,
+      "residual_risk": 3.161126483622654e-05,
+      "brightness_risk": 3.111503391912795e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -4.962309170985938e-07,
+        "paired_independent_source_percentile_ci95": [
+          -6.751608204099056e-07,
+          -3.332884647177274e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 4.962309170985938e-07,
+        "paired_independent_source_percentile_ci95": [
+          3.332884647177274e-07,
+          6.751608204099055e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 1.5697914008486857
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.936479698176358e-05,
+      "residual_risk": 3.936479698176358e-05,
+      "brightness_risk": 3.9326804792606325e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -3.7992189157256654e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.7580484147126953e-07,
+          8.725097770712535e-08
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 3.7992189157256654e-08,
+        "paired_independent_source_percentile_ci95": [
+          -8.725097770712539e-08,
+          1.7580484147126937e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.0965131083360049
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.249362788011423e-05,
+      "residual_risk": 3.249362788011423e-05,
+      "brightness_risk": 3.2071291551822e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -4.2233632829222915e-07,
+        "paired_independent_source_percentile_ci95": [
+          -6.009447571619259e-07,
+          -2.4320555720559824e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 4.2233632829222915e-07,
+        "paired_independent_source_percentile_ci95": [
+          2.432055572055982e-07,
+          6.009447571619259e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 1.2997512307657444
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.8747661017903656e-05,
+      "residual_risk": 3.8747661017903656e-05,
+      "brightness_risk": 3.8740408454333106e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -7.252563570545103e-09,
+        "paired_independent_source_percentile_ci95": [
+          -1.529953034584294e-07,
+          1.2168168588580057e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 7.252563570545103e-09,
+        "paired_independent_source_percentile_ci95": [
+          -1.216816858858006e-07,
+          1.5299530345842936e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.018717422884440005
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.2353288888535605e-05,
+      "residual_risk": 3.2353288888535605e-05,
+      "brightness_risk": 3.1903432521020365e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -4.4985636751523805e-07,
+        "paired_independent_source_percentile_ci95": [
+          -6.25182830040576e-07,
+          -2.783971563355004e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 4.4985636751523805e-07,
+        "paired_independent_source_percentile_ci95": [
+          2.783971563355003e-07,
+          6.25182830040576e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 1.3904501921430557
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.8822066649309785e-05,
+      "residual_risk": 3.8822066649309785e-05,
+      "brightness_risk": 3.8849736636136604e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": 2.7669986826819788e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.3440242879584358e-07,
+          1.8447652146657148e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.7669986826819788e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.844765214665715e-07,
+          1.3440242879584352e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": -0.07127386359095933
+    }
+  ],
+  "all_frozen_cross_cells": [
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_blind",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00019796909083645206,
+      "residual_risk": 0.00018335772510634637,
+      "brightness_risk": 0.00018634454874403718,
+      "residual_actions": [
+        0,
+        0,
+        2305,
+        0,
+        0,
+        5887,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -1.461136573010572e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.7744098174389457e-05,
+          -1.1603951487438344e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.1624542092414891e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.3266690881162812e-05,
+          -9.9589200011526e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.98682363769083e-06,
+        "paired_independent_source_percentile_ci95": [
+          -6.392217076122104e-06,
+          5.965501526492271e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 5.871897498391931
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_aware",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 8.944206340769228e-05,
+      "residual_risk": 5.2926170701828345e-05,
+      "brightness_risk": 8.099441136091021e-05,
+      "residual_actions": [
+        0,
+        0,
+        2305,
+        0,
+        0,
+        5887,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -3.651589270586393e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.8508679282429105e-05,
+          -3.4567327996044946e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -8.447652046782062e-06,
+        "paired_independent_source_percentile_ci95": [
+          -9.421046425937352e-06,
+          -7.550874597844685e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.8068240659081865e-05,
+        "paired_independent_source_percentile_ci95": [
+          -2.9691488662762914e-05,
+          -2.652172389766373e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 9.44483135219748
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_blind",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 0.0003341173346514535,
+      "residual_risk": 0.0003341173346514535,
+      "brightness_risk": 0.0003318364061016659,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -2.280928549787588e-06,
+        "paired_independent_source_percentile_ci95": [
+          -2.7189880706652345e-06,
+          -1.8694684166670383e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 2.280928549787588e-06,
+        "paired_independent_source_percentile_ci95": [
+          1.869468416667038e-06,
+          2.7189880706652345e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.6826729155393951
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.161126483622654e-05,
+      "residual_risk": 3.161126483622654e-05,
+      "brightness_risk": 3.111503391912795e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -4.962309170985938e-07,
+        "paired_independent_source_percentile_ci95": [
+          -6.751608204099056e-07,
+          -3.332884647177274e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 4.962309170985938e-07,
+        "paired_independent_source_percentile_ci95": [
+          3.332884647177274e-07,
+          6.751608204099055e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 1.5697914008486857
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_blind",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00027336859324450177,
+      "residual_risk": 0.0002326871059693048,
+      "brightness_risk": 0.00026007697285390977,
+      "residual_actions": [
+        0,
+        0,
+        5434,
+        0,
+        0,
+        2758,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -4.0681487275196964e-05,
+        "paired_independent_source_percentile_ci95": [
+          -4.3401410135289513e-05,
+          -3.798780764203616e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.3291620390591979e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.4787019389537647e-05,
+          -1.180438716917172e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.738986688460498e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.0487684918053688e-05,
+          -2.424567553757435e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 4.8621607306234775
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_aware",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00012654048420802499,
+      "residual_risk": 9.037108888808777e-05,
+      "brightness_risk": 0.0001192338883820346,
+      "residual_actions": [
+        0,
+        0,
+        5434,
+        0,
+        0,
+        2758,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -3.61693953199372e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.8152956658613557e-05,
+          -3.421034677216058e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -7.306595825990357e-06,
+        "paired_independent_source_percentile_ci95": [
+          -8.272744714279535e-06,
+          -6.4285413850819894e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.8862799493946838e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.053726518154741e-05,
+          -2.7157242030092803e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 5.774117170263693
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_blind",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 0.0007133573427248446,
+      "residual_risk": 0.0007133573427248446,
+      "brightness_risk": 0.0007134051083135055,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": 4.776558866100456e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.3356670889410873e-07,
+          2.2346657360958186e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -4.776558866100456e-08,
+        "paired_independent_source_percentile_ci95": [
+          -2.2346657360958204e-07,
+          1.3356670889410868e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": -0.006695885189667017
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.936479698176358e-05,
+      "residual_risk": 3.936479698176358e-05,
+      "brightness_risk": 3.9326804792606325e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -3.7992189157256654e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.7580484147126953e-07,
+          8.725097770712535e-08
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 3.7992189157256654e-08,
+        "paired_independent_source_percentile_ci95": [
+          -8.725097770712539e-08,
+          1.7580484147126937e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.0965131083360049
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_blind",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.000205478292837399,
+      "residual_risk": 0.00018982227242601732,
+      "brightness_risk": 0.0001926273175174275,
+      "residual_actions": [
+        0,
+        0,
+        2368,
+        0,
+        0,
+        5824,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -1.5656020411381732e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.8867093330107247e-05,
+          -1.230554271358805e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.2850975319971517e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.4553060392772612e-05,
+          -1.1152254877198368e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.805045091410212e-06,
+        "paired_independent_source_percentile_ci95": [
+          -6.410628015442171e-06,
+          9.001471979814894e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 6.254176605477668
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_aware",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 9.115460408287434e-05,
+      "residual_risk": 5.512450167292085e-05,
+      "brightness_risk": 8.300913438376778e-05,
+      "residual_actions": [
+        0,
+        0,
+        2368,
+        0,
+        0,
+        5824,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -3.6030102409953495e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.789253101388906e-05,
+          -3.432633943141693e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -8.145469699106578e-06,
+        "paired_independent_source_percentile_ci95": [
+          -9.024409582640438e-06,
+          -7.229195585051458e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.788463271084691e-05,
+        "paired_independent_source_percentile_ci95": [
+          -2.9423497935606158e-05,
+          -2.6477382902489447e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 8.93588401930967
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_blind",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 0.00033568260837643345,
+      "residual_risk": 0.00033568260837643345,
+      "brightness_risk": 0.0003339118202194441,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.770788156989354e-06,
+        "paired_independent_source_percentile_ci95": [
+          -2.1840323044919708e-06,
+          -1.360771437808524e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 1.770788156989354e-06,
+        "paired_independent_source_percentile_ci95": [
+          1.360771437808524e-06,
+          2.1840323044919708e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.5275185883337641
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.249362788011423e-05,
+      "residual_risk": 3.249362788011423e-05,
+      "brightness_risk": 3.2071291551822e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -4.2233632829222915e-07,
+        "paired_independent_source_percentile_ci95": [
+          -6.009447571619259e-07,
+          -2.4320555720559824e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 4.2233632829222915e-07,
+        "paired_independent_source_percentile_ci95": [
+          2.432055572055982e-07,
+          6.009447571619259e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 1.2997512307657444
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_blind",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.000274432462991561,
+      "residual_risk": 0.00023162764422383724,
+      "brightness_risk": 0.00026100566937464363,
+      "residual_actions": [
+        0,
+        0,
+        5364,
+        0,
+        0,
+        2828,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -4.280481876772382e-05,
+        "paired_independent_source_percentile_ci95": [
+          -4.547280609926047e-05,
+          -4.01399192614854e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.3426793616917405e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.50494841337718e-05,
+          -1.1839599489181637e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.9378025150806414e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.250893420449553e-05,
+          -2.615086257136579e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 4.892567544871785
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_aware",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00012740144525941568,
+      "residual_risk": 9.07554209180929e-05,
+      "brightness_risk": 0.00012027266663634258,
+      "residual_actions": [
+        0,
+        0,
+        5364,
+        0,
+        0,
+        2828,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -3.664602434132279e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.870072848285534e-05,
+          -3.466443138469932e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -7.128778623073084e-06,
+        "paired_independent_source_percentile_ci95": [
+          -8.070941564370775e-06,
+          -6.226559340895583e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.9517245718249705e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.1243895273623586e-05,
+          -2.778293437055275e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 5.59552413911587
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_blind",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 0.0007021969123183728,
+      "residual_risk": 0.0007021969123183728,
+      "brightness_risk": 0.0007022187351160747,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": 2.1822797701722977e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.792605335151292e-07,
+          2.3724297295052984e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.1822797701722977e-08,
+        "paired_independent_source_percentile_ci95": [
+          -2.3724297295052984e-07,
+          1.792605335151291e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": -0.003107788900669206
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.8747661017903656e-05,
+      "residual_risk": 3.8747661017903656e-05,
+      "brightness_risk": 3.8740408454333106e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -7.252563570545103e-09,
+        "paired_independent_source_percentile_ci95": [
+          -1.529953034584294e-07,
+          1.2168168588580057e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 7.252563570545103e-09,
+        "paired_independent_source_percentile_ci95": [
+          -1.216816858858006e-07,
+          1.5299530345842936e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.018717422884440005
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_blind",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00020433080142896268,
+      "residual_risk": 0.00018710363745763414,
+      "brightness_risk": 0.00019066328760675096,
+      "residual_actions": [
+        0,
+        0,
+        1656,
+        0,
+        0,
+        6536,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -1.722716397132857e-05,
+        "paired_independent_source_percentile_ci95": [
+          -2.126875248357681e-05,
+          -1.3559321799669179e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.3667513822211715e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.539796707151691e-05,
+          -1.1980588999069536e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -3.559650149116852e-06,
+        "paired_independent_source_percentile_ci95": [
+          -7.865138130568214e-06,
+          7.733615660245587e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 6.688915095829717
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_aware",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 9.09826984556068e-05,
+      "residual_risk": 4.7067082670767505e-05,
+      "brightness_risk": 8.294147343371915e-05,
+      "residual_actions": [
+        0,
+        0,
+        1656,
+        0,
+        0,
+        6536,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -4.39156157848393e-05,
+        "paired_independent_source_percentile_ci95": [
+          -4.592084834694057e-05,
+          -4.1950024562440775e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -8.041225021887647e-06,
+        "paired_independent_source_percentile_ci95": [
+          -8.939438675408865e-06,
+          -7.224635566055813e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -3.5874390762951655e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.754876105318051e-05,
+          -3.421264005391044e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 8.83819139065347
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_blind",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 0.0003281807635093023,
+      "residual_risk": 0.0003281807635093023,
+      "brightness_risk": 0.0003262548053824913,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.925958126811033e-06,
+        "paired_independent_source_percentile_ci95": [
+          -2.358782201849226e-06,
+          -1.5346127737844537e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 1.925958126811033e-06,
+        "paired_independent_source_percentile_ci95": [
+          1.5346127737844537e-06,
+          2.3587822018492254e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 0.5868589329296237
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.2353288888535605e-05,
+      "residual_risk": 3.2353288888535605e-05,
+      "brightness_risk": 3.1903432521020365e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -4.4985636751523805e-07,
+        "paired_independent_source_percentile_ci95": [
+          -6.25182830040576e-07,
+          -2.783971563355004e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": 4.4985636751523805e-07,
+        "paired_independent_source_percentile_ci95": [
+          2.783971563355003e-07,
+          6.25182830040576e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 1.3904501921430557
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_blind",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00027378806463538457,
+      "residual_risk": 0.00022857310313587756,
+      "brightness_risk": 0.00026017717681374203,
+      "residual_actions": [
+        0,
+        0,
+        4165,
+        0,
+        0,
+        4027,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -4.521496149950705e-05,
+        "paired_independent_source_percentile_ci95": [
+          -4.871500744856474e-05,
+          -4.161988176623131e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -1.3610887821642626e-05,
+        "paired_independent_source_percentile_ci95": [
+          -1.513483456098343e-05,
+          -1.2161783388180932e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -3.160407367786442e-05,
+        "paired_independent_source_percentile_ci95": [
+          -3.5637540107509184e-05,
+          -2.753953676659682e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 4.971322559209712
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_blind",
+      "renderer": "H_aware",
+      "fixed_exposure": 0.5,
+      "fixed_risk": 0.00012778384666776126,
+      "residual_risk": 7.869378759558252e-05,
+      "brightness_risk": 0.00012195213793300184,
+      "residual_actions": [
+        0,
+        0,
+        4165,
+        0,
+        0,
+        4027,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": -4.909005907217873e-05,
+        "paired_independent_source_percentile_ci95": [
+          -5.1211464948192165e-05,
+          -4.6975552632303875e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": -5.831708734759406e-06,
+        "paired_independent_source_percentile_ci95": [
+          -6.569104368632083e-06,
+          -5.0393586261671865e-06
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -4.3258350337419324e-05,
+        "paired_independent_source_percentile_ci95": [
+          -4.5207434837144234e-05,
+          -4.1294482138162e-05
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": 4.563729208999234
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_blind",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 0.000709886056600595,
+      "residual_risk": 0.000709886056600595,
+      "brightness_risk": 0.0007099698047169228,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": 8.37481163278115e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.2403203618482942e-07,
+          2.6876256961848057e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -8.37481163278115e-08,
+        "paired_independent_source_percentile_ci95": [
+          -2.687625696184806e-07,
+          1.2403203618482927e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": -0.011797402632307552
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "selector": "H_aware",
+      "renderer": "H_aware",
+      "fixed_exposure": 4.0,
+      "fixed_risk": 3.8822066649309785e-05,
+      "residual_risk": 3.8822066649309785e-05,
+      "brightness_risk": 3.8849736636136604e-05,
+      "residual_actions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8192,
+        0
+      ],
+      "residual_minus_fixed": {
+        "mean_difference": 0.0,
+        "paired_independent_source_percentile_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "brightness_minus_fixed": {
+        "mean_difference": 2.7669986826819788e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.3440242879584358e-07,
+          1.8447652146657148e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "rule minus this source-selector's dev-selected fixed; negative favors rule"
+      },
+      "residual_minus_brightness": {
+        "mean_difference": -2.7669986826819788e-08,
+        "paired_independent_source_percentile_ci95": [
+          -1.844765214665715e-07,
+          1.3440242879584352e-07
+        ],
+        "bootstrap_replicates": 2000,
+        "independent_source_count": 8192,
+        "difference_direction": "known residual minus brightness; negative favors residual"
+      },
+      "brightness_gain_percent": -0.07127386359095933
+    }
+  ],
+  "convergence": [
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "nodes": 128,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        6.161751100968758e-20,
+        2.3587055166949584e-21,
+        -5.8600576520553554e-21,
+        -5.2830164567383633e-20,
+        3.872963025549845e-20,
+        1.1080672378864543e-20,
+        -1.0845992191795299e-20
+      ],
+      "max_abs_action_risk_difference": 6.161751100968758e-20,
+      "max_abs_source_action_cost_difference": 3.729655473350135e-17
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "nodes": 128,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -2.683789436132859e-20,
+        -2.087144383415787e-20,
+        -6.30162992749089e-21,
+        -1.812016679979834e-20,
+        8.329140081737858e-21,
+        1.0880157309527427e-20,
+        -4.3908614911694723e-20
+      ],
+      "max_abs_action_risk_difference": 4.3908614911694723e-20,
+      "max_abs_source_action_cost_difference": 3.5344990823027445e-17
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 128,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -3.116402957793532e-19,
+        2.3291751688268153e-19,
+        -2.897586802403348e-19,
+        7.987572391396337e-19,
+        5.719561025013224e-20,
+        -4.652329238276069e-19,
+        5.960359505182004e-19
+      ],
+      "max_abs_action_risk_difference": 7.987572391396337e-19,
+      "max_abs_source_action_cost_difference": 3.642919299551295e-17
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 128,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        2.218357006681262e-19,
+        2.429373107389012e-19,
+        1.1238411844269284e-19,
+        2.2352979241202894e-20,
+        -5.135581852308443e-20,
+        -2.2219669750425565e-20,
+        1.806872278960479e-19
+      ],
+      "max_abs_action_risk_difference": 2.429373107389012e-19,
+      "max_abs_source_action_cost_difference": 3.230922474006803e-17
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "nodes": 256,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -6.16224740933629e-20,
+        -4.3076671169617746e-20,
+        -1.3344491232011719e-20,
+        -2.445828314712106e-20,
+        7.22500906034442e-21,
+        -2.4708274253458205e-20,
+        5.569409940064634e-19
+      ],
+      "max_abs_action_risk_difference": 5.569409940064634e-19,
+      "max_abs_source_action_cost_difference": 5.117434254131581e-17
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "nodes": 256,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -2.1837813740644282e-20,
+        1.7169031879984534e-20,
+        3.0154313468646565e-20,
+        -2.4046825415861285e-20,
+        -6.371113098945344e-21,
+        4.701609038742185e-22,
+        -1.924910369750686e-20
+      ],
+      "max_abs_action_risk_difference": 3.0154313468646565e-20,
+      "max_abs_source_action_cost_difference": 5.074066167232161e-17
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 256,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        5.632206616424561e-19,
+        2.6365554844515204e-19,
+        -3.452405790564103e-19,
+        -8.961964269613895e-19,
+        -3.0523895181395843e-19,
+        4.473241210613615e-19,
+        7.03849837915401e-19
+      ],
+      "max_abs_action_risk_difference": 8.961964269613895e-19,
+      "max_abs_source_action_cost_difference": 4.85722573273506e-17
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 256,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -2.0491820278019167e-19,
+        -2.6389514647945685e-19,
+        -3.118629107617065e-19,
+        -1.647104266194551e-19,
+        -7.26098107723282e-20,
+        -4.619871701986028e-21,
+        -1.6561677423274314e-19
+      ],
+      "max_abs_action_risk_difference": 3.118629107617065e-19,
+      "max_abs_source_action_cost_difference": 7.22078646875346e-17
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "nodes": 512,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 19,
+      "population": "N0_diagnostic",
+      "nodes": 512,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 512,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 19,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 512,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "nodes": 128,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -5.937502436905633e-21,
+        1.632937247240932e-20,
+        3.4245277359695346e-21,
+        6.21051339807876e-20,
+        -7.466132208903628e-21,
+        9.837659025093158e-21,
+        8.004833582828787e-21
+      ],
+      "max_abs_action_risk_difference": 6.21051339807876e-20,
+      "max_abs_source_action_cost_difference": 3.5128150388530344e-17
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "nodes": 128,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        2.337397699544762e-20,
+        -1.3102734773296025e-21,
+        1.3503374533107256e-20,
+        3.9405721159289836e-20,
+        1.4940626696812284e-21,
+        2.0390442902284195e-20,
+        5.728307379567076e-21
+      ],
+      "max_abs_action_risk_difference": 3.9405721159289836e-20,
+      "max_abs_source_action_cost_difference": 3.0140820395097023e-17
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 128,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -3.922316756797821e-19,
+        2.0766720829904095e-19,
+        -2.950187217555595e-19,
+        8.547732898362653e-19,
+        1.5698088908424162e-19,
+        -4.16151257452978e-19,
+        6.036032055569887e-19
+      ],
+      "max_abs_action_risk_difference": 8.547732898362653e-19,
+      "max_abs_source_action_cost_difference": 3.5561831257524545e-17
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 128,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        2.0181053691761823e-19,
+        2.2657991752324166e-19,
+        7.568816342194429e-20,
+        4.8488913917552206e-20,
+        -2.63310717527294e-20,
+        -1.9096640588220118e-20,
+        1.353133074374891e-19
+      ],
+      "max_abs_action_risk_difference": 2.2657991752324166e-19,
+      "max_abs_source_action_cost_difference": 3.0357660829594124e-17
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "nodes": 256,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -5.481643201327659e-20,
+        -5.310251378406672e-20,
+        -5.1477724265859433e-20,
+        -1.7246715771730627e-20,
+        3.0411295220512062e-21,
+        4.095278154931128e-20,
+        3.913311344866533e-20
+      ],
+      "max_abs_action_risk_difference": 5.481643201327659e-20,
+      "max_abs_source_action_cost_difference": 4.9439619065339e-17
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "nodes": 256,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        5.35752224625402e-20,
+        5.1410813109122136e-20,
+        8.935922297485253e-21,
+        1.6645781981407924e-20,
+        2.3807337241481577e-20,
+        4.81437693233547e-20,
+        5.646195688552802e-20
+      ],
+      "max_abs_action_risk_difference": 5.646195688552802e-20,
+      "max_abs_source_action_cost_difference": 5.941427905220564e-17
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 256,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        6.63014212282691e-19,
+        2.853857899320732e-19,
+        -3.1465474872664955e-19,
+        -9.136003070495052e-19,
+        -2.296999910950034e-19,
+        4.25944377971964e-19,
+        3.991484242526313e-19
+      ],
+      "max_abs_action_risk_difference": 9.136003070495052e-19,
+      "max_abs_source_action_cost_difference": 4.85722573273506e-17
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 256,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -1.8858841671747608e-19,
+        -2.5425719987350697e-19,
+        -2.9246635257795056e-19,
+        -1.2309721889920266e-19,
+        -4.066363022643571e-20,
+        4.79712604128074e-20,
+        -1.2953104192151781e-19
+      ],
+      "max_abs_action_risk_difference": 2.9246635257795056e-19,
+      "max_abs_source_action_cost_difference": 8.716985466783456e-17
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "nodes": 512,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 37,
+      "population": "N0_diagnostic",
+      "nodes": 512,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 512,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 37,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 512,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "nodes": 128,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -1.5683344414005405e-20,
+        1.2463957469949021e-20,
+        -9.040773902474885e-21,
+        4.4051917111817765e-20,
+        -1.0920438446925071e-20,
+        -1.3337654067261085e-20,
+        6.2940172809159876e-21
+      ],
+      "max_abs_action_risk_difference": 4.4051917111817765e-20,
+      "max_abs_source_action_cost_difference": 3.9898639947466563e-17
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "nodes": 128,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -1.9270572275674298e-20,
+        -4.129645893795572e-21,
+        -4.263233947135752e-21,
+        4.762222573722697e-21,
+        -2.4040460002553748e-20,
+        -1.8060487515943325e-21,
+        -3.4039792245774284e-20
+      ],
+      "max_abs_action_risk_difference": 3.4039792245774284e-20,
+      "max_abs_source_action_cost_difference": 3.946495907847236e-17
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 128,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -3.9310765994847577e-19,
+        1.4158623070401723e-19,
+        -3.0047046237774337e-19,
+        8.105546958310181e-19,
+        1.3355864965434323e-19,
+        -3.8373470194422695e-19,
+        6.203385169150084e-19
+      ],
+      "max_abs_action_risk_difference": 8.105546958310181e-19,
+      "max_abs_source_action_cost_difference": 3.642919299551295e-17
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 128,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        2.498766452198822e-19,
+        2.771778576594685e-19,
+        1.6148584394717612e-19,
+        8.963626385657244e-20,
+        -1.3484569098868746e-20,
+        -3.814495492629767e-20,
+        1.9709487203099747e-19
+      ],
+      "max_abs_action_risk_difference": 2.771778576594685e-19,
+      "max_abs_source_action_cost_difference": 3.859759734048396e-17
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "nodes": 256,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        1.6068810579455116e-20,
+        -1.80660381684644e-20,
+        -1.4641820625224574e-20,
+        4.2303257296880665e-20,
+        -1.9241461818902253e-20,
+        -5.386698376643057e-20,
+        -1.6432038834241648e-19
+      ],
+      "max_abs_action_risk_difference": 1.6432038834241648e-19,
+      "max_abs_source_action_cost_difference": 4.9439619065339e-17
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "nodes": 256,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        6.324804878691726e-20,
+        9.407343191454307e-20,
+        6.780638264875557e-20,
+        -9.679913097339882e-21,
+        -1.751679024172919e-20,
+        -3.434677662138215e-20,
+        -1.0122396059047952e-21
+      ],
+      "max_abs_action_risk_difference": 9.407343191454307e-20,
+      "max_abs_source_action_cost_difference": 7.784571598445922e-17
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 256,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        7.223329883700938e-19,
+        3.7507553618512604e-19,
+        -3.4562583842670687e-19,
+        -8.85240833338431e-19,
+        -2.818409074169772e-19,
+        4.567234195982413e-19,
+        2.17692750414283e-19
+      ],
+      "max_abs_action_risk_difference": 8.85240833338431e-19,
+      "max_abs_source_action_cost_difference": 5.0306980803327406e-17
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 256,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        -3.021184388024963e-19,
+        -3.4433892633933336e-19,
+        -3.38479773416073e-19,
+        -1.5362873965187048e-19,
+        -9.073059795758595e-20,
+        -2.5729983269938626e-20,
+        -3.367842403664984e-19
+      ],
+      "max_abs_action_risk_difference": 3.4433892633933336e-19,
+      "max_abs_source_action_cost_difference": 6.505213034913027e-17
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "nodes": 512,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 73,
+      "population": "N0_diagnostic",
+      "nodes": 512,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 512,
+      "renderer": "H_blind",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    },
+    {
+      "seed": 73,
+      "population": "N1_dependence_diagnostic",
+      "nodes": 512,
+      "renderer": "H_aware",
+      "risk_difference_by_action_vs_highest_nodes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_abs_action_risk_difference": 0.0,
+      "max_abs_source_action_cost_difference": 0.0
+    }
+  ],
+  "limits": [
+    "known explicit training prior and known residual relation; neither backend claims unknown-prior optimality",
+    "H_blind intentionally omits H and observational selection information; H_aware conditions on all three observed previews",
+    "N1 is a true dependence shift with the training prior frozen; no prior-shift Bayes optimality claim",
+    "finite nodes and future-noise repetitions; CI conditional on frozen policy and repeated captures",
+    "shared ADC kernel tail approximation/rare likelihood underflow; no Gaussian fallback",
+    "no S24 formal test, real camera, full-image prior, neural training, or motion evaluation"
+  ],
+  "interpretation": "In this frozen known-prior two-pixel experiment the H-aware-trained residual rule is fixed e4, not evidence of residual adaptation necessity. Transferred old-selector gains use the old e0.5 comparator and do not prove necessity after re-selection."
+}

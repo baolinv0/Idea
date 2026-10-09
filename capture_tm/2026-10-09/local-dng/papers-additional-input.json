@@ -1,0 +1,15 @@
+[
+  {
+    "id": "digital_gimbal",
+    "title": "Digital Gimbal: End-to-End Deep Image Stabilization With Learnable Exposure Times"
+  },
+  {
+    "id": "rl_control",
+    "title": "Learning to Control Camera Exposure via Reinforcement Learning"
+  },
+  {
+    "id": "bayes_attributes",
+    "arxiv_id": "1807.10596",
+    "title": "Generic Camera Attribute Control using Bayesian Optimization"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "call_number": 1,
+  "purpose": "latest-complete-evidence",
+  "timestamp": "2026-10-09T00:43:44.508154+00:00",
+  "thread_id": null,
+  "requested_session_id": "37524e62-bbc5-4904-b1bd-63a36ce75c6a",
+  "model": null,
+  "model_family": "unknown",
+  "reviewer_model_source": "unavailable",
+  "executor_model": "codex-gpt-6",
+  "executor_model_source": "caller-declared",
+  "executor_family": "openai",
+  "family_relation": "unknown",
+  "independence_verified": "unverified",
+  "backend": "claude-cli",
+  "tool": "claude --print",
+  "status": "error",
+  "review_status": "unavailable",
+  "acceptance_status": "provisional",
+  "fallback_reason": "Automatic approval review rejected the Claude CLI invocation before process creation. Stated reason: existing authorization did not explicitly permit sending these non-public research protocols/code/raw experimental results to this specific external Claude destination. No Claude review ran, no actual reviewer model/session response was returned. Explicit user approval is pending."
+}

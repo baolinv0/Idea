@@ -1,0 +1,505 @@
+{
+  "audit_type": "official_arxiv_title_metadata_check",
+  "audited_at_utc": "2026-10-09T00:48:54.206019+00:00",
+  "scope": "Seven legacy arXiv IDs plus four specified additions; titles and primary URLs only.",
+  "method": "Read all eleven official arxiv.org/abs/<ID> records through the web tool. Official titles were extracted from each Title field, not supplied from memory. Read local public dossier inputs for comparisons.",
+  "review_qualification": {
+    "same_family_provisional": true,
+    "cross_family_receipt": false,
+    "claude_called": false,
+    "scientific_claim_review": false
+  },
+  "inputs_inspected": [
+    {
+      "path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+      "sha256": "0b301905110bd051c9a39a3f091a65a8b52246fecc79a498ef565dcea926ce0c",
+      "item_count": 7,
+      "mode": "read_only"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "sha256": "dc757da8506172fe3840912ef5b59dad08737a9bf645c74f363a79b09fcc6b69",
+      "item_count": 7,
+      "mode": "read_only"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+      "sha256": "0b301905110bd051c9a39a3f091a65a8b52246fecc79a498ef565dcea926ce0c",
+      "item_count": 7,
+      "mode": "read_only"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+      "sha256": "1a224f372b256be0e5aeeb653d81725c251bb662ff93693687e287a9b4f2ee74",
+      "item_count": 6,
+      "mode": "read_only"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-additional-input.json",
+      "sha256": "b1d05c053bbc39224b5e990a8a2de7311a82f4b1fde93c9e7dd377e9e033aaca",
+      "item_count": 3,
+      "mode": "read_only"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+      "sha256": "0138156e8bd4148b6847a53c85af437fa5bba60d9f02abb40e75029f5a8b912e",
+      "item_count": 24,
+      "mode": "read_only"
+    }
+  ],
+  "summary": {
+    "requested_ids": 11,
+    "official_records_read": 11,
+    "legacy_input_exact_matches": 6,
+    "legacy_input_mismatches": [
+      "2508.13503"
+    ],
+    "additional_supplied_titles_exact_matches": 3,
+    "additional_input_titles_missing": [
+      "2605.04397"
+    ],
+    "all_primary_input_exact_matches": 9,
+    "all_primary_input_mismatches": [
+      "2508.13503"
+    ],
+    "all_primary_input_titles_missing": [
+      "2605.04397"
+    ],
+    "note": "AdaptiveAE is incorrect in the legacy papers-input copies, while papers-input_20261009.json already has the exact official title. Optimize-at-Capture had no title in papers-update-input.json; its official title is now recorded here. No input files or main documents were modified."
+  },
+  "papers": [
+    {
+      "arxiv_id": "2005.12536",
+      "official_title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+      "primary_url": "https://arxiv.org/abs/2005.12536",
+      "official_pdf_url": "https://arxiv.org/pdf/2005.12536",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v1",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "ebs",
+      "input_title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "ebs",
+          "input_title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "ebs",
+          "input_title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "ebs",
+          "input_title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "ebsnet",
+          "input_title": "Learning a Reinforced Agent for Flexible Exposure Bracketing Selection",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2508.13503",
+      "official_title": "AdaptiveAE: An Adaptive Exposure Strategy for HDR Capturing in Dynamic Scenes",
+      "primary_url": "https://arxiv.org/abs/2508.13503",
+      "official_pdf_url": "https://arxiv.org/pdf/2508.13503",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v1",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "adaptive",
+      "input_title": "AdaptiveAE: Physics-Aware Exposure Learning for Cameras in Motion",
+      "input_title_differs": true,
+      "comparison_status": "mismatch",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "adaptive",
+          "input_title": "AdaptiveAE: Physics-Aware Exposure Learning for Cameras in Motion",
+          "matches_official_title": false,
+          "comparison_status": "mismatch"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "adaptive",
+          "input_title": "AdaptiveAE: Physics-Aware Exposure Learning for Cameras in Motion",
+          "matches_official_title": false,
+          "comparison_status": "mismatch"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "adaptive",
+          "input_title": "AdaptiveAE: Physics-Aware Exposure Learning for Cameras in Motion",
+          "matches_official_title": false,
+          "comparison_status": "mismatch"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "adaptiveae",
+          "input_title": "AdaptiveAE: An Adaptive Exposure Strategy for HDR Capturing in Dynamic Scenes",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2603.21784",
+      "official_title": "Dynamic Exposure Burst Image Restoration",
+      "primary_url": "https://arxiv.org/abs/2603.21784",
+      "official_pdf_url": "https://arxiv.org/pdf/2603.21784",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v1",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "debir",
+      "input_title": "Dynamic Exposure Burst Image Restoration",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "debir",
+          "input_title": "Dynamic Exposure Burst Image Restoration",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "debir",
+          "input_title": "Dynamic Exposure Burst Image Restoration",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "debir",
+          "input_title": "Dynamic Exposure Burst Image Restoration",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "debir",
+          "input_title": "Dynamic Exposure Burst Image Restoration",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2512.08564",
+      "official_title": "Modular Neural Image Signal Processing",
+      "primary_url": "https://arxiv.org/abs/2512.08564",
+      "official_pdf_url": "https://arxiv.org/pdf/2512.08564",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v3",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "modular",
+      "input_title": "Modular Neural Image Signal Processing",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "modular",
+          "input_title": "Modular Neural Image Signal Processing",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "modular",
+          "input_title": "Modular Neural Image Signal Processing",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "modular",
+          "input_title": "Modular Neural Image Signal Processing",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "modular",
+          "input_title": "Modular Neural Image Signal Processing",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2604.03402",
+      "official_title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+      "primary_url": "https://arxiv.org/abs/2604.03402",
+      "official_pdf_url": "https://arxiv.org/pdf/2604.03402",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v2",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "drift",
+      "input_title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "drift",
+          "input_title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "drift",
+          "input_title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "drift",
+          "input_title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "drift",
+          "input_title": "DRIFT: Deep Restoration, ISP Fusion, and Tone-mapping",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2512.05859",
+      "official_title": "Edit-aware RAW Reconstruction",
+      "primary_url": "https://arxiv.org/abs/2512.05859",
+      "official_pdf_url": "https://arxiv.org/pdf/2512.05859",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v2",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "edit",
+      "input_title": "Edit-aware RAW Reconstruction",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "edit",
+          "input_title": "Edit-aware RAW Reconstruction",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "edit",
+          "input_title": "Edit-aware RAW Reconstruction",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "edit",
+          "input_title": "Edit-aware RAW Reconstruction",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "editraw",
+          "input_title": "Edit-aware RAW Reconstruction",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.02831",
+      "official_title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+      "primary_url": "https://arxiv.org/abs/2609.02831",
+      "official_pdf_url": "https://arxiv.org/pdf/2609.02831",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v1",
+      "group": "legacy_seven",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+      "input_id": "bench",
+      "input_title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\idea-discovery\\papers-input.json",
+          "input_id": "bench",
+          "input_title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\papers-input.json",
+          "input_id": "bench",
+          "input_title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009\\papers-input.json",
+          "input_id": "bench",
+          "input_title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "benchmark",
+          "input_title": "Benchmarking RAW and RGB Restoration in Image Signal Processors",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "1311.6887",
+      "official_title": "Modeling Radiometric Uncertainty for Vision with Tone-mapped Color Images",
+      "primary_url": "https://arxiv.org/abs/1311.6887",
+      "official_pdf_url": "https://arxiv.org/pdf/1311.6887",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v2",
+      "group": "additional_four",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+      "input_id": "radiometric",
+      "input_title": "Modeling Radiometric Uncertainty for Vision with Tone-mapped Color Images",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+          "input_id": "radiometric",
+          "input_title": "Modeling Radiometric Uncertainty for Vision with Tone-mapped Color Images",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2605.04397",
+      "official_title": "Optimize-at-Capture: Highly-adaptive Exposure Controlling for In-Vehicle Non-contact Heart-rate Monitoring",
+      "primary_url": "https://arxiv.org/abs/2605.04397",
+      "official_pdf_url": "https://arxiv.org/pdf/2605.04397",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v1",
+      "group": "additional_four",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+      "input_id": "optimize_capture",
+      "input_title": null,
+      "input_title_differs": null,
+      "comparison_status": "title_missing",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+          "input_id": "optimize_capture",
+          "input_title": null,
+          "matches_official_title": null,
+          "comparison_status": "title_missing"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2609.17023",
+      "official_title": "Optimal exposure time for satellite imaging? A trade-off between residual tip-tilt and registration accuracy",
+      "primary_url": "https://arxiv.org/abs/2609.17023",
+      "official_pdf_url": "https://arxiv.org/pdf/2609.17023",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v1",
+      "group": "additional_four",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+      "input_id": "satellite",
+      "input_title": "Optimal exposure time for satellite imaging? A trade-off between residual tip-tilt and registration accuracy",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-update-input.json",
+          "input_id": "satellite",
+          "input_title": "Optimal exposure time for satellite imaging? A trade-off between residual tip-tilt and registration accuracy",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        },
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\work\\repositories\\Idea\\capture_tm\\2026-10-09\\novelty-check\\papers-input_20261009.json",
+          "input_id": "satellite",
+          "input_title": "Optimal exposure time for satellite imaging? A trade-off between residual tip-tilt and registration accuracy",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "1807.10596",
+      "official_title": "Generic Camera Attribute Control using Bayesian Optimization",
+      "primary_url": "https://arxiv.org/abs/1807.10596",
+      "official_pdf_url": "https://arxiv.org/pdf/1807.10596",
+      "source_type": "official_arxiv_abstract_record",
+      "title_locator": "Title field in official abstract page (web extract line 9)",
+      "observed_latest_version": "v3",
+      "group": "additional_four",
+      "verification_status": "official_record_read",
+      "comparison_input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-additional-input.json",
+      "input_id": "bayes_attributes",
+      "input_title": "Generic Camera Attribute Control using Bayesian Optimization",
+      "input_title_differs": false,
+      "comparison_status": "exact_match",
+      "input_variants": [
+        {
+          "input_path": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Local_DNG_20261009\\papers-additional-input.json",
+          "input_id": "bayes_attributes",
+          "input_title": "Generic Camera Attribute Control using Bayesian Optimization",
+          "matches_official_title": true,
+          "comparison_status": "exact_match"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Bibliographic title verification only; no new method/experiment or overlap conclusions were inferred.",
+    "This same-family check does not satisfy any cross-family novelty or critical-review evidence gate."
+  ]
+}

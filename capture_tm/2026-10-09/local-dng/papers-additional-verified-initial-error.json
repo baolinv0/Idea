@@ -1,0 +1,10 @@
+{
+  "verdict": "BLOCKED",
+  "hallucination_rate": 0.0,
+  "pending_rate": 0.0,
+  "warnings": [
+    "input_unreadable"
+  ],
+  "papers": [],
+  "error": "PaperInput.__init__() got an unexpected keyword argument 'url'"
+}

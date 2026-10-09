@@ -1,0 +1,29 @@
+[
+  {
+    "id": "radiometric",
+    "arxiv_id": "1311.6887",
+    "doi": "10.1109/TPAMI.2014.2318713",
+    "title": "Modeling Radiometric Uncertainty for Vision with Tone-mapped Color Images"
+  },
+  {
+    "id": "optimize_capture",
+    "arxiv_id": "2605.04397"
+  },
+  {
+    "id": "satellite",
+    "arxiv_id": "2609.17023",
+    "title": "Optimal exposure time for satellite imaging? A trade-off between residual tip-tilt and registration accuracy"
+  },
+  {
+    "id": "hdrnoise",
+    "title": "Noise-Optimal Capture for High Dynamic Range Photography"
+  },
+  {
+    "id": "expocm",
+    "title": "ExpoCM: Exposure-Aware One-Step Generative Single-Image HDR Reconstruction"
+  },
+  {
+    "id": "joca",
+    "title": "JOCA: Task-Driven Joint Optimisation of Camera Hardware and Adaptive Camera"
+  }
+]

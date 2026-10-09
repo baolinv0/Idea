@@ -17,6 +17,8 @@
 
 全部DNG、照片、contact sheet、真实像素缓存均未上传。输入路径只由本地CLI提供。DNG源已处理/噪声/可能裁切；这里模拟额外曝光/噪声，以原bounded绿色源的固定解析变换为目标，不声称独立专家GT。
 
-当前科学缺口：参考后端遗漏三张历史预览及动作选择先验。因此当前结果只适用于共同H-blind后端。H-aware后验及严格2selectors×2renderers交叉矩阵正在独立worktree实现；DNG4/8积分refinement待做。只有这些决定检验及必要强基线支持后，才安排投稿贡献确认和后续训练。
+最新决定：H-aware与DNG4/8已完成并独立审计。H-aware关系规则恒4、收益0；DNG所有冻结动作和收益符号不变。当前缺口是明确的新颖贡献与实际跨家族外审，不能升级复杂方法主张。
 
 当前验收缺口：查新和批判审阅的实际模型均属OpenAI系列，接受状态provisional；2026-10-09重新运行evidence gate退出1，仍缺有效跨系列凭据。没有修改gate策略或伪造接受。
+
+最新资料：[H-aware原始结果](history-reference/results.json)、[全部交叉单元汇总](history-reference/summary.json)、[H-aware独立审计](history_independent_audit.md)、[DNG4/8原始结果](relative-experiment-refinement04_08/results.json)、[精度审计](dng_refinement_independent_audit.md)、[文献原文核读](primary_overlap_audit.md)。H-aware已发布等价代码提交c6a3fb4；其完整Git源tree与执行用本地f465e73一致。外部Claude审阅等待用户授权，未启动、无响应。

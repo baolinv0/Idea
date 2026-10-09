@@ -1,0 +1,18 @@
+{
+  "skill": "novelty-check",
+  "run_id": "2026-10-09_run02_claude-cli",
+  "started_at": "2026-10-09T00:40:57.120613+00:00",
+  "executor": "codex",
+  "executor_model": "codex-gpt-6",
+  "executor_model_source": "caller-declared",
+  "executor_family": "openai",
+  "reviewer_model_source": "unavailable",
+  "reviewer_family": "unknown",
+  "reviewer_backend": "claude-cli",
+  "family_relation": "unknown",
+  "independence_verified": "unverified",
+  "native_evidence_id": null,
+  "native_evidence_path": null,
+  "project_dir": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-08\\capturetm-plan-chatgpt-conversation-6ac72ce4-202c\\outputs\\CaptureTM_Idea_Discovery_20261009",
+  "status": "error"
+}

@@ -3,9 +3,9 @@
 流程：research-lit → idea-creator → novelty-check → research-review → research-refine-pipeline。
 状态：REVISE / 研究准备稿。初轮查新 PROCEED WITH CAUTION（5/10）；批判审阅 PROCEED（只推进最小实验，成熟度4/10）；同系列审阅，最终证据门未接受。CPU 实验已完成；没有正式神经训练或真实相机证据。
 
-最值得开展一次最小决定实验的问题是：**当曝光差异已获得充分、公平的后端补偿时，哪些可观测的空间关系仍会改变最优物理曝光？** 主线由“可补偿范围”定义，空间关系反例提供机制证据，独立后端交叉评测排除搭档适配。三者构成一个问题，不能算三项独立创新。
+经过决定性检验后，仍待查新的研究问题是：**当曝光差异已获得充分、公平的后端补偿时，哪些可观测的空间关系仍会改变最优物理曝光？** 主线由“可补偿范围”定义，空间关系反例提供机制证据，独立后端交叉评测排除搭档适配。三者构成一个问题，不能算三项独立创新。
 
-最新补充（2026-10-09）：N0连续参考、反向依赖N1以及68份DNG相对诊断已执行。当前参考后端仍未融合三张历史预览；H-aware决定检验已实现并在运行，最终三种子结果尚待汇总。投稿贡献和跨系列验收仍未完成。见[本地诊断完整正负结论](../local-dng/CONCLUSIONS.md)。
+最新决定检验（2026-10-09）：H-aware三种子与DNG4/8积分复核均已完成并独立审计。H-aware残差规则退化为固定4，未保留特殊关系自适应收益。现有证据不足以确认投稿贡献；两次跨家族外审等待明确外部提交授权，gate仍BLOCKED。见下文History-aware Decision Update与[完整正负结论](../local-dng/CONCLUSIONS.md)。
 
 ## Literature Landscape
 
@@ -114,7 +114,34 @@ reviewer 指出：细容差集合受 LUT 分箱影响；分族后端相当于获
 - 独立代码审计确认后端信息缺口：当前后验只用未来捕获与已知曝光，没有使用三张H或动作选择事件。这是共同受限后端比较，不是充分后端/Bayes下界。
 - DNG真实内容相对诊断已跑通3seed、三个有限后端、四个预设规则；规则收益随后端改变，有明显阴性/反转；三个诊断组的区间只作描述。没有神经训练、原生Bayer、专家GT或真实多曝光重拍证据。
 - 当前代码已上传工程分支；原始JSON、逐源成本、冻结后端交叉矩阵、失败修复与复现环境见[local-dng](../local-dng/README.md)。原实验target/actions/formalS24test保持原状。
-- H-aware检验已完成实现与测试，正式三种子运行中；最终结果待汇总。DNG积分2/4节点每prior bin最大风险差6.636e-6，后续4/8 refinement用于确认更严格数值口径。
+- 本条是前次运行状态；H-aware及DNG4/8现已完成，详见下一节决定结论。DNG积分2/4节点每prior bin最大风险差6.636e-6，后续4/8 refinement用于确认更严格数值口径。
+
+## History-aware Decision Update 2026-10-09
+
+本节是已完成决定实验的新结论；前面的H-blind、有限分箱与旧审阅保留为历史证据。当前尚未确认可投稿贡献。
+
+H-aware正式三种子、每诊断8192个双像素源×16次未来重复、128/256/512积分已完成，退出0，内部耗时1102.163秒。两个后端共享同一源、H与未来ADC捕获；各自development选择器冻结，再完整交叉。独立审计重算6份NPZ、24个交叉单元、96条配对区间，JSON重算误差0。256/512最大逐源成本差8.717e-17、最大动作平均风险差9.136e-19。
+
+关键阴性结论：三个种子、N0/N1中，H-aware训练的已知关系残差规则全部选固定4，相对自己的dev固定4收益为0、CI[0,0]。N0亮度规则仅有1.30%–1.57%微小改善，绝对约4.2e-7–5.0e-7；N1直接残差减亮度区间全部跨0。旧H-blind选择器转到H-aware仍胜其继承的固定.5，但不能据这个正的交叉单元证明重新选择后的H-aware系统需要残差自适应。
+
+| 条件 | seed | H-aware固定4／残差规则MSE | 亮度规则下降 | 残差减亮度MSE及配对95%CI |
+|---|---:|---:|---:|---|
+| N0_diagnostic | 19 | 3.16112648e-05 | 1.5698% | +4.9623e-07 [+3.3329e-07, +6.7516e-07] |
+| N1_dependence_diagnostic | 19 | 3.93647970e-05 | 0.0965% | +3.7992e-08 [-8.7251e-08, +1.7580e-07] |
+| N0_diagnostic | 37 | 3.24936279e-05 | 1.2998% | +4.2234e-07 [+2.4321e-07, +6.0094e-07] |
+| N1_dependence_diagnostic | 37 | 3.87476610e-05 | 0.0187% | +7.2526e-09 [-1.2168e-07, +1.5300e-07] |
+| N0_diagnostic | 73 | 3.23532889e-05 | 1.3905% | +4.4986e-07 [+2.7840e-07, +6.2518e-07] |
+| N1_dependence_diagnostic | 73 | 3.88220666e-05 | -0.0713% | -2.7670e-08 [-1.8448e-07, +1.3440e-07] |
+
+DNG每prior bin4/8节点复核完成，退出0、耗时200.798秒；全部216行源标识、prior和输入一致。最大组级动作风险差由2/4的6.636e-6降至4/8的1.077e-6。六个point-posterior固定动作仍为2，24条规则和288个策略动作不变，所有收益符号不变；inverse/Wiener的144行成本与动作完全一致。支持当前定性诊断稳定，不把相邻积分规则之差当严格误差界或完全收敛证明。
+
+投稿判断：**现有证据不支持把复杂联合AE–TM或关系风险网络的必要性当主贡献。** 可以复用的是输入信息一致、后端专属选择器重新冻结、直接简单规则比较的诊断原则；其是否有足够原创发现支撑投稿，仍需真实外审判断。不能推到任意图像、未知prior或真实相机。
+
+主文献进一步核读：AdaptiveAE §4.1/Table3已有一般后端交叉测试；Modeling Radiometric Uncertainty §5.1/Fig6已有不同恢复方式改变低误差曝光组合集合。不能把这两点独立算新意。身份核验的API暂时失败条目标UNVERIFIED，完整核读与范围见[文献增补](../local-dng/REFERENCES_UPDATE.md)。
+
+最新原始结果：[H-aware JSON](../local-dng/history-reference/results.json)、[完整冻结交叉](../local-dng/history-reference/summary.json)、[独立数值审计](../local-dng/history_independent_audit.md)、[DNG4/8结果](../local-dng/relative-experiment-refinement04_08/results.json)、[DNG独立复核](../local-dng/dng_refinement_independent_audit.md)。源NPZ仅含模拟双像素数据，不含真实图片。
+
+两份只读跨家族外审材料已准备；自动审批拒绝向外部Claude提交非公开研究资料，目前等待用户对该目的地和材料的明确授权。此次Claude审阅未启动，无模型响应、无接受凭据。既有同家族审阅仍provisional，gate继续BLOCKED。没有以新增CPU结果替代这两个审核凭据。
 
 ## Refined Proposal
 
@@ -139,7 +166,7 @@ reviewer 指出：细容差集合受 LUT 分箱影响；分族后端相当于获
 
 ## Final Recommendation and Acceptance
 
-研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。N0/N1受限版本已执行；当前下一步是H-aware后验与冻结后端交叉验证，见最新诊断结论；正式神经训练仍按决定检验结果安排。
+研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。N0/N1受限版本已执行；H-aware及冻结后端交叉已完成；当前下一步是据阴性结果更新查新和外审，正式神经训练缺乏升级证据。
 
 技能[idea-discovery](C:/Users/Lenovo/.agents/skills/idea-discovery/SKILL.md)要求最终确定性证据门，并明确“do not present the workflow as complete”；[运行时规则](C:/Users/Lenovo/.agents/skills/shared-references/codex-runtime.md)写明“Same-family review is provisional, not cross-family evidence.” 本轮配置的两次审阅实际均为OpenAI gpt-6-astra，与执行者同family；没有虚构其他模型接受。实际证据门结果见下方及.aris/runs状态。当前可审阅的研究产物已经备齐，验收仍为暂定。
 

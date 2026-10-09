@@ -648,6 +648,8 @@
   "DNG_quadrature_max_abs_risk_difference": 6.635846751812825e-06,
   "DNG_code_commit": "09052a605b8251c539a6dda3268f2b1f183a95c8",
   "cross_matrix_note": "Frozen source backend policies replayed against same future capture costs; limited renderer classes, one-session diagnostic",
-  "cross_family_review": "not available; existing reviews provisional",
-  "full_H_reference": "pending; current posterior does not assimilate preview history"
+  "cross_family_review": "Claude submission rejected by auto-review before execution; explicit user approval pending",
+  "full_H_reference": "completed; H-aware-trained residual equals fixed e4, no residual adaptation gain",
+  "history_reference_artifact": "history-reference/summary.json",
+  "DNG_refinement4_8_artifact": "relative-experiment-refinement04_08/results.json"
 }

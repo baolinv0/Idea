@@ -1,4 +1,4 @@
-最新本地诊断见[local-dng/CONCLUSIONS.md](local-dng/CONCLUSIONS.md)。本文保留前轮历史判断；N0/N1与DNG已执行，H-aware和最终验收仍未完成。
+最新本地诊断见[local-dng/CONCLUSIONS.md](local-dng/CONCLUSIONS.md)。本文保留前轮历史判断；N0/N1、DNG及H-aware决定检验均已执行；最新H-aware残差规则恒4、收益0。最终外审验收仍未完成。
 
 # 确定性结论、撤回与证据范围
 
@@ -70,3 +70,7 @@ EBSNet 已有由后端质量训练有限曝光选择并联合学习；AdaptiveAE
 
 保留一个**待验证的研究问题**：“固定目标下曝光选择收益：后端补偿与空间可预测性”。先用连续/数值后验参考后端排除数值表示，再做空间依赖强度留出；不靠加模块挽救不稳结果。
 评审分数是建议而非确定性实验测量；完整意见保留，研究状态 REVISE，跨模型系列验收 BLOCKED。[记录](ARCHIVE_NOTES.md#review-status)
+
+## 最新H-aware决定结论
+
+H-aware、DNG4/8及完整独立数值审计已完成。三个种子、N0/N1中，重新选择的H-aware关系规则恒4，收益0、CI[0,0]；不能保留复杂关系自适应必要性主张。DNG精度改善但冻结规则和收益符号不变。详见[完整最新正负结论](local-dng/CONCLUSIONS.md)。投稿idea仍未确认；Claude跨家族审阅被自动审批阻止，等待用户明确授权。

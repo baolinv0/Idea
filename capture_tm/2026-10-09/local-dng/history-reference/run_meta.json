@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETED",
+  "local_code_commit": "f465e73c883a3abe3f46dc5d380fbf985f408b58",
+  "public_equivalent_commit": "c6a3fb4c0cc8113b12a444e4a6d3a7dfd04d43be",
+  "source_tree_sha": "39a22cbfd57522bbb3641f242645262ff03cbe8b",
+  "source_tree_equality_verified": true,
+  "tests": {
+    "relevant_tests": 40,
+    "exit_code": 0,
+    "seconds": 7.36
+  },
+  "config": {
+    "seeds": [
+      19,
+      37,
+      73
+    ],
+    "train_sources": 2048,
+    "development_sources": 4096,
+    "diagnostic_sources_each": 8192,
+    "future_noise_repeats": 16,
+    "nodes": [
+      128,
+      256,
+      512
+    ],
+    "selection_nodes": 512,
+    "bootstraps": 2000
+  },
+  "physical_model": "unchanged N0 Poisson/read/clip/ADC chain, both renderers share same source/history/future noise",
+  "scope": "two-pixel known train prior; no S24 formal test or unrestricted image Bayes claim",
+  "public_transport": "Git CLI failed twice; GitHub connector publication matches full local Git source tree exactly",
+  "independent_audit": "Full 6-NPZ / 24-cell / 96-paired-CI reconstruction independently checked; same-family audit, not cross-family acceptance",
+  "exit_code": 0,
+  "actual_elapsed_seconds": 1102.1631016000174,
+  "completion_observed_utc": "2026-10-09T00:36:21.211827+00:00",
+  "source_metric_files": [
+    "seed_19_N0_diagnostic.npz",
+    "seed_19_N1_dependence_diagnostic.npz",
+    "seed_37_N0_diagnostic.npz",
+    "seed_37_N1_dependence_diagnostic.npz",
+    "seed_73_N0_diagnostic.npz",
+    "seed_73_N1_dependence_diagnostic.npz"
+  ]
+}

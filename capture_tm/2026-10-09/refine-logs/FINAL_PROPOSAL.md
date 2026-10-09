@@ -73,3 +73,15 @@ Gate D：全部成立且与最近邻有明确实验证据差异，再扩展数�
 ## Local diagnostic execution update 2026-10-09
 
 N0/N1受限版本与本地DNG相对诊断已执行，详见[完整结论](../local-dng/CONCLUSIONS.md)。N0的连续风险稳定但参考后端未融合H；N0关系规则相对亮度规则的直接CI跨零。N1反向依赖留出已完成，仍为已知训练prior模型。下一决定实验改为H-aware后验及严格冻结后端交叉矩阵；DNG4/8积分 refinement待做。正式神经强后端、有效跨系列评审与最终gate尚未完成。原计划和历史结果保留，当前状态以新执行结论为准。
+
+## Latest completed decision and next action 2026-10-09
+
+本节覆盖前面的历史PLANNED/待执行描述，保留原Problem Anchor和旧对照。H-aware三种子及DNG4/8复核均已完成、退出0并独立数值审计。H-aware专属关系规则全部退化为固定4、收益0；亮度仅有微小N0收益且N1差异不确定。DNG精度改善，固定动作、全部规则、动作和收益符号保持稳定。
+
+当前不升级复杂risk网络或GPU。最小下一行动是：对已完成完整正负证据进行最新查新和实际不同家族外审，决定是否有原创的条件规律/评测发现；若只是已有Bayes/恢复知识的演示，保留负结果并停止该算法主张。不能把普通后端交叉或“恢复影响曝光集合”当单独创新。
+
+C1–C3仍未在未知完整图像和充分神经后端中验证。若外审提出一个明确、可核验的原创剩余问题，再冻结下一最小对照；若涉及原库动作/target或新任务，写独立protocol后推进。已有DNG只有一个采集会话和三个诊断组，不能当真实重拍证据。
+
+两份具体外审dossier已准备。自动审批拒绝将非公开协议/代码/实验结果提交给Claude服务，当前等待用户明确授权；尚无Claude响应。跨家族接受凭据和Evidence Gate未完成。旧六小时AutoDL预算已结束，本轮无新增远程/GPU授权。
+
+完整结论与逐源证据：[local-dng](../local-dng/CONCLUSIONS.md)；剩余步骤：[WORKFLOW_REMAINING_STEPS](../WORKFLOW_REMAINING_STEPS.md)。

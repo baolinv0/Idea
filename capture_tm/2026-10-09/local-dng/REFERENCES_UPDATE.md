@@ -19,3 +19,11 @@
 6. site:arxiv.org "adaptive exposure" "2026"
 
 下一轮必须按实际H-aware及留出结果更新核心claim，核对候选全文/身份并进行有效独立审阅。本文件不赋予review receipt，不是穷尽检索。
+
+## 本轮完成的原文与身份复核
+
+官方arXiv11项标题已独立核对；旧输入仅AdaptiveAE标题错误，正式题名为AdaptiveAE: An Adaptive Exposure Strategy for HDR Capturing in Dynamic Scenes。原始核验输入保留，见[标题审计](paper_title_audit.json)。
+
+新增helper已核实1311.6887、2605.04397、2609.17023、1807.10596的ID存在。Hasinoff Noise-Optimal Capture、ExpoCM、JOCA、Digital Gimbal和Learning to Control Camera Exposure via Reinforcement Learning的题名核验遇到Semantic Scholar暂时失败，标为[UNVERIFIED by helper]；主页面/作者PDF资料仍保留，不补造DOI或ID。首次additional输入因不支持url字段失败，已保存真实错误并修正后重新执行，最终WARN；这是资料核验失败记录，不是文献被判不存在。
+
+已独立核读AdaptiveAE方法/§4.1 Table3，Noise-Optimal Capture§4–5，以及Radiometric Uncertainty§4/§5.1。泛泛曝光优化、后端交叉测试和不同恢复方法改变低误差曝光组合集合都已有直接先例；严格控制协议的组合未见于这三篇不等于创新已确认。完整原文范围和页码见[primary_overlap_audit.md](primary_overlap_audit.md)。
