@@ -5,7 +5,7 @@
 
 最值得开展一次最小决定实验的问题是：**当曝光差异已获得充分、公平的后端补偿时，哪些可观测的空间关系仍会改变最优物理曝光？** 主线由“可补偿范围”定义，空间关系反例提供机制证据，独立后端交叉评测排除搭档适配。三者构成一个问题，不能算三项独立创新。
 
-最新补充（2026-10-09）：N0连续参考、反向依赖N1以及68份DNG相对诊断已执行。当前参考后端仍未融合三张历史预览；H-aware决定检验正在实现。投稿贡献和跨系列验收仍未完成。见[本地诊断完整正负结论](../local-dng/CONCLUSIONS.md)。
+最新补充（2026-10-09）：N0连续参考、反向依赖N1以及68份DNG相对诊断已执行。当前参考后端仍未融合三张历史预览；H-aware决定检验已实现并在运行，最终三种子结果尚待汇总。投稿贡献和跨系列验收仍未完成。见[本地诊断完整正负结论](../local-dng/CONCLUSIONS.md)。
 
 ## Literature Landscape
 
@@ -114,7 +114,7 @@ reviewer 指出：细容差集合受 LUT 分箱影响；分族后端相当于获
 - 独立代码审计确认后端信息缺口：当前后验只用未来捕获与已知曝光，没有使用三张H或动作选择事件。这是共同受限后端比较，不是充分后端/Bayes下界。
 - DNG真实内容相对诊断已跑通3seed、三个有限后端、四个预设规则；规则收益随后端改变，有明显阴性/反转；三个诊断组的区间只作描述。没有神经训练、原生Bayer、专家GT或真实多曝光重拍证据。
 - 当前代码已上传工程分支；原始JSON、逐源成本、冻结后端交叉矩阵、失败修复与复现环境见[local-dng](../local-dng/README.md)。原实验target/actions/formalS24test保持原状。
-- H-aware检验正在独立worktree实现。DNG积分2/4节点每prior bin最大风险差6.636e-6，后续4/8 refinement用于确认更严格数值口径。
+- H-aware检验已完成实现与测试，正式三种子运行中；最终结果待汇总。DNG积分2/4节点每prior bin最大风险差6.636e-6，后续4/8 refinement用于确认更严格数值口径。
 
 ## Refined Proposal
 
@@ -142,6 +142,9 @@ reviewer 指出：细容差集合受 LUT 分箱影响；分族后端相当于获
 研究题目建议：**固定目标下曝光选择收益：后端补偿与空间可预测性**。这是下一轮假设，不是已验证论文贡献。10候选已筛选，3个CPU机制probe及必要数值追检已运行，proposal/plan/tracker已形成。N0/N1受限版本已执行；当前下一步是H-aware后验与冻结后端交叉验证，见最新诊断结论；正式神经训练仍按决定检验结果安排。
 
 技能[idea-discovery](C:/Users/Lenovo/.agents/skills/idea-discovery/SKILL.md)要求最终确定性证据门，并明确“do not present the workflow as complete”；[运行时规则](C:/Users/Lenovo/.agents/skills/shared-references/codex-runtime.md)写明“Same-family review is provisional, not cross-family evidence.” 本轮配置的两次审阅实际均为OpenAI gpt-6-astra，与执行者同family；没有虚构其他模型接受。实际证据门结果见下方及.aris/runs状态。当前可审阅的研究产物已经备齐，验收仍为暂定。
+
+
+步骤、当前状态与完成标准见[剩余步骤清单](../WORKFLOW_REMAINING_STEPS.md)。
 
 <!-- ARIS_IDEA_DISCOVERY_EVIDENCE_GATE:START -->
 ## Evidence Gate
