@@ -1,3 +1,12 @@
+## 2026-10-13 更新：本次精炼完成，科学路线需重提机制
+
+research-refine实际完成5/5轮，最终6.85/10、RETHINK（当前toy与算法贡献路线）；方法诊断闭合、停止当前toy阳性实验、复杂AE升级暂停。原问题保留。
+新toy已由解析置换不变性判为零值对照，无待补MC。H-aware、DNG4/8和完整历史信息控制早已完成，继续作为正负证据，不重复执行。新机制卡和原创delta缺失，不进入网络训练或run-experiment。
+本次同属OpenAI的native方法审核不替代下述跨家族验收，旧BLOCKED状态不变；未新提交外部Claude。技能循环completed不代表投稿READY或gate PASS。
+[最终提案](refine-logs/FINAL_PROPOSAL.md) · [真实五轮意见](research-refine/2026-10-13/refine-logs/REFINEMENT_REPORT.md)。
+
+以下为此前跨家族流程的历史剩余步骤，最新科学方向以上述停止决定为准。
+
 # CaptureTM：剩余步骤与完成标准
 
 更新：2026-10-09。研究状态REVISE；Evidence Gate仍BLOCKED；投稿贡献尚未确认。

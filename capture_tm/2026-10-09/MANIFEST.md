@@ -121,3 +121,78 @@
 | 2026-10-09 01:42 UTC | /idea-discovery | [review-inputs/latest-complete-dossier/prepared_meta.json](review-inputs/latest-complete-dossier/prepared_meta.json) | review-preparation | PREPARED_NOT_SUBMITTED原始材料；无实际响应/接受 |
 | 2026-10-09 01:42 UTC | /idea-discovery | [SHA256SUMS.txt](SHA256SUMS.txt) | idea-discovery | 原始研究资料或历史证据 |
 | 2026-10-09 01:42 UTC | /idea-discovery | [WORKFLOW_REMAINING_STEPS.md](WORKFLOW_REMAINING_STEPS.md) | idea-discovery | 原始研究资料或历史证据 |
+
+
+## 2026-10-13 research-refine追加（67个新增/更新文件）
+
+5轮实际native评审；6.85/10、RETHINK；无新实验。私有.aris trace不在本批发布范围，全部可读原始意见已包含。
+
+|Timestamp|Skill|File|Stage|Description|
+|---|---|---|---|---|
+|2026-10-13 Asia/Shanghai|research-refine|[CONCLUSIONS.md](CONCLUSIONS.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[MANIFEST.md](MANIFEST.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[README.md](README.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[SHA256SUMS.txt](SHA256SUMS.txt)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[WORKFLOW_REMAINING_STEPS.md](WORKFLOW_REMAINING_STEPS.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[history/README_before_refine_20261013_72fec723.md](history/README_before_refine_20261013_72fec723.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[refine-logs/FINAL_PROPOSAL.md](refine-logs/FINAL_PROPOSAL.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[refine-logs/FINAL_PROPOSAL_before_20261013_72fec723.md](refine-logs/FINAL_PROPOSAL_before_20261013_72fec723.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/01_RESEARCH_STATE.md](research-refine/2026-10-13/01_RESEARCH_STATE.md)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/01_RESEARCH_STATE_20261013_220507.md](research-refine/2026-10-13/01_RESEARCH_STATE_20261013_220507.md)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/MANIFEST.md](research-refine/2026-10-13/MANIFEST.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/PUBLICATION_SCOPE.md](research-refine/2026-10-13/PUBLICATION_SCOPE.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/README.md](research-refine/2026-10-13/README.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/SHA256SUMS.txt](research-refine/2026-10-13/SHA256SUMS.txt)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/EVIDENCE_BASELINE.md](research-refine/2026-10-13/refine-logs/EVIDENCE_BASELINE.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/EXECUTABLE_SPEC.md](research-refine/2026-10-13/refine-logs/EXECUTABLE_SPEC.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/EXECUTABLE_SPEC_20261013_214438.md](research-refine/2026-10-13/refine-logs/EXECUTABLE_SPEC_20261013_214438.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/EXECUTABLE_SPEC_20261013_215036.md](research-refine/2026-10-13/refine-logs/EXECUTABLE_SPEC_20261013_215036.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/FINAL_PROPOSAL.md](research-refine/2026-10-13/refine-logs/FINAL_PROPOSAL.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/FINAL_PROPOSAL_20261013_220507.md](research-refine/2026-10-13/refine-logs/FINAL_PROPOSAL_20261013_220507.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/PROBLEM_ANCHOR.md](research-refine/2026-10-13/refine-logs/PROBLEM_ANCHOR.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINEMENT_REPORT.md](research-refine/2026-10-13/refine-logs/REFINEMENT_REPORT.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINEMENT_REPORT_20261013_220507.md](research-refine/2026-10-13/refine-logs/REFINEMENT_REPORT_20261013_220507.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE.json](research-refine/2026-10-13/refine-logs/REFINE_STATE.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_211502.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_211502.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_211502_2.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_211502_2.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_211502_3.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_211502_3.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_213717.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_213717.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_214438.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_214438.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_214826.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_214826.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215036.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215036.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215350.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215350.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215528.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215528.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215844.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_215844.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_220023.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_220023.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_220330.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_220330.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_220507.json](research-refine/2026-10-13/refine-logs/REFINE_STATE_20261013_220507.json)|checkpoint|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REVIEW_PROVENANCE.json](research-refine/2026-10-13/refine-logs/REVIEW_PROVENANCE.json)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REVIEW_PROVENANCE_20261013_220507.json](research-refine/2026-10-13/refine-logs/REVIEW_PROVENANCE_20261013_220507.json)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REVIEW_SUMMARY.md](research-refine/2026-10-13/refine-logs/REVIEW_SUMMARY.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/REVIEW_SUMMARY_20261013_220507.md](research-refine/2026-10-13/refine-logs/REVIEW_SUMMARY_20261013_220507.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/SYMMETRY_AUDIT.md](research-refine/2026-10-13/refine-logs/SYMMETRY_AUDIT.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/SYMMETRY_AUDIT_20261013_215036.md](research-refine/2026-10-13/refine-logs/SYMMETRY_AUDIT_20261013_215036.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/SYMMETRY_AUDIT_20261013_215528.md](research-refine/2026-10-13/refine-logs/SYMMETRY_AUDIT_20261013_215528.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/codex_round_1_review_bundle.md](research-refine/2026-10-13/refine-logs/codex_round_1_review_bundle.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/codex_round_2_review_bundle.md](research-refine/2026-10-13/refine-logs/codex_round_2_review_bundle.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/codex_round_3_review_bundle.md](research-refine/2026-10-13/refine-logs/codex_round_3_review_bundle.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/codex_round_4_review_bundle.md](research-refine/2026-10-13/refine-logs/codex_round_4_review_bundle.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/codex_round_5_review_bundle.md](research-refine/2026-10-13/refine-logs/codex_round_5_review_bundle.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-0-initial-proposal.md](research-refine/2026-10-13/refine-logs/round-0-initial-proposal.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-1-refinement.md](research-refine/2026-10-13/refine-logs/round-1-refinement.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-1-review.md](research-refine/2026-10-13/refine-logs/round-1-review.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-2-refinement.md](research-refine/2026-10-13/refine-logs/round-2-refinement.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-2-review.md](research-refine/2026-10-13/refine-logs/round-2-review.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-3-refinement.md](research-refine/2026-10-13/refine-logs/round-3-refinement.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-3-review.md](research-refine/2026-10-13/refine-logs/round-3-review.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-4-refinement.md](research-refine/2026-10-13/refine-logs/round-4-refinement.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-4-review.md](research-refine/2026-10-13/refine-logs/round-4-review.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/round-5-review.md](research-refine/2026-10-13/refine-logs/round-5-review.md)|review|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/score-history.md](research-refine/2026-10-13/refine-logs/score-history.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/score-history_20261013_214826.md](research-refine/2026-10-13/refine-logs/score-history_20261013_214826.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/score-history_20261013_215350.md](research-refine/2026-10-13/refine-logs/score-history_20261013_215350.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/score-history_20261013_215844.md](research-refine/2026-10-13/refine-logs/score-history_20261013_215844.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/refine-logs/score-history_20261013_220330.md](research-refine/2026-10-13/refine-logs/score-history_20261013_220330.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/source/novelty-report.md](research-refine/2026-10-13/source/novelty-report.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/source/previous-proposal.md](research-refine/2026-10-13/source/previous-proposal.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|
+|2026-10-13 Asia/Shanghai|research-refine|[research-refine/2026-10-13/source/primary-overlap-audit.md](research-refine/2026-10-13/source/primary-overlap-audit.md)|refinement|本轮原始评审/提案/诊断或归档更新；不代表科学通过|

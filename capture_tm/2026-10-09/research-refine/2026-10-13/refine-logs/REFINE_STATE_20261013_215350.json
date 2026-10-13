@@ -1,0 +1,17 @@
+{
+  "phase": "review",
+  "round": 3,
+  "threadId": null,
+  "last_score": 6.85,
+  "last_verdict": "RETHINK",
+  "status": "in_progress",
+  "timestamp": "2026-10-13T13:53:50.000Z",
+  "source_commit": "72fec72348904bd5230202e78d55ab6459695d9a",
+  "run_id": "capturetm-refine-20261013",
+  "review_backend": "collaboration.spawn_agent",
+  "reviewer_model_requested": "gpt-6-astra",
+  "reviewer_effort_requested": "xhigh",
+  "cross_family_gate": "not_satisfied",
+  "scope": "refinement_only_no_experiments",
+  "reviewer_agent_id": "/root/refine13_astra_review"
+}

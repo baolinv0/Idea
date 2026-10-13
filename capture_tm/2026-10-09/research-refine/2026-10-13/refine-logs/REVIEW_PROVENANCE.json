@@ -1,0 +1,23 @@
+{
+  "skill": "research-refine",
+  "run_id": "capturetm-refine-20261013",
+  "source_commit": "72fec72348904bd5230202e78d55ab6459695d9a",
+  "model_requested": "gpt-6-astra",
+  "effort_requested": "xhigh",
+  "review_backend": "collaboration.spawn_agent",
+  "reviewer_agent_id": "/root/refine13_astra_review",
+  "codex_mcp_available": false,
+  "fallback_reason": "No Codex MCP reviewer tool exposed; installed runtime permits native fresh-agent review.",
+  "model_reported_by_backend": null,
+  "model_source": "explicit_spawn_configuration",
+  "executor_family": "openai",
+  "requested_reviewer_family": "openai",
+  "cross_family_independence_verified": false,
+  "external_claude_used": false,
+  "experiments_run": false,
+  "prior_workflow_cross_family_gate": "pending_unchanged",
+  "rounds_completed": 5,
+  "final_weighted_score": 6.85,
+  "final_verdict": "RETHINK",
+  "stop_reason": "MAX_ROUNDS"
+}
