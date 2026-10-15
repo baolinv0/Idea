@@ -15,3 +15,9 @@
 [资料、讨论与当前结论](hdr_faithfulness/2026-10-09/README.md)
 
 归档覆盖2026-10-08—09的原始motivation/Minimal Probe、查新与12候选、六个独立AI研究视角、实验规划及全部历史版本。当前A已选用于规划，B条件诊断、C解释控制；没有pilot，未确认新颖性。以[最新结论](hdr_faithfulness/2026-10-09/CONCLUSIONS.md)为准。
+
+## LivePhoto：参考信息可信传播与视频重建
+
+[选题、idea 与最小验证路径](livephoto_reference_reconstruction/2026-10-15/README.md)
+
+2026-10-15 讨论归档。聚焦高质量照片的可信细节传播、错误迁移抑制与时域一致性；保留拍后异步处理、缓存和按需输出路线。当前为 PROBE，产品增益、方法新颖性和实验有效性均待验证，暂不预设完整 Scene Memory 或动态 3D 建模。
